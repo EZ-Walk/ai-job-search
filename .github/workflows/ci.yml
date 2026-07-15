@@ -157,6 +157,7 @@ jobs:
       fail-fast: false
       matrix:
         tool:
+          - ashby-search
           - freehire-search
           - jobbank-search
           - jobdanmark-search
