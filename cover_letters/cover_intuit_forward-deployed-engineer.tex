@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Intuit, Forward Deployed Engineer (Intuit Enterprise Suite)
+% Compile with: xelatex cover_intuit_forward-deployed-engineer.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://linkedin.com/in/ezwalk}{LinkedIn}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Intuit hiring team,}
+
+\lettercontent{I am writing about the Forward Deployed Engineer role for Intuit Enterprise Suite in Mountain View. For three years I have been the technical person on both sides of the signature: paid discovery, a working system in the client's own tools, then production support and training after they sign. I live in Emeryville, so the Mountain View hub is in range.}
+
+\lettercontent{Intuit's mission is to power prosperity around the world. Enterprise Suite is how that mission reaches mid-market finance teams: AI agents on live accounting work, not demos, with the Accounting Agent handling categorization and reconciliation while people keep the approvals. The FDE job as you describe it is the last mile, wiring what Core Engineering ships into one customer's data and workflows. That last-mile loop is the work I already do. Accounting operations is the domain I would ramp.}
+
+\lettercontent{How that maps to what you need:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Both sides of the signature:} I source, scope, and price my own work, then stay through enablement. Not a regional quota. The whole number for my own book, including the proof that has to work before the delivery SOW is signed.
+    \item \textbf{Agentic AI:} MCP servers and tool-calling with Claude, OpenAI, and Gemini. Claude Code is the daily driver (skills, subagents, MCP). LangGraph in my own product work; Graph RAG as team lead at AI Tinkerers SF.
+    \item \textbf{Python, SQL, REST:} I debug in the customer's stack. Production OAuth and live-API CI; IBMLogAnalyze (SQL) cut per-case log prep from 1-3 hours to zero.
+    \item \textbf{Enablement:} I automated an IT MSP's pre-sales risk assessments, cut processing time 98\%, then trained their team to keep extending the workflow.
+\end{itemize}\par}
+\vspace{2pt}
+
+\lettercontent{Two gaps, named plainly. Accounting operations are adjacent for me: IBM support analytics, SQL validations, and client process mapping, not controllership or ERP implementation. I learn a chart of accounts through discovery and process mapping with the operators, then a working proof in their data. And this is a field role with travel up to 70\% for technical evaluation, deployment, and adoption workshops. I am applying for that job, including the travel, from Emeryville.}
+
+\lettercontent{Thank you for your time and consideration. I would welcome a conversation about which Enterprise Suite agent configurations you need proven first in a live customer environment.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

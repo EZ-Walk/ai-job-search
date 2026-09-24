@@ -1,0 +1,139 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Forward Deployed Engineer, Rowspace (San Francisco)
+%% Template: compact-arial (templates/cv/compact-arial/)
+%% Compile with: lualatex main_rowspace_forward-deployed-engineer.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Run discovery interviews and process mapping across workflows, files, data, and systems. Write the specs, then scope and ship the workflow from that map.
+  \item Modernized a data-ingestion pipeline on inconsistent source formats. Throughput increased 99.8\% in four months, and cost fell 86\% against the prior baseline.
+  \item Built ingestion from a customer's document store over unstructured federal case documents into a client-facing analytics dashboard, using LLMs to scale data-entry throughput.
+  \item Built production API integrations in Python and TypeScript: a public OAuth app, data-source workflows, and a Whisper to Notion pipeline with CI that tests live API connectivity.
+  \item Automated an IT MSP's pre-sales cybersecurity risk assessments and trained their team to run and extend the workflow. Processing time fell 98\% against a measured baseline.
+  \item Designed a content-scoring LLM evaluation from the client's own ground truth and tested it through their review gates. The pass bar was 95\% agreement with human reviewers.
+  \item Stay after launch: debug production issues, keep a living product backlog, report measured results, and prototype the next change (Python, n8n, Claude Code, MCP) so a one-off fix can become the reusable path.
+  \item Delivered EZ-AI, problem-first AI-fluency training for domain experts, so the operators who own the process can judge the output and extend the workflow themselves.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Built an ML model translating handwritten clinical notes into an extensible data model (F1 80.03): a human-in-the-loop workflow over unstructured clinical documents.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Built DRE Bot, a Watson NLP retrieval app in Slack that surfaced similar past cases in the channel engineers already used. The most common issues dropped from a multi-touch case to a single response.
+  \item Designed and deployed IBMLogAnalyze, a GDPR-compliant data pipeline and analytics dashboard on messy client logs that eliminated 1 to 3 hours of per-case log-analysis prep.
+  \item Led Design Thinking discovery sessions to surface business needs, and wrote the release notes and product docs that walked non-technical stakeholders through each change.
+  \item Launched BI dashboards (SQL, Tableau, Cognos) delivering operational insight to C-level executives.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate (in progress)}{2026}
+
+\vspace{3pt}
+\cveduhead{DeepLearning.AI}{Online}
+{Deep Learning Specialization \textbar{} TensorFlow Developer Professional Certificate}{2020 - 2021}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Languages \& data:} Python, SQL (PostgreSQL, SQLite), TypeScript/Next.js, Flask, data pipelines, unstructured document ingestion, n8n, Docker, GitHub Actions.\\[2pt]
+\noindent\textbf{AI systems:} Claude Code, Claude/OpenAI/Gemini APIs, MCP and agent tooling, RAG and retrieval (Graph RAG, embeddings), LLM evaluation against human ground truth.\\[2pt]
+\noindent\textbf{Delivery:} process mapping, SOWs, production integrations in the customer's workflow, stakeholder enablement, playbooks, change management, and technical writing.\\[2pt]
+\noindent\textbf{Selected:} Graph RAG agent (Python, Neo4j, Claude Code) as team lead, AI Tinkerers SF, October 2025.\par
+}
+
+\end{document}

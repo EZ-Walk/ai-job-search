@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Taskrabbit, AI Solutions Lead (San Francisco)
+% Compile with: xelatex cover_taskrabbit_ai-solutions-lead.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://github.com/EZ-Walk}{GitHub}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Taskrabbit hiring team,}
+
+\lettercontent{I am writing about the AI Solutions Lead role in San Francisco. For three years I have been the only technical person on my own engagements: I embed with a client's operating team, map how the work actually happens, build the automation, and stay until they can run and extend it without me. That is the loop your posting describes. I live in Emeryville, so Tuesdays and Wednesdays on Sutter Street are a short commute.}
+
+\lettercontent{Taskrabbit's product is putting a person into the work. That makes the internal version of the same question sharper here than at most companies: which parts of your teams' days are genuinely repetitive, and which only look that way from a dashboard. I build so the person stays the decision-maker. With 450 employees behind a marketplace running in nine countries, the leverage is in automations that travel between functions, and I would rather set that pattern early in an AI for Work function than retrofit it later.}
+
+\lettercontent{How that maps to what you need:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Building with Claude:} agents and automations in production since 2023 using the Claude API, tool-calling, MCP servers, and Claude Code as a daily driver. Shipped systems non-technical teams use, not demos.
+    \item \textbf{Discovery into enablement:} I automated an IT MSP's pre-sales risk assessments, cut processing time 98\%, then trained their team to keep changing it as their process changed.
+    \item \textbf{Measurement first:} I set the baseline before I build. One ingestion pipeline went 99.8\% higher in throughput in four months at 86\% lower cost.
+    \item \textbf{Skeptical stakeholders:} at IBM I embedded with a customer-support team and ran Design Thinking sessions with the engineers whose queue I was about to change, then shipped DRE Bot, a Watson NLP Slack app that cut their most common issues to a single response. They kept using it because they had shaped it.
+\end{itemize}\par}
+\vspace{6pt}
+
+\lettercontent{The two-sided dynamics between Taskers and clients would be new to me, and I would rather say that plainly than pretend otherwise. What I have done most often is this job's harder part: walk into an operation I did not grow up in, get fluent enough to be useful within weeks, and earn the trust of the people whose process I am about to change.}
+
+\lettercontent{Thank you for your time and consideration. I would welcome the chance to talk about which functions you are looking at first.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

@@ -1,0 +1,129 @@
+%% Resume - Ethan Zaruba-Walker
+%% Tailored for: Specialist (Seasonal, Part-time), Apple Retail - Bay Street, Emeryville
+%% Apple Role Number 114438158
+%% Compile with: lualatex main_apple_retail.tex
+%% TARGET: exactly 1 page (retail convention; overrides the 2-page CV default)
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Force both first and last name AND section headings to render in moderncv
+% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
+% looks inconsistent with the rest of the blue accent scheme.
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{28}{30}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{28}{30}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Ethan Zaruba-Walker - Resume},
+    pdfpagemode=FullScreen,
+}
+\usepackage[scale=0.84]{geometry}
+\usepackage{needspace}
+\usepackage{import}
+
+% personal data
+\name{Ethan}{Zaruba-Walker}
+\address{Emeryville, CA}{}{}
+\phone[mobile]{(512) 694-4844}
+\email{rocketwalker@gmail.com}
+
+\begin{document}
+
+\makecvtitle
+
+% ============================================================
+%     PROFILE STATEMENT
+% ============================================================
+
+\vspace{2pt}
+\small{Customer-facing technology professional living a mile from Bay Street. Three years running my own consulting practice, where I greet customers, discover needs, recommend solutions, and support them after the sale. I am the person friends and family call when a Mac, iPhone, or iPad needs setting up, moving over, or fixing. I want to do that for people every day with the technology I so enjoy. The part I like is selling someone on something that makes them ooh and aah the same way I did when I first used it. \textbf{Fully open availability, including nights, weekends, and holidays. I am committing to the full season and I show up for the shifts I am given.}}
+
+% ============================================================
+%     CORE STRENGTHS
+% ============================================================
+
+\section{Core Strengths}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{Customer service and curiosity}: sole point of contact for every consulting client, from first conversation through delivery and support; I run discovery sessions whose whole purpose is asking better questions until the customer's real need surfaces
+
+\item \textbf{Personalizing solutions and clear communication}: I match what I recommend to the person in front of me rather than pitching a catalog, and have spent eight years turning technical detail into plain language for non-technical customers
+
+\item \textbf{Apple products and the ecosystem}: Daily Mac, iPhone, and iPad ecosystem user, so I can sell the value from experience. I am also the default person in my family and friend group for device setup, data migration, iCloud, and troubleshooting
+
+\item \textbf{Fast pace and shared accountability}: I support several customers at once while keeping my own schedule and billing straight, and I take direction from the people who know the floor better than I do
+
+\item \textbf{Languages}: English (native), Spanish (conversational)
+
+\end{itemize}
+
+% ============================================================
+%     EXPERIENCE
+% ============================================================
+
+\section{Experience}
+\vspace{2pt}
+\begin{itemize}
+
+% --- StaffRoom AI ---
+\item{\cventry{2023--Present}{Owner \& Solutions Consultant}{StaffRoom AI}{Emeryville, CA}{}{\vspace{1pt}
+\begin{itemize}
+    \item Own every customer relationship end-to-end: first conversation, understanding the need, recommending a solution, delivering it, and supporting it afterward
+    \item Sold and delivered engagements up to \$18K, staying the single point of contact throughout
+    \item Taught a client's team to run new workflows themselves, cutting the time it took them by 98\%
+\end{itemize}}}
+
+\vspace{2pt}
+
+% --- Wiz Music ---
+\item{\cventry{2022}{Community Development Intern}{Wiz Music}{Barcelona, Spain}{}{\vspace{1pt}
+\begin{itemize}
+    \item Answered questions and welcomed newcomers daily in a global online community, working in Spanish and English alongside Catalan speakers
+\end{itemize}}}
+
+\vspace{2pt}
+
+% --- IBM full-time ---
+\needspace{5\baselineskip}
+\item{\cventry{2018--2020}{Data Engineer, Customer Support}{IBM}{Austin, TX}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built tools for front-line support engineers inside IBM's Customer Support organization, cutting time-to-resolution on the most common customer issues to a single response
+    \item Trusted with sensitive customer data under GDPR-compliant controls, and wrote plain-language release notes guiding customers through product changes
+\end{itemize}}}
+
+\vspace{2pt}
+
+% --- Busser ---
+\item{\cventry{2018--2019}{Busser}{The Rio Grande}{Boulder, CO}{}{\vspace{1pt}
+\begin{itemize}
+    \item Cleared and reset tables through dinner rushes while carrying a full course load, keeping servers and the kitchen ahead of a full room
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     EDUCATION & CERTIFICATIONS
+% ============================================================
+
+\section{Education \& Certifications}
+\vspace{1pt}
+\begin{itemize}
+
+\item{\cventry{2018--2023}{B.S. Information Science}{University of Colorado Boulder}{Boulder, CO}{}{}}
+
+\vspace{2pt}
+
+\item{EMT-certified, RC Health Services (2024)}
+
+\end{itemize}
+
+\end{document}

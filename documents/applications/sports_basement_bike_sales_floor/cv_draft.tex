@@ -1,0 +1,189 @@
+%% CV - Sports Basement, Bike Sales Floor (Berkeley)
+%% Compile with: lualatex main_sports_basement.tex
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Force both first and last name AND section headings to render in moderncv
+% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
+% looks inconsistent with the rest of the blue accent scheme.
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{needspace}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Ethan Zaruba-Walker - CV},
+    pdfpagemode=FullScreen,
+}
+\usepackage[scale=0.80]{geometry}
+\usepackage{import}
+
+% personal data
+\name{Ethan}{Zaruba-Walker}
+\address{Emeryville, CA}{}{}
+\phone[mobile]{(512) 694-4844}
+\email{rocketwalker@gmail.com}
+
+\begin{document}
+
+\makecvtitle
+
+% ============================================================
+%     PROFILE STATEMENT
+% ============================================================
+
+\vspace{6pt}
+\small{East Bay cyclist and outdoor generalist seeking part-time Bike Sales Floor hours at Sports Basement Berkeley, alongside independent consulting. I help people choose what they will actually use: ask what they need to do, explain it in plain language, and stay until they can do it themselves. Conversational Spanish. Lives in Emeryville; rides as a commute and as a way to meet people. EMT; available weekdays, weekends, and holidays.}
+
+% ============================================================
+%     CORE COMPETENCIES
+% ============================================================
+
+\section{Core Competencies}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{Customer conversations}: discovery-style questions, matching a recommendation to real use, and explaining technical details in plain language for beginners and experts
+
+\item \textbf{Outdoor \& cycling}: regular rider (commute and community); skiing; sailing; lives aboard a 1966 sailboat on the SF Bay; AIARE 1 avalanche training; EMT
+
+\item \textbf{Teaching \& follow-through}: walks non-experts through something new until they can do it themselves; steps up without a direct-report title; needs little supervision
+
+\item \textbf{Communication}: English (native), Spanish (conversational); clear in person and in writing with beginners and non-specialists
+
+\item \textbf{Safety \& physical work}: EMT (2024); comfortable standing a full shift, bending repeatedly, lifting 40 pounds, and working with hands
+
+\end{itemize}
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+
+\section{Professional Experience}
+\vspace{3pt}
+\begin{itemize}
+
+% --- StaffRoom AI ---
+\needspace{5\baselineskip}
+\item{\cventry{2023--Present}{Founder \& AI Solutions Consultant}{StaffRoom AI}{Emeryville, CA}{}{\vspace{1pt}
+\begin{itemize}
+    \item Sell and deliver client work by running discovery first: listen for the job to be done, recommend a path, and stay until they can run it themselves
+    \item Trained a non-technical operations team to run a new process on their own after cutting their processing time 98\%
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Wiz Music ---
+\needspace{5\baselineskip}
+\item{\cventry{May--Jul 2022}{Community Development Intern}{Wiz Music}{Barcelona, Spain}{}{\vspace{1pt}
+\begin{itemize}
+    \item Ran multilingual community operations (English / Spanish / Catalan): diagnosed who was actually showing up versus reported growth, raised it with the team, and ran an artist AMA against the engagement gap
+    \item Built simple automation so the team spent time with people instead of on repetitive outreach
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Valhalla ---
+\needspace{5\baselineskip}
+\item{\cventry{2021}{Machine Learning Engineer (Intern)}{Valhalla Healthcare}{Remote}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built a handwritten-clinical-notes ML pipeline into an extensible data model (F1 80.03). Interface work was with a single customer. Python, Keras, TensorFlow, Docker.
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- IBM full-time ---
+\needspace{5\baselineskip}
+\item{\cventry{2018--2020}{Data Engineer / Cognitive Software Engineer}{IBM}{Austin, TX}{}{\vspace{1pt}
+\begin{itemize}
+    \item Facilitated Design Thinking sessions to learn what people needed before proposing a solution
+    \item Wrote release notes and walkthroughs that took non-engineers through a change until they could use it
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- IBM intern ---
+\needspace{5\baselineskip}
+\item{\cventry{2017}{Research Intern, ThinkLab}{IBM}{Austin, TX}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built hands-on VR/AR exhibits (Unity, Kinect, HoloLens) that had to work for a walk-up public audience, not just a specialist
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     EDUCATION
+% ============================================================
+
+\enlargethispage{5\baselineskip}
+\needspace{8\baselineskip}
+\section{Education}
+\vspace{1pt}
+\begin{itemize}
+
+\needspace{5\baselineskip}
+\item{\cventry{2018--2023}{B.S. Information Science}{University of Colorado Boulder}{Boulder, CO}{}{\vspace{1pt}
+Major GPA 3.7 · Certificate of Cognitive Science · Dean's List (Fall 2019, Spring 2023). Coursework: User-Centered Design, Community-Based Design. Senior capstone: Gamifying Outdoor Education in Software.
+}}
+
+\end{itemize}
+
+% ============================================================
+%     CERTIFICATIONS \& OUTDOOR
+% ============================================================
+
+\section{Certifications \& Outdoor}
+\vspace{1pt}
+\begin{itemize}
+
+\item{\cventry{2024}{Emergency Medical Technician}{RC Health Services}{}{}{}}
+
+\vspace{3pt}
+
+\item{\cventry{2022}{AIARE 1 Avalanche Safety and Rescue}{}{}{}{}}
+
+\vspace{3pt}
+
+\item Regular cyclist (commute and community rides); skier; sailor. Lives aboard a 1966 sailboat on the SF Bay.
+
+\end{itemize}
+
+% ============================================================
+%     LANGUAGES
+% ============================================================
+
+\section{Languages}
+\vspace{1pt}
+\begin{itemize}
+\item English (native), Spanish (conversational; two years of university coursework and a multilingual workplace in Barcelona).
+\end{itemize}
+
+% ============================================================
+%     HONORS AND AWARDS
+% ============================================================
+
+\section{Honors and Awards}
+\vspace{1pt}
+\begin{itemize}
+\item{\textbf{2nd Place, IBM Hackathon for Racial Justice}, Team Lead / Data Scientist (2020): unified a mixed intern team and presented to executive judges.}
+\end{itemize}
+
+% ============================================================
+%     REFERENCES
+% ============================================================
+
+\section{References}
+\vspace{1pt}
+\begin{itemize}
+\item{Available upon request.}
+\end{itemize}
+
+\end{document}

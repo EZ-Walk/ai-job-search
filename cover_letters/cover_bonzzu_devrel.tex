@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Bonzzu, Senior Developer Relations Partner (Asana platform)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://github.com/EZ-Walk}{GitHub}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Eric and the Bonzzu team,}
+
+\lettercontent{I am applying for the Senior Developer Relations Partner role supporting Asana's developer platform. After our call about the position, I recognized the work immediately: for the last three years I have been helping developers and teams build reliable, agentic experiences on a B2B SaaS platform API, just on Notion's instead of Asana's.}
+
+\lettercontent{Through my consulting practice, StaffRoom AI, I already produce the outputs this role asks for:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Platform code:} production Notion API integrations in TypeScript and Python, including a public OAuth Connections app, webhook and worker services, and a pipeline with CI that tests live API connectivity
+    \item \textbf{Developer content:} an OAuth quickstart, a sample Notion Worker, a technical breakdown of Notion's 2025 data-sources migration, and reusable Notion templates for building data apps
+    \item \textbf{Agentic examples:} daily hands-on work with MCP servers, Claude Code, and multi-step automated workflows, the patterns external developers will need as Asana's new Agents API and MCP server open the Work Graph to AI clients
+    \item \textbf{Enablement:} AI-adoption training for client teams, including an IT MSP that now independently runs and extends an automation that cut their assessment processing time 98\%
+\end{itemize}\par}
+\vspace{6pt}
+
+\lettercontent{The embedded partner model is familiar ground. I sell and deliver engagements end-to-end, hold scope boundaries, and keep alignment through structured weekly touchpoints, which is exactly how this role is set up to operate. On community, I will be direct: I have run workshops, 1:1 developer support, and small technical gatherings, not a large digital community. I would approach that pillar the way I approach any system: instrument it, find the feedback loops that matter, and grow it deliberately. I have done the instrumentation half before: auditing a music startup's Discord analytics, I found the reported membership growth was not organic, and I said so.}
+
+\lettercontent{Success in this role is defined as a first code sample or doc improvement shipped inside 30 days. I would start with agentic reference patterns: working examples against the new Agents API and Asana's MCP server that show external developers what reliable, safe automation on the Work Graph looks like. Thank you for your time and consideration. I look forward to discussing it.}
+
+\begin{flushright}
+% No trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

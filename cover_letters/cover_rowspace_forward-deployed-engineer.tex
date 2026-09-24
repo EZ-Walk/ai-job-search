@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Rowspace, Forward Deployed Engineer (San Francisco)
+% Compile with: xelatex cover_rowspace_forward-deployed-engineer.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://github.com/EZ-Walk}{GitHub}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Hiring Manager,}
+
+\lettercontent{I am writing about the founding Forward Deployed Engineer role in San Francisco. For three years I have owned the technical customer relationship after the sale: I embed with the operating team, build production integrations on their data, and stay until the workflow actually changes. I live in Emeryville, so the office days are a short commute.}
+
+\lettercontent{Rowspace deploys into the customer's environment, keeps their data under their control, and turns messy proprietary data, memos, models, research, accounting, and trade files, into intelligence investors can act on. I want that work. Your own writing is clear that finance is not a domain where mostly right is good enough. I already build so the customer owns the workflow, and I do not ship a pipeline whose output I cannot measure.}
+
+\lettercontent{What I would do in the seat:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Custom pipelines on messy data:} I modernized a data-ingestion pipeline on inconsistent source formats (throughput +99.8\%, cost $-$86\%) and built ingestion over unstructured federal case documents into a client-facing dashboard.
+    \item \textbf{LLM performance in production:} I designed a content-scoring evaluation from a client's ground truth and held a 95\% human-agreement bar. Daily tools are Python, SQL, Claude Code, MCP, and LLM APIs. I do not train foundation models. I debug the production workflow when output disagrees with reviewers.
+    \item \textbf{One customer into a playbook:} I automated an IT MSP's pre-sales risk assessments, cut processing time 98\%, then trained their team to keep extending it. The pattern I want to keep is: ship the fix, then make it reusable.
+    \item \textbf{Translate both ways:} two years in IBM Customer Support shipping DRE Bot, a Watson NLP retrieval app in the Slack channel engineers already used, cutting common issues to a single response, plus release notes for non-technical stakeholders.
+\end{itemize}\par}
+\vspace{2pt}
+
+\lettercontent{One real gap, named plainly: I have not held a titled Forward Deployed Engineer role, and I have not sat inside an investment firm. Excel tearsheets, PE due diligence, and fund warehouses are a plus I cannot claim. What I have done is the adjacent work: unstructured documents, inconsistent formats, and production LLM systems where accuracy is the product. I would bring that as a founder joining a team.}
+
+\lettercontent{Thank you for your time and consideration. I would welcome the chance to talk about how you turn one customer's integration into the next firm's default.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

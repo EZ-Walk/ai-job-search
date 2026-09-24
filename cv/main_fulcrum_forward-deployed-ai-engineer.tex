@@ -1,0 +1,139 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Forward Deployed AI Engineer, Fulcrum (San Francisco)
+%% Template: compact-arial (templates/cv/compact-arial/)
+%% Compile with: lualatex main_fulcrum_forward-deployed-ai-engineer.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Sell and deliver every engagement end-to-end: discovery contracts, SOWs, and milestone-gated delivery. Client work has run up to \$18K with the operator remaining the decision-maker.
+  \item Interview operators, parse existing documentation, and map present-day workflows, files, data, and systems as process diagrams. Write the functional specifications the build follows.
+  \item Automated an IT MSP's pre-sales cybersecurity risk assessments and trained their team to run and extend the workflow. Processing time fell 98\% against a measured baseline.
+  \item Built production Notion API integrations in TypeScript and Python, including a public OAuth Connections app for multi-customer install and CI that tests live third-party API connectivity.
+  \item Designed a Notion content-marketing system and enabled the operators running it. Agency production volume increased 10x after the workflow went live.
+  \item Modernized a data-ingestion pipeline. Throughput increased 99.8\% in four months and cost fell 86\%.
+  \item Designed a content-scoring evaluation from the client's own ground truth and tested it through their review gates. The pass bar was 95\% agreement with human reviewers.
+  \item Delivered EZ-AI, problem-first AI-fluency training for domain experts, so the people who own the process can judge and extend the system themselves after handover.
+  \item After launch I stay with the team: resolve user issues, keep a living product backlog, report measured results, and build the next change in Python, n8n, and Claude Code.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Built an ML model translating handwritten clinical notes into an extensible data model (F1 80.03), a human-in-the-loop workflow over unstructured healthcare documents.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Led cross-functional Design Thinking discovery sessions to surface business needs, and authored the release notes and product documentation that walked stakeholders through each application change.
+  \item Designed and deployed IBMLogAnalyze, a GDPR-compliant data pipeline and analytics dashboard that eliminated 1-3 hours of per-case log-analysis prep; launched BI dashboards (Tableau, Cognos) for C-level operations.
+  \item Built DRE Bot, a Watson NLP Slack app that surfaced similar past cases to support engineers in the channel they already used, cutting the most common issues from a multi-touch case to a single response.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate (in progress)}{expected July 2026}
+\begin{cvitems}
+  \item BPMN and process improvement (April 2026); IT Systems Design and Analysis; Cloud Native, DevOps, Agile.
+\end{cvitems}
+
+\vspace{3pt}
+\cveduhead{DeepLearning.AI}{Online}
+{Deep Learning Specialization \textbar{} TensorFlow Developer Professional Certificate}{2020 - 2021}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Languages \& APIs:} Python (primary), TypeScript/Next.js (production Notion OAuth and API integrations), SQL/PostgreSQL, REST/JSON. \textbf{AI delivery:} Claude / OpenAI / Gemini APIs, MCP, Claude Code, n8n, human-in-the-loop evaluation with human review gates. \textbf{Customer work:} process mapping, functional specifications, technical documentation, mixed technical/non-technical rooms, post-launch enablement. \textbf{Tooling:} Docker, GitHub Actions, Figma process diagrams, Vercel, Slack API, Tableau, Cognos.\par
+}
+
+\end{document}

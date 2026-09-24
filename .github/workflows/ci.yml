@@ -158,6 +158,7 @@ jobs:
       matrix:
         tool:
           - ashby-search
+          - greenhouse-search
           - freehire-search
           - jobbank-search
           - jobdanmark-search

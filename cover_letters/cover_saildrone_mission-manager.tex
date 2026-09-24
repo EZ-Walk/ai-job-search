@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Saildrone, Mission Manager (Mission Execution, Alameda)
+% Compile with: xelatex cover_saildrone_mission-manager.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://linkedin.com/in/ezwalk}{LinkedIn}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Mission Execution team,}
+
+\lettercontent{I am applying for Mission Manager on the Mission Execution team in Alameda. I live in Emeryville aboard \textit{MARGARITA}, a 1966 sailboat. For three years I have turned stakeholder objectives into executable plans, written the SOPs and training that let other people run them, and stayed through delivery.}
+
+\lettercontent{Saildrone has 12+ years of ocean operations and a global Explorer, Voyager, and Surveyor fleet, with Mission Execution in Alameda. The Mission Manager sits between customers, Fleet Captains, engineering, and Product: turn routing and CONOPS into a plan the fleet can run, keep execution aligned, and feed vehicle performance and health back into SOPs and the product roadmap. That is the work I want to do.}
+
+\lettercontent{How I would cover the work:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Executable mission plans:} I run discovery with operators, map the present-day workflow, and write the plan, specs, and delivery gates the team runs. Closest analog to a feasibility pass with Sales: I owned an MSP pre-sales risk-assessment workflow, then trained their team to run it.
+    \item \textbf{SOPs, documentation, and training:} I automated that MSP pre-sales workflow, cut processing time 98\%, then trained the team to run and extend it. I also delivered EZ-AI, problem-first training for domain experts. I would use the same muscle to refine Mission Control SOPs and customer training, not to invent a parallel process set.
+    \item \textbf{Status, systems, and product feedback:} At IBM I shipped C-level operational dashboards (Tableau, Cognos) and the release notes for each change. In consulting I kept a living backlog and modernized a data-ingestion pipeline (throughput +99.8\% in four months, cost fell 86\%). I would send vehicle health the same way: precise status up, structured feedback to Product and R\&D.
+    \item \textbf{Pressure:} EMT (2024). Patient assessment and radio/team communication while the situation is still moving. Judgment under uncertainty, not a 24/7 Mission Control watch.
+\end{itemize}\par}
+\vspace{2pt}
+
+\lettercontent{One real gap, named plainly: I do not have professional COLREGS, VTS, or Coast Guard liaison tenure, and I have not piloted USVs or sat a 24/7 ops-center watch. I bring complex technical operations, process documentation, operational tooling in Python, and a life already on the Bay. COLREGS, port reporting, and watch discipline are what I would close first on the job.}
+
+\lettercontent{Thank you for your time and consideration. I would welcome the chance to talk about turning a Mission Portal routing request into a plan Fleet Captains can run.}
+
+\begin{flushright}
+% No trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "! LaTeX Error: There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

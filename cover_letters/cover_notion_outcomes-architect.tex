@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Notion, Commercial Outcomes Architect (San Francisco)
+% Compile with: xelatex cover_notion_outcomes-architect.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://github.com/EZ-Walk}{GitHub}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Notion hiring team,}
+
+\lettercontent{I am writing about the Commercial Outcomes Architect role in San Francisco. For three years I have run client engagements end to end: discovery with the stakeholders, workflow co-design, building beside the team rather than for them, and staying until the workflow is theirs and they run it without me. I am based in Emeryville, so onsite in SF is a short commute.}
+
+\lettercontent{Why this seat, and why now: Notion prices agent work in credits, and Workers move onto the same meter in October. That makes adoption and revenue the same number, because a workflow nobody runs is a credit nobody consumes. Getting that right is a builder's problem more than an account-management one, and it is the part of this job I want.}
+
+\lettercontent{Here is how that maps to what you need:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Adoption and value realization:} I automated an IT MSP's pre-sales risk assessments, cut processing time 98\%, then trained their team to run and extend the workflow themselves. I judge an engagement on what the client still operates after I leave.
+    \item \textbf{Technical fluency in Notion specifically:} production Notion API integrations, a public OAuth Connections app, a sample Worker, a Whisper-to-Notion pipeline with CI against the live API, and a version-controlled mirror of an entire workspace with architecture decision records. I can co-design and troubleshoot a workspace without a specialist in the room.
+    \item \textbf{Commercial ownership:} I scope, price, and close my own engagements, then carry the outcome. When delivery slips there is no renewal and no referral, so value realization has never been someone else's job. A book of named accounts at Notion's scale is the one piece I would be doing for the first time; the accountability underneath it I have carried since 2023.
+    \item \textbf{Building with AI daily:} MCP servers, Claude Code, and agent tooling across the Claude, OpenAI, and Gemini APIs.
+\end{itemize}\par}
+\vspace{6pt}
+
+\lettercontent{“Great work is still fundamentally human” is not a line I picked up from your careers page for this letter. It is the principle I started my consultancy on: every system I have built keeps the person as the decision-maker and takes the busywork off them. Your posting asks this person to help build and deliver OA programs across Notion's install base, and I would rather help write those playbooks than inherit them.}
+
+\lettercontent{Thank you for your time and consideration. I would welcome the chance to talk about the flat and at-risk accounts you are trying to move back onto a clear value path.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

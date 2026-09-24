@@ -1,0 +1,142 @@
+%% Compact Arial CV - Ethan Zaruba-Walker
+%% Target: Guest Services Representative, Backroads (Berkeley, CA)
+%% Compile with: lualatex -interaction=nonstopmode main_backroads.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+% Tight hyphen bullets without enumitem
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    Emeryville, CA
+    {-}
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Ran discovery conversations with non-technical clients. Collected missing details, explained the options in plain language, and wrote clear next steps so they could decide with confidence.
+  \item Kept several client threads moving at once over email and Slack in a fast-paced practice. Held a consistent professional tone and accurate notes on every thread.
+  \item Owned intake through close-out on every engagement. Statements of work, forms, milestone tracking, and complete records for clients up to \$18K.
+  \item Turned unwritten client processes into written procedures their staff could follow without a call.
+  \item Trained an IT services team to run a new pre-sales workflow on their own. Processing time on their risk assessments fell 98\%.
+  \item Ran a solo practice, so every email, form, and follow-up was mine to complete accurately and on time.
+\end{cvitems}
+
+\vspace{5pt}
+\cventryhead{Wiz Music}{Barcelona, Spain}
+{Community Development Intern}{May 2022 - July 2022}
+\begin{cvitems}
+  \item Ran Discord operations in English, Spanish, and Catalan, including an artist AMA against an engagement gap.
+  \item Segmented churn and join sources, found that reported membership growth was not organic, and raised it with the team.
+\end{cvitems}
+
+\vspace{5pt}
+\cventryhead{IBM, Customer Support}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Wrote release notes and product documentation that walked support stakeholders through application changes in plain language.
+  \item Facilitated Design Thinking sessions to surface what support teams needed, then translated that into tools they could use.
+\end{cvitems}
+
+\vspace{5pt}
+\cventryhead{Alpha Phi Delta, University of Colorado Boulder}{Boulder, CO}
+{Rush Chair}{January 2019 - December 2021}
+\begin{cvitems}
+  \item Owned the membership funnel: hosted rush events, built the recruitment profiles the chapter used, matched prospects to a fit, and converted them to signed bids.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S.\ Information Science (Major GPA 3.7); Certificate of Cognitive Science}{2018 - May 2023}
+\begin{cvitems}
+  \item Senior capstone: built the backend for a camping-trip planner. It pulled campground, weather, and alert data and turned Leave No Trace practice into a game.
+  \item Dean's List, Fall 2019 and Spring 2023. Technical communication, user-centered design, and cognitive science.
+\end{cvitems}
+
+\vspace{5pt}
+\noindent\textbf{Certifications:} Emergency Medical Technician (2024); AIARE 1 Avalanche Safety and Rescue (2022), including trip planning and group decision-making.
+
+\cvsection{Skills}
+
+\noindent\textbf{Communication:} professional tone across email and Slack; client intake; explaining options in conversation and in writing.\\[2pt]
+\noindent\textbf{Organization \& accuracy:} collecting missing information; forms; statements of work; milestone tracking; Microsoft Office; complete records.\\[2pt]
+\noindent\textbf{Matching \& discovery:} asking questions, mapping needs, recommending a fit.\\[2pt]
+\noindent\textbf{Travel \& outdoors:} live and work aboard a 1966 sailboat on the SF Bay; Barcelona internship; AIARE 1 trip planning; EMT; camping-trip planner capstone.\\[2pt]
+\noindent\textbf{Languages:} English (native), Spanish (conversational; two years of university coursework).\\[2pt]
+\noindent\textbf{Tools:} Microsoft Office, Slack, Notion. Quick to ramp on new systems.
+
+\end{document}

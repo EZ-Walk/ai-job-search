@@ -168,6 +168,20 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 - [ ] Salutation is appropriate (named person if possible)
 - [ ] Headline is engaging and specific, not generic
 
+## Observed Structure from Past Letters
+
+<!-- Added by /setup (Path A) on 2026-07-15, from Makai Labs (2025) and Deloitte (2024) cover letters -->
+
+Ethan's past letters follow a consistent five-block structure that maps cleanly onto this template:
+
+1. **Mission-alignment opener** — name the role and connect to the company's mission in one sentence
+2. **Qualification bullets** — "My qualifications directly match your needs, including:" + 3-4 bullets with years and tools
+3. **"What excites me" paragraph** — genuine interest in a specific responsibility from the posting, backed by one recent concrete example
+4. **Personal fit / narrative paragraph** — life context or philosophy (human-in-the-loop mission, SF relocation) tied to the company
+5. **Thank-you close** — "Thank you for your time and consideration" + forward-looking sentence
+
+Note: past letters ran to ~400 words and spilled to a second page (Makai). Under this framework's hard 1-page / 250-300 word budget, compress blocks 3 and 4 into one paragraph each.
+
 ## Submission Guidelines (Best Practice)
 - Submit only the documents the employer requests
 - Export as PDF to preserve formatting

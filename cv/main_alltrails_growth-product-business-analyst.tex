@@ -1,0 +1,147 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Growth Product & Business Analyst, AllTrails (US remote; SF hub)
+%% Template: compact-arial (templates/cv/compact-arial/)
+%% Compile with: lualatex main_alltrails_growth-product-business-analyst.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    Emeryville, CA
+    {-}
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Mapped current-state workflows with operators, defined the KPIs the build would move, and reported measured results after launch so the team could see progress early and often.
+  \item Modernized a data-analytics ingestion pipeline in Python and SQL, increasing throughput 99.8\% in four months and reducing operating cost 86\% versus the prior production stack.
+  \item Built Python and SQL pipelines and a client-facing analytics dashboard from ingested case documents, with downstream analysis on the joined tables those pipelines produced.
+  \item Set a baseline KPI for an IT MSP's pre-sales risk assessments, then automated the workflow and trained their team, cutting processing time 98\% against that measured baseline.
+  \item Designed a content-scoring evaluation from the client's labeled ground truth and required 95\% agreement with human reviewers before the system could pass into production use.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Wiz Music}{Barcelona, Spain}
+{Community Development Intern}{May 2022 - July 2022}
+\begin{cvitems}
+  \item Diagnosed membership growth from the community's own analytics. Segmented churn by tenure cohort and joins by source, showed the reported growth was not organic, and raised it with the team.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Built a Python ML model turning handwritten clinical notes into a queryable data model (F1 80.03).
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Built and launched Tableau and Cognos BI dashboards that delivered operational insights to C-level executives. Led Design Thinking sessions so stakeholders shared one definition of each metric.
+  \item Designed and deployed IBMLogAnalyze, a GDPR-compliant SQL pipeline and analytics dashboard that cut per-case log-analysis prep from 1-3 hours of engineer time to zero.
+  \item Built a Flask system for pulling, joining, and analyzing support-log datasets in place at large scale.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+\begin{cvitems}
+  \item Senior capstone, Oasis: outdoor-education planner in Python and Streamlit that aggregated campground, weather, alert, and wildlife data, with Leave No Trace education in the product.
+\end{cvitems}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate (in progress)}{expected July 2026}
+\begin{cvitems}
+  \item Completed Business Process Modeling (April 2026); IT Systems Design and Analysis; Cloud Native, DevOps, Agile.
+\end{cvitems}
+
+\vspace{3pt}
+\cveduhead{Field credentials}{Bondi Outdoor Leadership; RC Health Services}
+{AIARE 1 Avalanche Safety and Rescue (2022) \textbar{} Emergency Medical Technician (2024)}{2022 - 2024}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Analysis \& reporting:} SQL (PostgreSQL, SQLite), Python, Tableau, Cognos, data pipelines, BI dashboards, KPI definition and monitoring, pulling and joining large datasets, warehouse tables and views. \textbf{Collaboration:} cross-functional discovery with operators and executives, GitHub, documentation, training operators to own the system. \textbf{Outdoor domain:} AIARE 1, EMT, Oasis outdoor-education capstone, Strava GPX/Navionics pipelines. \textbf{Also:} 2nd Place, IBM Hackathon for Racial Justice (2020), Team Lead / Data Scientist; Tableau insights to executive judges.\par
+}
+
+\end{document}

@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Touchstone Climbing, Front Desk Staff (Berkeley Ironworks)
+% Compile with: xelatex cover_touchstone_front-desk.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://github.com/EZ-Walk}{GitHub}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Touchstone Climbing hiring team,}
+
+\lettercontent{I am applying for the Front Desk Staff position at Berkeley Ironworks. I climb regularly, I live minutes away in Emeryville aboard a 1966 sailboat on the Bay, and I want my in-person work anchored in the community that gym serves. I also run a small independent consulting practice. I want to pair its deliberately flexible schedule with steady front-of-house work, which means I can cover evenings and weekends.}
+
+\lettercontent{The front desk is a service job, a safety job, and a community job. Here is what I bring to each:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Service:} I spent two years building tools for front-line support teams inside IBM's Customer Support organization, then three years as the first and only point of contact for my own consulting clients, greeting people, listening, forming relationships, and resolving conflicts amicably.
+    \item \textbf{Safety:} I am EMT-certified (2024), plus AIARE 1 avalanche rescue trained. I stay composed when situations get tense.
+    \item \textbf{Community:} I grew a multilingual Discord community for a music startup, speak conversational Spanish, and am launching a lightning-talk gathering series that brings Bay Area engineers and sailors together on the water.
+    \item \textbf{Systems:} After seven years of professional software work, I pick up POS, waiver, and membership tools quickly, and I am happy to learn yours the way you want them run.
+\end{itemize}\par}
+\vspace{6pt}
+
+\lettercontent{Your posting calls the front desk the heartbeat of the community, and Touchstone backs it up: your Public Benefit Corporation charter and the climbing groups and events you host create spaces where everyone feels they belong. Helping people find their crew is something I really admire about the community at Ironworks and want to contribute to.}
+
+\lettercontent{Thank you for your time. I look forward to hearing from you.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

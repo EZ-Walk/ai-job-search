@@ -1,0 +1,177 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Workflow + Process Designer (AI Enablement), Notion, Business Technology
+%% Compile with: lualatex main_notion.tex
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Force both first and last name AND section headings to render in moderncv
+% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
+% looks inconsistent with the rest of the blue accent scheme.
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Ethan Zaruba-Walker - CV},
+    pdfpagemode=FullScreen,
+}
+\usepackage[scale=0.80]{geometry}
+\usepackage{import}
+\usepackage{needspace}
+
+% personal data
+\name{Ethan}{Zaruba-Walker}
+\address{Emeryville, CA}{}{}
+\phone[mobile]{(512) 694-4844}
+\email{ethan@staffroomai.com}
+\extrainfo{\href{https://linkedin.com/in/ezwalk}{LinkedIn}, \href{https://github.com/EZ-Walk}{GitHub}, \href{https://app.notion.com/p/staffroomai/Ethan-Zaruba-Walker-2953ef6cafd5812baab4fcd98c129999?source=resume}{Portfolio}}
+
+\begin{document}
+
+\makecvtitle
+
+% ============================================================
+%     PROFILE STATEMENT
+% ============================================================
+
+\vspace{6pt}
+\small{AI solutions consultant who redesigns business processes end to end and embeds human-in-the-loop agents so intake, triage, and reporting move faster without losing auditability. Three years of discovery, current- and future-state mapping, and change enablement; production Notion API systems (OAuth Connections, data sources, webhooks); agents and structured skills via Claude Code and MCP. Measures success on cycle time, quality, adoption, and whether the team can run the workflow without me.}
+
+% ============================================================
+%     CORE COMPETENCIES
+% ============================================================
+
+\section{Core Competencies}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{Process \& systems design}: discovery, current- and future-state mapping, runbooks, operating models; intake, triage, routing, approvals, escalations, and reporting, with states, handoffs, and auditability
+
+\item \textbf{AI enablement}: human-in-the-loop patterns (assist, automate, approve, audit) with a reviewable trail; agents and structured skills; prompt and tool design; evaluation for quality, reliability, and edge cases (Claude Code, Claude / OpenAI / Gemini APIs, MCP)
+
+\item \textbf{Notion platform}: production API integrations (OAuth Connections, scopes and permissions, data sources, pages, comments), webhooks, hosted MCP, workspace and information architecture
+
+\item \textbf{Workflow automation}: n8n, APIs / webhooks / connectors, Slack apps, Python and TypeScript / Next.js; design for handoff so business teams operate the system independently
+
+\item \textbf{Instrumentation \& change}: cycle-time, quality, and adoption metrics, iterated with stakeholder feedback; BI dashboards (Tableau, Cognos); workshops, enablement, and Design Thinking facilitation
+
+\end{itemize}
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+
+\section{Professional Experience}
+\vspace{3pt}
+\begin{itemize}
+
+% --- StaffRoom AI ---
+\needspace{5\baselineskip}
+\item{\cventry{2023--Present}{Founder \& AI Solutions Consultant}{StaffRoom AI}{Emeryville, CA}{}{\vspace{1pt}
+\begin{itemize}
+    \item Sell and deliver AI-automation engagements end-to-end across agencies, IT, and media: discovery, current- and future-state process maps, stakeholder workshops, SOWs, and milestone-gated delivery for clients up to \$18K
+    \item Led discovery, design, and implementation of a Notion-based content system that 10x'd agency production volume; owned stakeholder enablement and change management so the operating model stuck
+    \item Designed intake, routing, and reporting for an IT MSP's pre-sales cybersecurity risk assessments, cutting processing time 98\%; left runbooks and trained the team to run and extend the workflow without me
+    \item Built production Notion API integrations in TypeScript and Python: public OAuth Connections app, data-source and page workflows, comments polling, and a Whisper$\rightarrow$Notion pipeline with CI against the live API; daily agent work with Claude Code, structured skills, and hosted MCP
+    \item Designed human-in-the-loop evaluation for MediaMark Spotlight (LLM-as-a-judge): rubric from client ground truth, 95\% human-agreement bar, n8n event-driven agent workflows, and a triple-gate so AI scores, humans approve, and the trail shows what the model did
+    \item Delivered EZ-AI, problem-first AI-fluency training for domain experts, so the people who own the process can judge and extend the system themselves
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Wiz Music ---
+\needspace{5\baselineskip}
+\item{\cventry{2022}{Community Development Intern}{Wiz Music}{Barcelona, Spain}{}{\vspace{1pt}
+\begin{itemize}
+    \item Diagnosed a Discord community from its own analytics (churn by tenure, joins by source), identified that reported growth was not organic, and raised it with the team; configured artist feeds and ran an AMA against the remaining engagement gap
+    \item Engineered Python automation and Chartmetric API work to streamline artist and investor outreach
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Valhalla ---
+\needspace{5\baselineskip}
+\item{\cventry{2021}{Machine Learning Engineer (Intern)}{Valhalla Healthcare}{Remote}{}{\vspace{1pt}
+\begin{itemize}
+    \item Designed and shipped an ML model translating handwritten clinical notes into an extensible data model (F1 80.03), with evaluation against edge cases before release (Python, Keras, TensorFlow, Docker)
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- IBM full-time ---
+\needspace{5\baselineskip}
+\item{\cventry{2018--2020}{Data Engineer / Cognitive Software Engineer}{IBM}{Austin, TX}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built DRE Bot, an internal Watson NLP Slack app that triaged incoming support cases against similar past issues and routed engineers to a single response for the most common ones; containerized on IBM Cloud
+    \item Designed and deployed IBMLogAnalyze: GDPR-compliant client-data pipelines and an analytics dashboard, eliminating 1--3 hours of log-analysis prep per case and leaving an auditable trail
+    \item Launched BI dashboards for C-level operational metrics; led Design Thinking sessions; authored release notes and documentation so stakeholders could operate through ongoing application changes
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     EDUCATION
+% ============================================================
+
+\section{Education}
+\vspace{1pt}
+\begin{itemize}
+
+\needspace{5\baselineskip}
+\item{\cventry{2018--2023}{B.S. Information Science}{University of Colorado Boulder}{Boulder, CO}{}{\vspace{1pt}
+Major GPA 3.7 · Certificate of Cognitive Science · Dean's List (Fall 2019, Spring 2023). Coursework: User-Centered Design, Community-Based Design, Applied Machine Learning, Cognitive Science.
+}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{2026}{IBM Systems \& Solutions Architecture Professional Certificate}{IBM}{in progress, expected Jul 2026}{}{\vspace{1pt}
+Completed: IT Systems Design and Analysis; Business Process Modeling, Analysis and Improvement (BPMN, Lean); Cloud Native, DevOps, Agile.
+}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{2020--2021}{Deep Learning Specialization \& TensorFlow Developer Professional Certificate}{DeepLearning.AI / Coursera}{}{}{}}
+
+\end{itemize}
+
+% ============================================================
+%     LANGUAGES
+% ============================================================
+
+\section{Languages}
+\vspace{1pt}
+\begin{itemize}
+\item English (native), Spanish (conversational).
+\end{itemize}
+
+% ============================================================
+%     HONORS AND AWARDS
+% ============================================================
+
+\section{Honors and Awards}
+\vspace{1pt}
+\begin{itemize}
+\item{\textbf{2nd Place, Hackathon for Racial Justice}, IBM, Team Lead / Data Scientist (2020).}
+\end{itemize}
+
+% ============================================================
+%     REFERENCES
+% ============================================================
+
+\section{References}
+\vspace{1pt}
+\begin{itemize}
+\item{Available upon request.}
+\end{itemize}
+
+\end{document}

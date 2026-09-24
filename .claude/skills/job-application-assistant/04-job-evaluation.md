@@ -20,9 +20,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Python (7+ yrs professional), SQL/PostgreSQL, AI/LLM integration (Claude / OpenAI / Gemini APIs, MCP, agents), process automation (n8n, workflow design), Notion API / API integrations, data pipelines & BI (Tableau, Cognos, dashboards), discovery & stakeholder management, technical writing & documentation. For educator roles: daily generative-AI fluency, human-in-the-loop philosophy, adult enablement (EZ-AI), Cognitive Science certificate, 1:1 coaching-adjacent work (rush chair matching, client enablement). Do not treat AI fluency as a requirement for Montessori or traditional postings; it is a bonus there, not the job.
+**Moderate match areas:** TypeScript / Next.js, Flask microservices, classical ML (TensorFlow, Keras, scikit-learn), graph databases (Neo4j/Cypher), cloud platforms (IBM Cloud, Azure, AWS, GCP), Docker/Kubernetes, solutions/sales engineering (builder-seller experience, no quota history), developer relations, motivating peers/adults toward a goal (consulting delivery, fraternity rush, hackathon team lead)
+**Weak match areas:** large-scale distributed systems / infra engineering, mobile development, quota-carrying enterprise sales, people management, robotics/embedded, deep statistics/research-level ML, **K-12 classroom teaching, teaching credential, lesson planning, and 3+ years working directly with Pre-K–8 children** (the usual Alpha Guide screen)
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -34,9 +34,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** AI solutions consulting (3 yrs end-to-end: sell → discover → build → enable), workflow/process automation, data engineering & analytics (IBM Customer Support + client work), API integration work (Notion API production systems)
+**Moderate:** ML engineering (internship + certifications, not a full-time ML role), developer relations (community + content work, never held the title), solutions/GTM engineering (builder-seller pattern, no formal SE role), adult training/enablement (EZ-AI)
+**Entry-level:** quota-carrying sales (SDR/BDR/AE), people management, robotics/hardware, **K-12 educator roles of every pedagogy** (no classroom, camp, tutoring, or youth-program tenure on file). Score assistant / para / sub / after-school / Montessori intern in the 35–55 band when no credential is required. Score credentialed teacher-of-record and AMI/AMS lead Guide lower unless the school hires uncredentialed. **Say the gap out loud** before drafting. Do not skip a posting because it is Montessori or traditional rather than Alpha.
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -53,7 +53,8 @@ Does the role and company culture match the behavioral profile?
 ### 4. Location & Logistics (Pass/Fail + Notes)
 - Within commute range: PASS
 - Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
+- **Bay Area on-site, including school hours (approx. 7:30am–4:30pm, M–F):** PASS (confirmed 2026-08-31 for educator targeting). East Bay / SF / Peninsula / South Bay schools are in range from Emeryville.
+- Requires relocation out of the Bay Area: FAIL (deal-breaker). Alpha postings that only list non-Bay campuses fail even with relocation support. Same rule for any school district or Montessori network outside the Bay Area.
 - Frequent international travel: FLAG (discuss with user)
 
 ### 5. Career Alignment & Motivation (0-100)
@@ -67,19 +68,27 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- **Primary (2026-08-31):** Bay Area educator roles. Alpha-style Guide is one target, not the only shape. Also in scope: Montessori Guide / assistant, independent-school teacher or assistant, paraeducator, substitute, after-school / enrichment, tutor, outdoor education, and traditional K-12 classroom roles where the posting does not require a credential he does not have.
+- Client-facing AI engineering still in scope as a parallel lane: AI Solutions Engineer, Client Engineer, GTM Engineer, Technical Consultant
+- Work in the outdoor / adventure / climate sector where possible (see `documents/outdoor-target-companies.md`)
+- Preserve high autonomy; bring 3 years of founder-level ownership into a team context
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: discovery and process mapping, 0→1 builds, shipping working pilots fast, human-in-the-loop AI design, translating technical change for non-technical stakeholders, mission-driven work (e.g. Allies Against Slavery), coaching people through a goal (EZ-AI, client enablement), being present with learners
+- Tasks that drain: pure maintenance of legacy systems, rigid heavily-supervised process, work with no human contact and no craft. Do **not** mark traditional classroom teaching or grading as inherently draining. That is a live career lane.
+- Non-task factors: leadership style, department culture, company values, degree of autonomy (low autonomy is a deal-breaker; a school with a clear pedagogy is not automatically that)
+
+**Educator-lane honesty check:** No classroom, camp, tutoring, or youth-program tenure on file. A bachelor's is on file. No CA teaching credential, no AMI/AMS Montessori credential. Score accordingly:
+- Assistant / aide / para / sub / after-school / enrichment / outdoor-ed: often realistic entry. Experience match ~35–55. Apply when the posting does not require a credential.
+- Montessori assistant / intern / after-care: same. Lead Guide postings that require AMI/AMS: weak unless they explicitly train from scratch.
+- Traditional credentialed teacher of record: usually skip unless they will hire uncredentialed (private/independent sometimes will; public usually will not).
+- Alpha Guide: bachelor's yes, 3+ years Pre-K–8 no. Still worth running Bay Area Crossover assessments; do not invent classroom years.
+Map EZ-AI, rush-chair matching, and enablement as adult-coaching evidence only. Never reframe FRC 2015 (competed as a student) or Wiz as K-12 experience.
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: salary flexible, evaluated case by case (equity, mission, and growth path weigh in); consulting income exists as fallback. Alpha Guide posted pay is typically $100k–$150k W2. Montessori assistants, paras, and after-school roles pay much less. Say so in the eval; do not skip on pay unless the user has set a floor.
+- **Flexibility**: remote-first for engineering/consulting roles; **Bay Area on-site including school hours is fine for educator roles**; relocation out of the Bay Area is a deal-breaker (lives aboard MARGARITA on the SF Bay)
+- **Professional development**: growth toward AI-native client engineering *or* education work (Montessori, independent, traditional, or Guide-style); IBM Systems & Solutions Architecture certificate completing Jul 2026
 
 ### 6. Salary Benchmark (Optional)
 
@@ -139,6 +148,8 @@ Present the evaluation as:
 - [ ] Identified network contacts who may know the team/manager
 ```
 
+A named recruiter in the checklist is not a prompt to draft outreach. Mention the contact in the evaluation. Draft a note only if he asks. If he pastes a draft, follow Recruiter and warm-lead notes in `03-writing-style.md`.
+
 ## Weighting
 - Technical Skills: 30%
 - Experience Match: 25%
@@ -146,6 +157,10 @@ Present the evaluation as:
 - Career Alignment: 30%
 
 (Location is pass/fail, not weighted)
+
+## Named company notes
+
+**Backroads** (first-party, Sep 2026): becoming data-driven and building custom in-house software (director of rooming ops). Do not score guest-services or hotel-ops postings as "hide the analyst." Technical-skills and career-alignment scores should credit operational analysis, custom internal tools, and process mapping as relevant, not as flight-risk noise. Still score hospitality/reservations tenure honestly when it is a gap.
 
 ## Thresholds
 - **Strong Fit** (75+): Definitely apply, tailor everything

@@ -1,0 +1,55 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - H Company, Founding Forward Deployed Engineer - US
+% Compile with: xelatex cover_h-company_founding-forward-deployed-engineer.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://github.com/EZ-Walk}{GitHub}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear H Company hiring team,}
+
+\lettercontent{I am writing about the Founding Forward Deployed Engineer role in the US. I live in Emeryville, so the Bay Area seat is already home, and I can travel for on-site deployments. For three years I have been the technical person on customer-facing AI work: name the multi-step process worth automating, integrate it with the systems the team already runs, and stay until they can operate it.}
+
+\lettercontent{H is an agentic-model lab. That is why I am applying. You train computer-use models so agents can act on a screen when there is no API, and Forward Deployed is how those agents land in a customer's environment and how field findings get back into the H platform. I already run that loop: discover, integrate, iterate, hand over.}
+
+\lettercontent{How that maps to what you need:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Customer-facing AI, three years:} I source, scope, and ship every engagement, including an MSP pre-sales risk workflow cut 98\% in processing time, then train operators to extend it.
+    \item \textbf{Python production systems:} 7+ years of professional Python, plus REST/OAuth APIs, PostgreSQL, Docker, and data pipelines (ingestion throughput up 99.8\% at 86\% lower cost). TypeScript and Next.js (React) are in production on a public OAuth app.
+    \item \textbf{LLM and agentic workflows:} Claude, OpenAI, and Gemini tool-calling, MCP servers, and Claude Code as a daily driver, orchestrated in n8n when the operating team needed a tool they could keep.
+\end{itemize}\par}
+\vspace{2pt}
+
+\lettercontent{One real gap, named plainly: I have not shipped computer-use agents that click through a GUI. My production agents call APIs, databases, and MCP tools. FastAPI is not my daily framework; Flask and Next.js backends are. The Holo action layer is the part I would ramp on with your research and product teams.}
+
+\lettercontent{Thank you for your time and consideration. I would welcome a conversation about which US customer workflows a founding FDE would own first.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

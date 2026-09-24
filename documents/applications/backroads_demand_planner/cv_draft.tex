@@ -1,0 +1,149 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Demand Planner, Yield Organization, Backroads (Berkeley, CA)
+%% Compile with: lualatex main_backroads_demand-planner.tex
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Force both first and last name AND section headings to render in moderncv
+% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
+% looks inconsistent with the rest of the blue accent scheme.
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Ethan Zaruba-Walker - CV},
+    pdfpagemode=FullScreen,
+}
+\usepackage[scale=0.80]{geometry}
+\usepackage{needspace}
+\usepackage{import}
+
+% personal data
+\name{Ethan}{Zaruba-Walker}
+\address{Emeryville, CA}{}{}
+\phone[mobile]{(512) 694-4844}
+\email{ethan@staffroomai.com}
+\extrainfo{\href{https://github.com/EZ-Walk}{GitHub}}
+
+\begin{document}
+
+\makecvtitle
+
+% ============================================================
+%     PROFILE STATEMENT
+% ============================================================
+
+\vspace{6pt}
+\small{Consultant and analyst who turns operational performance into actionable recommendations: identify the opportunity or risk, write it in the business's numbers, and put it in front of the person who has to act. Three years owning consulting engagements end to end, plus two years inside IBM Customer Support building Tableau and Cognos analytics for C-level executives in a live, deadline-driven operation. Based in Emeryville; four days a week in Berkeley is a commute.}
+
+% ============================================================
+%     CORE COMPETENCIES
+% ============================================================
+
+\section{Core Competencies}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{Business analytics \& recommendations}: find and collect data when it isn't handed over, pull performance out of large datasets, identify opportunities and risks, and write an actionable recommendation in the business's own numbers rather than a model dump
+
+\item \textbf{Stakeholder alignment}: Design Thinking discovery with operating teams, presentations and reports for C-Suite executives, and driving alignment so the partner can run the next cycle without me in the room
+
+\item \textbf{Large-dataset analysis}: SQL/PostgreSQL, Python, Tableau, and Cognos across multiple systems; pipelines and dashboards built to a high level of accuracy under deadline, not one-off slides
+
+\item \textbf{Consulting delivery}: three years owning discovery through recommendation and implementation, scoped and milestone-gated in a deadline-driven environment, balancing independent work with cross-functional collaboration
+
+\item \textbf{Quantitative foundation}: B.S. Information Science (Major GPA 3.7) with Applied Machine Learning and Cognitive Science; comfortable learning a new commercial vocabulary and testing it against the data
+
+\end{itemize}
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+
+\section{Professional Experience}
+\vspace{3pt}
+\begin{itemize}
+
+% --- StaffRoom AI ---
+\item{\cventry{2023--Present}{Founder \& AI Solutions Consultant}{StaffRoom AI}{Emeryville, CA}{}{\vspace{1pt}
+\begin{itemize}
+    \item Lead discovery with a client's operating team: map the current-state process, separate the steps that move the number from the ones that only look busy, and recommend what to change, naming the opportunity or risk before building anything
+    \item Automated an IT MSP's pre-sales cybersecurity risk assessments, cutting processing time 98\% against a measured baseline, then trained their staff to run and extend the workflow as demand shifted
+    \item Modernized a data-analytics platform's ingestion pipeline, increasing throughput 99.8\% in 4 months while cutting cost 86\%, working across systems with a high bar for accuracy
+    \item Built data pipelines and the client-facing \textit{Lighthouse} analytics dashboard for Allies Against Slavery, ingesting federal case documents so the team could see patterns instead of paging through files
+    \item Own the full cycle on every engagement: source the work, write the SOW, deliver on deadline, and report outcomes back to stakeholders in their metrics, including C-level audiences
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Wiz Music ---
+\needspace{5\baselineskip}
+\item{\cventry{2022}{Community Development Intern}{Wiz Music}{Barcelona, Spain}{}{\vspace{1pt}
+\begin{itemize}
+    \item Diagnosed a multilingual Discord community from its own analytics: segmented churn by tenure and joins by source, showed that reported membership growth was not organic, and raised it with the team
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Valhalla ---
+\needspace{5\baselineskip}
+\item{\cventry{2021}{Machine Learning Engineer (Intern)}{Valhalla Healthcare}{Remote}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built an ML model translating handwritten clinical notes into a structured data model (F1 80.03), putting quantitative output in front of a non-technical clinical team
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- IBM full-time ---
+\needspace{5\baselineskip}
+\item{\cventry{2018--2020}{Data Engineer / Cognitive Software Engineer, Customer Support}{IBM}{Austin, TX}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built and launched BI dashboards (Tableau, Cognos) that delivered operational insight to C-level executives, led Design Thinking sessions so the metrics matched the decisions leaders had to make, and served that live Customer Support operation with timely analyses rather than a quarterly slide deck
+    \item Designed and deployed IBMLogAnalyze, a GDPR-compliant data pipeline and analytics dashboard that eliminated 1--3 hours of per-case log-analysis prep
+    \item Authored release notes and documentation that walked cross-functional stakeholders through each change, keeping detailed operational data accurate as the process moved
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     EDUCATION & CERTIFICATIONS
+% ============================================================
+
+\section{Education \& Certifications}
+\vspace{1pt}
+\begin{itemize}
+
+\item{\cventry{2018--2023}{B.S. Information Science}{University of Colorado Boulder}{Boulder, CO}{}{\vspace{1pt}
+Major GPA 3.7 · Certificate of Cognitive Science · Dean's List (Fall 2019, Spring 2023). Related quantitative discipline: Applied Machine Learning, User-Centered Design, Information Ecosystems. Senior capstone: Gamifying Outdoor Education in Software.
+}}
+
+\vspace{3pt}
+
+\item \textbf{IBM Systems \& Solutions Architecture Professional Certificate}: coursework complete, capstone in progress. Completed: Project, Stakeholder, and Requirements Management; Business Process Modeling, Analysis and Improvement; IT Systems Design and Analysis; Enterprise Data Architecture and Operations; Data Integration, Data Storage, and Data Migration
+
+\item \textbf{Deep Learning Specialization} · \textbf{TensorFlow Developer Professional Certificate}, DeepLearning.AI (2020--2021)
+
+\end{itemize}
+
+% ============================================================
+%     AWARDS \& REFERENCES
+% ============================================================
+
+\section{Awards \& References}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{2nd Place, IBM Hackathon for Racial Justice} (2020): Team Lead and Data Scientist; aggregated multi-source data and presented insights to executive judges
+\item Outdoor credentials used in the field: EMT (2024), AIARE 1 avalanche training (2022)
+\item References available upon request.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Fulcrum, Forward Deployed AI Engineer (San Francisco)
+% Compile with: xelatex cover_fulcrum_forward-deployed-ai-engineer.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://linkedin.com/in/ezwalk}{LinkedIn}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Fulcrum hiring team,}
+
+\lettercontent{I am writing about the Forward Deployed AI Engineer role in San Francisco. For three years I have been the only technical person on my own engagements: I run discovery with a customer's operating team, build the automation, and stay until they can run it without me. I live in Emeryville, so five days in the office is a short commute.}
+
+\lettercontent{Account managers stuck keying data and chasing documents instead of talking to clients is the class of operational drag I already remove. You just raised a Series A, and the product sits in Outlook and the AMS brokers already use, which is where adoption is won. Insurance brokerage operations are new to me. I learn a domain by mapping the current workflow with the people who run it, then automating the manual step that burns the hours.}
+
+\lettercontent{How that maps to what you need:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Customer implementation:} I automated an IT MSP's pre-sales risk assessments, cut processing time 98\%, then trained their team to keep extending the workflow. The same discovery-to-handover loop is how I would take a first workflow live and fold the reusable pieces back into the core product.
+    \item \textbf{Python daily, TypeScript in production:} public OAuth app and Notion API integrations in TypeScript and Python, with CI that tests live API connectivity. Claude Code is my daily driver for iterating with customers.
+    \item \textbf{Docs and mixed rooms:} at IBM Customer Support I wrote the release notes and product documentation that walked stakeholders through each change, after Design Thinking sessions that surfaced the actual need.
+    \item \textbf{Owner, not renter:} I source, scope, price, and deliver my own book. Not a regional quota. The entire number for my own business.
+\end{itemize}\par}
+\vspace{2pt}
+
+\lettercontent{Two gaps, named plainly. TypeScript is in production on those integrations, not the language I reach for first; Python is. Insurance brokerage is a new domain. Neither is a reason to slow down a customer engagement. Both are things I will be explicit about while I ramp.}
+
+\lettercontent{Thank you for your time and consideration. I would welcome the chance to talk about which customizations you are folding back into the core product first.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

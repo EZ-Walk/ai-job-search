@@ -1,0 +1,121 @@
+%% Compact Arial CV (letter, 1 page)
+%% Recreated from the dense single-column layout used in
+%% Ruben Aguilar's OpenAI Strategy & Operations Launch Programs resume
+%% (ReportLab / Arial). Profile-agnostic skeleton for /apply.
+%% Compile with: lualatex -interaction=nonstopmode <file>.tex
+%% Output: cv/main_<company>_<role>.tex
+%%
+%% Packages: article + fontspec, geometry, hyperref, setspace.
+%% No enumitem/titlesec (not in TeX Live basic).
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={[YOUR_NAME] - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+% Tight hyphen bullets without enumitem
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+% Section: ALL CAPS bold + full-width rule
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+% Company (bold) + location (right); title (italic) + dates (right)
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont [YOUR_NAME]\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]}
+    {-}
+    [YOUR_PHONE]
+    {-}
+    \href{[YOUR_LINKEDIN_URL]}{[YOUR_LINKEDIN_DISPLAY]}
+    {-}
+    \href{[YOUR_GITHUB_URL]}{[YOUR_GITHUB_DISPLAY]}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{[COMPANY]}{[LOCATION]}{[TITLE]}{[DATES]}
+\begin{cvitems}
+  \item [BULLET]
+  \item [BULLET]
+  \item [BULLET]
+\end{cvitems}
+
+\vspace{5pt}
+\cventryhead{[COMPANY]}{[LOCATION]}{[TITLE]}{[DATES]}
+\begin{cvitems}
+  \item [BULLET]
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{[SCHOOL]}{[SCHOOL_LOCATION]}{[DEGREE]}{[DATES]}
+
+\vspace{5pt}
+\cveduhead{[SCHOOL]}{[SCHOOL_LOCATION]}{[DEGREE]}{[DATES]}
+
+\cvsection{Skills}
+
+\noindent\textbf{Discovery \& delivery:} [SKILLS].\\[2pt]
+\noindent\textbf{Build \& analysis:} [SKILLS].
+
+\end{document}

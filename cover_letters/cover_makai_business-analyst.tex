@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Makai Labs, Business Analyst (Product Management, remote)
+% Compile with: xelatex cover_makai_business-analyst.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://linkedin.com/in/ezwalk}{LinkedIn}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Makai hiring team,}
+
+\lettercontent{I am applying for the Business Analyst role on the Product Management team. I interviewed with Makai last year, first for an engineering seat that was not the right match, then for this BA role, which filled before we completed the process. I am applying again because this is the client-engagement work I already run.}
+
+\lettercontent{Makai's premise is the one I work from. Technology will never be 100\% accurate, so people remain the final firewall for quality, and the solution has to adapt to how a client already works. The MRO case study is why this role clicked: the interface doubled productivity even with auto-extraction turned off, so process design and the human firewall are part of the product. I want that work on the Product Management team, pairing with engineering when a prototype clarifies the vision.}
+
+\lettercontent{How I would contribute on a new-client engagement:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Discovery and process diagrams:} I start with interviews and existing documentation, then produce current-state workflow diagrams the rest of the team can build against, including the files, data, and systems people already use. I completed IBM's Business Process Modeling, Analysis and Improvement coursework in April 2026.
+    \item \textbf{Functional specs through pilot:} I write the requirements (discovery contracts, SOWs, acceptance criteria) and stay to test new features with a small group of real users and measure the results. On a content-scoring workflow, the pass bar was 95\% agreement with the client's own reviewers.
+    \item \textbf{Training and the living roadmap:} after an IT MSP risk-assessment workflow cut processing time 98\%, I trained their team to run and extend it so they own the system. After launch I own issue support and the enhancement backlog. Agile delivery today is GitHub and Notion; Jira or Azure DevOps would be new tools, not a new way of working.
+    \item \textbf{Prototypes when they clarify the vision:} I can sit with engineering and produce an early working model (Python, n8n, Claude Code) so the product team can test an early vision with users, without turning this seat into an IC engineering role.
+\end{itemize}\par}
+\vspace{2pt}
+
+\lettercontent{Thank you for your time and consideration. I would welcome a conversation about how you run discovery with a new client, and how a BA fits existing platform modules to that current state.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

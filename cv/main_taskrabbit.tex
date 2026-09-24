@@ -1,0 +1,166 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: AI Solutions Lead, Taskrabbit (San Francisco)
+%% Compile with: lualatex main_taskrabbit.tex
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Force both first and last name AND section headings to render in moderncv
+% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
+% looks inconsistent with the rest of the blue accent scheme.
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Ethan Zaruba-Walker - CV},
+    pdfpagemode=FullScreen,
+}
+\usepackage[scale=0.80]{geometry}
+\usepackage{needspace}
+\usepackage{import}
+
+% personal data
+\name{Ethan}{Zaruba-Walker}
+\address{Emeryville, CA}{}{}
+\phone[mobile]{(512) 694-4844}
+\email{ethan@staffroomai.com}
+\extrainfo{\href{https://github.com/EZ-Walk}{GitHub}}
+
+\begin{document}
+
+\makecvtitle
+
+% ============================================================
+%     PROFILE STATEMENT
+% ============================================================
+
+\vspace{6pt}
+\small{AI solutions builder who embeds with business teams, traces a workflow to where the time actually goes, and ships the agent that takes the repetitive part off them. Three years running engagements end to end at my own consultancy: workflow discovery, build, deployment, and the enablement that leaves the team able to run and extend it without me. Every engagement measured against a baseline, including a pre-sales workflow cut 98\% in processing time and an ingestion pipeline moved 99.8\% higher in throughput at 86\% lower cost. Over two years inside IBM building AI and data tools for a customer-support organization, adopted by the front-line teams whose queues they changed.}
+
+% ============================================================
+%     CORE COMPETENCIES
+% ============================================================
+
+\section{Core Competencies}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{Workflow discovery \& process mapping}: embed with a team, map current-state workflows end to end, and separate the steps worth automating from the ones that only look repetitive; the discovery session is a working session, not a slide deck
+
+\item \textbf{Claude-powered agents \& internal tools}: build and deploy agents with the Claude API, MCP (Model Context Protocol), and Claude Code, plus LLM tool-calling across OpenAI and Gemini; production systems, not prototypes
+
+\item \textbf{Enablement \& capability building}: hand the build over deliberately, train the team to build the next one themselves, and judge the engagement on what still runs after I leave rather than on what shipped
+
+\item \textbf{Impact measurement}: set the baseline before building, then report the delta in the business's own numbers (processing time, throughput, cost, time-to-resolution)
+
+\item \textbf{Stakeholder influence \& translation}: move skeptical operators from ``this will not work on my process'' to running it themselves; present findings and ROI to C-level stakeholders
+
+\item \textbf{Self-directed delivery}: sole builder on every engagement since 2023, scoping, pricing, and shipping without a dedicated engineering partner
+
+\item \textbf{Reusable patterns \& scale}: turn a one-off automation into a template the next team can pick up, documented so it travels without me in the room; three years of engagements run on the same repeatable discovery-to-handover process
+
+\item \textbf{Technical foundation}: Python (7+ yrs professional), TypeScript/Next.js, SQL/PostgreSQL, n8n, data pipelines, BI dashboards (Tableau, Cognos)
+
+\end{itemize}
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+
+\section{Professional Experience}
+\vspace{3pt}
+\begin{itemize}
+
+% --- StaffRoom AI ---
+\item{\cventry{2023--Present}{Founder \& AI Solutions Consultant}{StaffRoom AI}{Emeryville, CA}{}{\vspace{1pt}
+\begin{itemize}
+    \item Embed with client operating teams to map end-to-end workflows, identify the highest-impact automation targets, then design, build, and deploy the solution as the only technical person on the engagement
+    \item Automated an IT MSP's pre-sales cybersecurity risk assessments, reducing processing time 98\% against a measured baseline, then trained the team to run and extend the workflow without me
+    \item Modernized a data-analytics platform's ingestion pipeline, increasing throughput 99.8\% in 4 months while cutting cost 86\%
+    \item Build production agent and LLM tooling since 2023: Claude API tool-calling, MCP servers, Claude Code, and n8n automations put in front of non-technical teams as their daily tools
+    \item Built data pipelines and an ML model for anti-trafficking nonprofit Allies Against Slavery, ingesting federal case documents to power the \textit{Lighthouse} analytics dashboard their team runs day to day
+    \item Ship production Notion API integrations in TypeScript and Python: a public OAuth (Connections) app, a comments-polling service, and a Whisper-to-Notion pipeline with CI that tests live API connectivity
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Wiz Music ---
+\item{\cventry{2022}{Community Development Intern}{Wiz Music}{Barcelona, Spain}{}{\vspace{1pt}
+\begin{itemize}
+    \item Grew and stewarded a global, multilingual (English/Spanish/Catalan) builder-and-creator community around an early-stage music startup, and built Python automation to streamline investor outreach
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Valhalla ---
+\needspace{5\baselineskip}
+\item{\cventry{2021}{Machine Learning Engineer (Intern)}{Valhalla Healthcare}{Remote}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built an ML model translating handwritten clinical notes into an extensible data model (F1 80.03), putting a usable AI tool in front of a non-technical clinical team
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- IBM full-time ---
+\needspace{5\baselineskip}
+\item{\cventry{2018--2020}{Data Engineer / Cognitive Software Engineer, Customer Support}{IBM}{Austin, TX}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built DRE Bot, a Watson NLP Slack app for a customer-support operation, surfacing similar past cases to support engineers and cutting time-to-resolution for the most common customer issues to a single response; adoption held at three-month team check-ins
+    \item Designed and deployed IBMLogAnalyze, a GDPR-compliant data pipeline and analytics dashboard that eliminated 1--3 hours of per-case log-analysis prep
+    \item Led Design Thinking discovery sessions to surface business needs, launched BI dashboards delivering operational insight to C-level executives, and authored the release notes that walked stakeholders through each change
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     SELECTED PROJECTS
+% ============================================================
+
+\section{Selected Projects}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{Agentic job-search system}: a Claude Code workspace of custom skills and subagents that scrapes postings, scores fit against a structured profile, and drafts tailored documents, with the evaluation framework versioned and calibrated against outcomes
+\item \textbf{notion.md}: version-controlled Markdown mirror of a full Notion workspace, with architecture decision records so the next person can follow the pattern instead of rediscovering it
+\item \textbf{``Ocean-Tech'' gatherings}: an early-stage lightning-talk series I started, bringing Bay Area engineers, founders, and sailors together on the water
+\end{itemize}
+
+% ============================================================
+%     EDUCATION & CERTIFICATIONS
+% ============================================================
+
+\section{Education \& Certifications}
+\vspace{1pt}
+\begin{itemize}
+
+\item{\cventry{2018--2023}{B.S. Information Science}{University of Colorado Boulder}{Boulder, CO}{}{\vspace{1pt}
+Major GPA 3.7 · Certificate of Cognitive Science · Dean's List (Fall 2019, Spring 2023). Coursework in Applied Machine Learning, User-Centered Design, and Information Ecosystems.
+}}
+
+\vspace{3pt}
+
+\item \textbf{IBM Systems \& Solutions Architecture Professional Certificate}: in progress; completed Business Process Modeling, Analysis and Improvement; IT Systems Design and Analysis; Cloud Native, DevOps, Agile
+
+\item \textbf{Deep Learning Specialization} · \textbf{TensorFlow Developer Professional Certificate}, DeepLearning.AI (2020--2021)
+
+\end{itemize}
+
+% ============================================================
+%     AWARDS & REFERENCES
+% ============================================================
+
+\section{Awards \& References}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{2nd Place, IBM Hackathon for Racial Justice} (2020): Team Lead and Data Scientist for a diverse intern team, presenting insights to executive judges
+\item References available upon request.
+\end{itemize}
+
+\end{document}

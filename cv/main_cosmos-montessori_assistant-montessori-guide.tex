@@ -1,0 +1,148 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Assistant Montessori Guide (maternity-leave substitute), Cosmos Montessori
+%% Template: compact-arial (templates/cv/compact-arial/)
+%% Compile with: lualatex main_cosmos-montessori_assistant-montessori-guide.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    Emeryville, CA\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Adult workplace discovery: watch how a team actually works, listen without rushing, and write instructions the next adult can follow so the work continues without me in the room.
+  \item Trained an operations team to run and extend a workflow I had built, then let them own it. Processing time fell 98\% against a measured baseline, and I stayed available after they took over.
+  \item Designed a content system with the people who would run it, and stayed until they could operate it without me.
+  \item Delivered EZ-AI, problem-first training for adult domain experts, starting from the learner's real work and treating their judgment as the thing to keep. Adult learners only.
+  \item After a handoff I stay available, write down what is still not working, and change the work when the people who own it tell me to. Comfortable receiving guidance and revising.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Wiz Music}{Barcelona, Spain}
+{Community Development Intern}{May 2022 - July 2022}
+\begin{cvitems}
+  \item Observed a multilingual adult community (English, Spanish, Catalan) from its own analytics, segmented churn by tenure and joins by source, and raised the finding when reported growth was not organic.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Built a human-in-the-loop model over handwritten clinical notes (F1 80.03) for one adult customer, not children.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Led discovery sessions with colleagues, listened for what they actually needed, and wrote the release notes and documentation that walked them through each change.
+  \item Built a Slack tool that surfaced similar past cases for support engineers, then stayed through check-ins until common issues resolved in a single response.
+  \item Designed IBMLogAnalyze, a data pipeline and dashboard that removed 1 to 3 hours of log-analysis prep per case, then documented it so engineers could run it themselves.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S.\ Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+\begin{cvitems}
+  \item Cognitive psychology, including graduate seminar PSYC 7215; Advanced Cognitive Psychology (PSYC 4145); User-Centered Design; Community-Based Design.
+\end{cvitems}
+
+\vspace{3pt}
+\cveduhead{RC Health Services}{Austin, TX}
+{Emergency Medical Technician}{2024}
+\begin{cvitems}
+  \item Adult emergency assessment, BLS, and team communication under uncertainty. Not pediatric CPR or First Aid.
+\end{cvitems}
+
+\vspace{3pt}
+\cveduhead{Bondi Outdoor Leadership}{Colorado}
+{AIARE 1 Avalanche Safety and Rescue}{March 2022}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Presence \& enablement:} observation of adult work, active listening, process mapping, 1:1 adult training, receiving guidance and revising, writing instructions others can follow.\\[2pt]
+\noindent\textbf{Learning sciences:} Certificate of Cognitive Science; cognitive psychology; user-centered design. No AMI/AMS credential, no ECE units, no classroom or 0 to 3 tenure.\\[2pt]
+\noindent\textbf{Languages \& licensing:} English (native), Spanish (conversational). EMT (2024), not pediatric CPR. Willing to obtain pediatric CPR, First Aid, ECE units, TB, MMR, Tdap, and Live Scan.\\[2pt]
+\noindent\textbf{Outdoors:} AIARE 1 avalanche rescue. Live and work aboard a 1966 sailboat on the SF Bay.\par
+}
+
+\end{document}

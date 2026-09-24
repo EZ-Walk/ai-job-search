@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Notion, Workflow + Process Designer (AI Enablement)
+% Compile with: xelatex cover_notion_workflow-process-designer.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://github.com/EZ-Walk}{GitHub}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Notion hiring team,}
+
+\lettercontent{I am writing about the Workflow + Process Designer (AI Enablement) role on Business Technology. I map how work actually runs, decide where a person approves and where an agent assists, then ship the Notion workflows and runbooks that make that operational. I live in Emeryville, so Anchor Days in San Francisco are a short commute.}
+
+\lettercontent{Notion's February 2026 release notes put 2,800 Custom Agents on internal work, including routing and reporting. Customer zero is already how the company runs. This seat is how Foundations gets the same standard for intake, triage, approvals, and auditability without adding headcount.}
+
+\lettercontent{Here is how I would take that on:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Process redesign:} current-state mapping, then a future-state with explicit states, routing, and handoffs. I did that for a Notion content system that 10x'd agency production volume, then stayed through enablement.
+    \item \textbf{Adoption, not documentation:} I automated an IT MSP's pre-sales risk assessments (intake through reporting), cut processing time 98\%, and trained the team to run and extend the workflow themselves.
+    \item \textbf{Notion systems:} I work daily in Claude Code against Notion's API and hosted MCP, the seam your Developer Platform opened for External Agents. In this seat I would ship Custom Agents and runbooks Foundations can operate.
+    \item \textbf{Human-in-the-loop:} Notion calls it progressive trust: human review first, more autonomy after the agent proves out. For MediaMark Spotlight I designed LLM-as-a-judge evaluation with a 95\% human-agreement bar and a triple gate.
+\end{itemize}\par}
+\vspace{6pt}
+
+\lettercontent{Thank you for your time and consideration. I would welcome the chance to walk through a Foundations intake workflow from current state to an agent-assisted, auditable operating model.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

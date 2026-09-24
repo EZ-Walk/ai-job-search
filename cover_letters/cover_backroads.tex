@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Backroads
+% Compile with: xelatex cover_backroads.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+% Tighter paragraph gap so the approved wording still fits on one page.
+\renewcommand{\lettercontent}[1]{%
+  \raggedright
+  \fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+  #1\par\vspace{5pt}%
+  \normalfont
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Backroads team,}
+
+\lettercontent{The reason Backroads keeps pulling me back is simple: I believe active travel makes people more connected—to the world, to people unlike them and to parts of themselves they haven’t met yet. That’s the pattern I’ve organized my life around.}
+
+\lettercontent{I was fortunate enough to travel growing up, and I learned early just how many different ways there are to live a life. After college, I followed that idea as far as I could. I road tripped in my 4Runner across the western United States, stopping wherever there was good climbing, hiking, surfing or something else active people were doing. At crags, reef breaks, trails and campgrounds, I met people whose lives looked nothing like mine. I sorely didn’t uncover any great truth about the universe, but I made friends across spectrums of age, wealth, background and outlook. Through them, I also found pieces of myself I would not have encountered by staying comfortable.}
+
+\lettercontent{In Sausalito, a dream began to form into a loose plan to sail south along the Pacific coast of the Americas. It was another commitment to the same experiment: use movement and shared experience to connect more deeply with the world and the people living in it.}
+
+\lettercontent{Active travel is not just movement through a beautiful place. It creates the conditions for people to challenge themselves, encounter difference and become companions. Connecting with ourselves makes us more capable; connecting with each other makes us capable of far more than we could do alone. I believe a Backroads trip turns that belief into an experience.}
+
+\lettercontent{If active travel is the passion I would bring to Backroads, systems work is the craft. Running StaffRoomAI has taught me that keeping details organized is how care becomes visible. It is how trust survives growth, and how a team keeps delivering the experience it promised as more people enter it.}
+
+\lettercontent{I like owning the outcomes that matter and building and operating the systems that deliver them. Running a business has taught me not to blame or complain when something slips. I look for the gap, fix what I can and support the people around me in owning their outcomes just as they support me in mine.}
+
+\lettercontent{At their best, Data and AI automate the mechanical so people have more time for the relational. I have built systems to spend more time listening closely, asking useful questions and following through reliably. I would bring that same instinct to Backroads: use technology quietly, in service of the guests, leaders and teammates whose relationships make the company work.}
+
+\lettercontent{I am also applying from a place of real commitment. The old dream was to sail away forever. It has been replaced by a better one: build a long-term life in the East Bay with my girlfriend and take occasional sailing adventures rather than spend my life escaping toward the horizon.}
+
+\lettercontent{I love the community we have here. When Backroads staff describe the lively, in-person culture of the East Bay office, I hear the kind of community I want to join and help strengthen.}
+
+\lettercontent{That is why I believe I could be a strongly positive force on a Backroads team. I would bring a lived belief in active travel, a systems mind that makes care reliable, a habit of owning outcomes and a genuine desire to build a life with the people around me.}
+
+\lettercontent{Thank you for your time and attention.}
+\enlargethispage{3\baselineskip}
+\signature{Ethan Zaruba-Walker}
+\end{document}

@@ -1,0 +1,148 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Hotel Operations Assistant, Backroads (Berkeley, CA)
+%% Compile with: lualatex main_backroads_hotel-operations-assistant.tex
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Force both first and last name AND section headings to render in moderncv
+% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
+% looks inconsistent with the rest of the blue accent scheme.
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Ethan Zaruba-Walker - CV},
+    pdfpagemode=FullScreen,
+}
+\usepackage[scale=0.80]{geometry}
+\usepackage{needspace}
+\usepackage{import}
+
+% personal data
+\name{Ethan}{Zaruba-Walker}
+\address{Emeryville, CA}{}{}
+\phone[mobile]{(512) 694-4844}
+\email{ethan@staffroomai.com}
+\extrainfo{\href{https://staffroomai.notion.site/ezwalk?source=resume}{Portfolio}}
+
+\begin{document}
+
+\makecvtitle
+
+% ============================================================
+%     PROFILE STATEMENT
+% ============================================================
+
+\vspace{6pt}
+\small{Operations-focused data professional making an intentional move into active travel. Three years managing SOWs, data workflows, reporting, and deadline-sensitive delivery for consulting clients, plus two years supporting IBM Customer Support operations. Brings careful data validation, clear communication, and fast system learning. Based in Emeryville and ready for Backroads' four-day Berkeley office schedule.}
+
+% ============================================================
+%     CORE COMPETENCIES
+% ============================================================
+
+\section{Core Competencies}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{Data validation \& proactive problem solving}: audit structured data workflows, reconcile information across systems, and document changes so operating teams can trust what they see
+
+\item \textbf{Contract documents \& workflow support}: write SOWs, translate stakeholder requirements into accurate delivery records, and keep milestone-gated work moving on schedule
+
+\item \textbf{Operational reporting \& systems}: build Tableau and Cognos reports for operating teams and executives, analyze structured data, and learn unfamiliar systems quickly; SQL/PostgreSQL and Python
+
+\item \textbf{Collaboration \& communication}: Design Thinking sessions, client discovery, staff enablement, release notes, and reports for technical, operating, and C-suite stakeholders
+
+\item \textbf{Active travel alignment}: sailor living aboard on the San Francisco Bay, EMT-certified, and AIARE 1 trained; co-built an outdoor-education trip-planning capstone and is deliberately moving into the outdoor industry
+
+\end{itemize}
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+
+\section{Professional Experience}
+\vspace{3pt}
+\begin{itemize}
+
+% --- StaffRoom AI ---
+\item{\cventry{2023--Present}{Founder \& AI Solutions Consultant}{StaffRoom AI}{Emeryville, CA}{}{\vspace{1pt}
+\begin{itemize}
+    \item Write SOWs and milestone-gated delivery plans, translating stakeholder requirements into accurate scope, responsibilities, and acceptance criteria
+    \item Modernized a data-analytics platform's ingestion pipeline, increasing throughput 99.8\% in 4 months while cutting cost 86\%, with careful validation across source and destination systems
+    \item Automated an IT MSP's pre-sales risk assessments, cutting processing time 98\%, then documented the workflow and trained staff to operate it independently
+    \item Built data pipelines for an anti-trafficking nonprofit, scaling structured data-entry throughput and documenting transparent collection procedures
+    \item Prioritize multiple client commitments from discovery through reporting, working independently and collaborating with stakeholders to deliver deadline-sensitive work
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Wiz Music ---
+\needspace{5\baselineskip}
+\item{\cventry{2022}{Community Development Intern}{Wiz Music}{Barcelona, Spain}{}{\vspace{1pt}
+\begin{itemize}
+    \item Audited multilingual community performance metrics, segmented churn by tenure and joins by source, identified that reported growth was not organic, and raised the discrepancy clearly with the team
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Valhalla ---
+\needspace{5\baselineskip}
+\item{\cventry{2021}{Machine Learning Engineer (Intern)}{Valhalla Healthcare}{Remote}{}{\vspace{1pt}
+\begin{itemize}
+    \item Translated handwritten clinical notes into a consistent, extensible data model and built an ML pipeline that achieved an F1 score of 80.03
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- IBM full-time ---
+\needspace{5\baselineskip}
+\item{\cventry{2018--2020}{Data Engineer / Cognitive Software Engineer, Customer Support}{IBM}{Austin, TX}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built Tableau and Cognos reports for operating teams and C-level executives, using Design Thinking sessions to ensure the data answered the decisions stakeholders needed to make
+    \item Designed and deployed IBMLogAnalyze, a GDPR-compliant data pipeline and reporting workflow that eliminated 1--3 hours of per-case log preparation
+    \item Authored release notes and product documentation, giving cross-functional stakeholders an accurate record of system and process changes
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     EDUCATION & CERTIFICATIONS
+% ============================================================
+
+\section{Education \& Certifications}
+\vspace{1pt}
+\begin{itemize}
+
+\item{\cventry{2018--2023}{B.S. Information Science}{University of Colorado Boulder}{Boulder, CO}{}{\vspace{1pt}
+Major GPA 3.7 · Certificate of Cognitive Science · Dean's List (Fall 2019, Spring 2023). Coursework: Applied Machine Learning, User-Centered Design, Information Ecosystems. Senior capstone: outdoor-education trip-planning software.
+}}
+
+\vspace{3pt}
+
+\item \textbf{IBM Systems \& Solutions Architecture Professional Certificate}, in progress. Completed coursework includes Business Process Modeling, Analysis and Improvement; IT Systems Design and Analysis; and Cloud Native, DevOps, Agile
+
+\item \textbf{Deep Learning Specialization} · \textbf{TensorFlow Developer Professional Certificate}, DeepLearning.AI (2020--2021)
+
+\end{itemize}
+
+% ============================================================
+%     AWARDS \& REFERENCES
+% ============================================================
+
+\section{Awards \& Outdoor Alignment}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{2nd Place, IBM Hackathon for Racial Justice} (2020): Team Lead and Data Scientist; aggregated multi-source data and presented insights to executive judges
+\item Outdoor credentials: EMT (2024), AIARE 1 avalanche training (2022)
+\end{itemize}
+
+\end{document}

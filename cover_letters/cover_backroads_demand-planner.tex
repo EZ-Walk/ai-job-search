@@ -1,0 +1,55 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Backroads, Demand Planner (Berkeley, Yield Organization)
+% Compile with: xelatex cover_backroads_demand-planner.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Backroads hiring team,}
+
+\lettercontent{I am applying for the Demand Planner role on the Demand Planning team in your Yield Organization, Berkeley HQ. I live in Emeryville, so four days on site is a commute. I bring three years of consulting, which your posting lists as qualifying experience, and two years of IBM operational analytics. I turn performance data into recommendations that partners actually use.}
+
+\lettercontent{Your 2026 catalog is the widest in company history: more than 270 trips, with planned growth of more than 10 percent. Demand Planning decides which of those trips run, when they depart, and how much capacity they get. I want that seat because it is how the mission becomes a schedule. EMT, AIARE 1, and a CU Boulder capstone on gamifying outdoor education are already how I spend my time.}
+
+\lettercontent{On the work in your posting:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Biannual planning and stakeholder alignment:} I map a team's current process, name the constraint, write the proposal, and stay until they can run the next cycle. An IT MSP's pre-sales assessments dropped 98\% in processing time against a measured baseline, then their staff kept the workflow.
+    \item \textbf{Trip-performance reviews, in adjacent form:} at IBM I built Tableau and Cognos dashboards for C-level executives in a live Customer Support operation, plus IBMLogAnalyze, which cut 1--3 hours of per-case log prep.
+    \item \textbf{When the number and the story disagree:} at Wiz Music I segmented community churn by tenure and joins by source, showed that reported growth was not organic, and raised it with the team. That is the habit I would bring when a departure's story and its numbers disagree.
+\end{itemize}\par}
+\vspace{2pt}
+
+\lettercontent{I have not held a demand-planning title. Booking pace and assortment planning are new. Excel, SQL, Python, Tableau, and Cognos on large datasets are not. I want that recommendation work pointed at guest demand and real capacity.}
+
+\lettercontent{Thank you for your time and consideration. I would welcome the chance to walk through how I would read a departure that is behind last year's curve.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

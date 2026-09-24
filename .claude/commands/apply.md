@@ -17,6 +17,12 @@ Follow these steps **exactly in order**. Do not skip steps.
 - If `$ARGUMENTS` looks like a URL, use `WebFetch` to retrieve the job posting content.
 - If it is pasted text, use it directly.
 - Extract: **company name**, **role title**, **department** (if mentioned), **location**, and **language** of the posting (Danish or English).
+- Derive file slugs now and reuse them for the rest of the workflow:
+  - Company slug: lowercase, hyphens for spaces (`Backroads` → `backroads`)
+  - Role slug: lowercase, hyphens for spaces (`Guest Services Representative` → `guest-services-representative`)
+  - CV path: `cv/main_<company>_<role>.tex`
+  - Cover letter path: `cover_letters/cover_<company>_<role>.tex`
+- **Never overwrite another role's files.** Before writing, glob `cv/main_<company>*`. If `cv/main_<company>.tex` (legacy, no role) or any other `cv/main_<company>_*.tex` exists, leave those files untouched and write only the new role-specific path. If `cv/main_<company>_<role>.tex` already exists for this same role, ask before replacing.
 - Store these for use throughout the workflow.
 
 ---
@@ -60,15 +66,16 @@ Read only the reference files you do not yet have:
 - `.claude/skills/job-application-assistant/06-cover-letter-templates.md`
 
 Also read the most recent existing CV and cover letter files for concrete structural reference (one of each is enough):
-- Read any existing `cv/main_*.tex` file as a LaTeX template reference
+- If an `ACTIVE-TEMPLATE` block is present in `05-cv-templates.md`, read that template's `template.tex` as the CV structural reference (not a leftover moderncv `cv/main_*.tex`)
 - Read any existing `cover_letters/cover_*.tex` or `cover_letters/Cover_*.tex` file as a template reference
 
-### CV (`cv/main_<company>.tex`)
+### CV (`cv/main_<company>_<role>.tex`)
 - Always in **English**
-- Follow the moderncv/banking format from `05-cv-templates.md`
-- Tailor the profile statement and experience bullets to the specific role
+- Follow `05-cv-templates.md`. If that file has an `ACTIVE-TEMPLATE` managed block, use that skeleton, engine, fonts, and page limit. Otherwise use stock moderncv/banking and 2 pages.
+- Tailor experience bullets (and a profile statement only if the active template has one) to the specific role
 - Reframe skills and achievements to match job requirements
-- Keep to 2 pages
+- Keep to the active template's page limit
+- Do **not** write `cv/main_<company>.tex`. That path cannot hold two roles at the same company.
 
 ### Cover Letter (`cover_letters/cover_<company>_<role>.tex`)
 - **Match the language of the job posting** (Danish posting -> Danish cover letter, English posting -> English cover letter)
@@ -113,7 +120,7 @@ Do NOT read `05-cv-templates.md` or `06-cover-letter-templates.md` — those gov
 ### 3. Drafts to Review
 Both drafts are provided inline below. Do NOT use the Read tool on the draft files — use these exact texts.
 
-<CV_DRAFT file="cv/main_<COMPANY>.tex">
+<CV_DRAFT file="cv/main_<COMPANY>_<ROLE>.tex">
 <INSERT_CV_DRAFT_HERE>
 </CV_DRAFT>
 
@@ -134,7 +141,7 @@ Return your feedback in **two parts**:
 A JSON array of concrete edits the drafter can apply directly without re-reading the files. Each edit is an object:
 ```json
 {
-  "file": "cv/main_<COMPANY>.tex" | "cover_letters/cover_<COMPANY>_<ROLE>.tex",
+  "file": "cv/main_<COMPANY>_<ROLE>.tex" | "cover_letters/cover_<COMPANY>_<ROLE>.tex",
   "old_string": "<exact text currently in the draft>",
   "new_string": "<replacement text>",
   "reason": "<one-line rationale: keyword match / company angle / reframing / style>"
@@ -181,12 +188,14 @@ After all edits are applied, the two files on disk are the final drafts.
 
 ### 5a. Compile
 
+Read the compile engine and page limit from `05-cv-templates.md` (the `ACTIVE-TEMPLATE` block wins if present). Stock defaults if no override: CV `lualatex` / 2 pages; cover letter `xelatex` / 1 page.
+
 ```bash
-cd cv && lualatex -interaction=nonstopmode main_<company>.tex
+cd cv && lualatex -interaction=nonstopmode main_<company>_<role>.tex
 cd ../cover_letters && xelatex -interaction=nonstopmode cover_<company>_<role>.tex
 ```
 
-- CV uses **lualatex** — pdflatex fails on modern MiKTeX with fontawesome5 font-expansion errors. lualatex handles the same sources cleanly.
+- Stock moderncv CV uses **lualatex** — pdflatex fails on modern MiKTeX with fontawesome5 font-expansion errors. The compact-arial CV also uses **lualatex** (fontspec / Arial).
 - Cover letter uses **xelatex** — cover.cls requires fontspec.
 
 If either compile fails, fix the error and re-compile until clean.
@@ -195,11 +204,14 @@ If either compile fails, fix the error and re-compile until clean.
 
 Read both PDFs via the Read tool and verify:
 
-**CV (`cv/main_<company>.pdf`):**
-- [ ] Exactly 2 pages (not 1, not 3)
-- [ ] No orphaned `\cventry` titles — a job/education title line must never sit alone at the bottom of page 1 with its bullets on page 2. This is the most common failure.
-- [ ] Section headings are not isolated at the top of page 2 with only 1-2 lines below
+**CV (`cv/main_<company>_<role>.pdf`):**
+- [ ] Page count matches the active template (compact-arial: **exactly 1 page**; stock moderncv: **exactly 2 pages**)
+- [ ] No orphaned job/education titles — a title line must never sit alone at the bottom of a page with its bullets on the next page
+- [ ] Section headings are not isolated at the top of a later page with only 1-2 lines below
 - [ ] No awkward whitespace gaps
+- [ ] **No large empty footer** (compact-arial): last line of content in the bottom inch
+- [ ] **No orphan wrap lines** (compact-arial): a continuation line with only a few words is a fail; fit one full line or fill the second
+- [ ] Contact line prints email, phone, and URLs as **visible text** (not icon-only or "LinkedIn" link text)
 
 **Cover letter (`cover_letters/cover_<company>_<role>.pdf`):**
 - [ ] Exactly 1 page
@@ -210,7 +222,7 @@ Read both PDFs via the Read tool and verify:
 
 If the layout has problems, edit the `.tex` files and recompile. Common fixes (see `05-cv-templates.md` and `06-cover-letter-templates.md` for full details):
 
-- **Orphaned CV entry title:** `\usepackage{needspace}` in preamble, then `\needspace{5\baselineskip}` immediately before the problematic `\cventry`
+- **Orphaned CV entry title:** stock moderncv: `\usepackage{needspace}` then `\needspace{5\baselineskip}` before the `\cventry`. compact-arial: keep `\cventryhead` glued to its `cvitems` list; if a break appears, move the whole entry up or cut a bullet.
 - **CV spills to page 3 with only a trailing section:** `\enlargethispage{2-3\baselineskip}` before a late section
 - **Substantial content on page 3:** cut content using **relevance-weighted cutting** (see `05-cv-templates.md` → "Relevance-weighted cutting"). Score each candidate line by (a) relevance to THIS posting's keywords and responsibilities, (b) uniqueness (is it duplicated elsewhere?), (c) narrative load (does the cover letter depend on it?). Cut the lowest-total-score line first, regardless of section. Do NOT mechanically apply a static section-based priority order — an older-role bullet that hits posting keywords is worth more than a recent-role bullet that does not.
 - **Cover letter itemize breaks compile or uses wrong font:** close `\lettercontent{}` before the list, wrap the list in `{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont \begin{itemize}...\end{itemize}\par}`
@@ -227,7 +239,7 @@ An ATS parser reads the PDF's embedded **text layer**, not the rendered page —
 **1. Extract the text layer:**
 
 ```bash
-cd cv && pdftotext -layout main_<company>.pdf main_<company>.txt
+cd cv && pdftotext -layout main_<company>_<role>.pdf main_<company>_<role>.txt
 ```
 
 Read the `.txt` file.
@@ -276,11 +288,12 @@ Summarize 3-5 key decisions made to tailor the application:
 
 ### Files Created
 List the files written:
-- `cv/main_<company>.tex`
+- `cv/main_<company>_<role>.tex`
 - `cover_letters/cover_<company>_<role>.tex`
 
 Tell the user: "Both files are ready for your review. Open them to check the final output before compiling."
 
 ### Next Steps
 - **Submitted?** `/outcome <company>` logs it in the tracker and starts the per-application record that `/setup` later uses to calibrate the fit framework.
+- **Named recruiter?** Do not auto-draft a note. If he pastes one, edit that draft in place (see `03-writing-style.md` → Recruiter and warm-lead notes). Finish the sentence; do not swap a simple ask for a "better" one.
 - **Interview scheduled?** `/interview` builds a stage-specific prep pack from this posting and the documents you just created.

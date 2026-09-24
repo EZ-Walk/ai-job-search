@@ -1,0 +1,33 @@
+{
+  "jobs": [
+    {
+      "id": 4020159008,
+      "internal_job_id": 5030159008,
+      "title": "Backend Engineer",
+      "updated_at": "2026-04-02T21:00:55-04:00",
+      "first_published": "2026-04-01T09:00:00-04:00",
+      "requisition_id": "REQ-100",
+      "company_name": "Acme",
+      "location": { "name": "San Francisco, CA" },
+      "absolute_url": "https://boards.greenhouse.io/acme/jobs/4020159008",
+      "content": "&lt;div&gt;&lt;p&gt;Build APIs.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ship &amp;amp; iterate&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
+      "departments": [{ "name": "Engineering" }],
+      "offices": [{ "name": "United States of America" }]
+    },
+    {
+      "id": 4020160000,
+      "internal_job_id": 5030160000,
+      "title": "Dublin Support Engineer",
+      "updated_at": "2026-03-15T10:00:00-04:00",
+      "first_published": "2026-03-10T09:00:00-04:00",
+      "requisition_id": "REQ-101",
+      "company_name": "Acme",
+      "location": { "name": "Dublin, Ireland" },
+      "absolute_url": "https://boards.greenhouse.io/acme/jobs/4020160000",
+      "content": "&lt;p&gt;Support customers in EMEA.&lt;/p&gt;",
+      "departments": [{ "name": "Support" }],
+      "offices": [{ "name": "Ireland" }]
+    }
+  ],
+  "meta": { "total": 2 }
+}

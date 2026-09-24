@@ -1,0 +1,151 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Mission Manager, Saildrone (Mission Execution, Alameda)
+%% Template: compact-arial (templates/cv/compact-arial/)
+%% Compile with: lualatex main_saildrone_mission-manager.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{2.0pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    Emeryville, CA
+    {-}
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Translate stakeholder objectives into executable plans: discovery with operators, process mapping, specs, and delivery gates the operators who own the process run.
+  \item Automated an IT MSP's pre-sales cybersecurity risk assessments and trained their team to run and extend the workflow. Processing time fell 98\% against a measured baseline.
+  \item Post-launch operations: troubleshoot live issues, keep a living backlog, and report measured status to process owners.
+  \item Delivered EZ-AI, problem-first training for domain experts, so operators can judge and extend the system themselves.
+  \item Built Python automations that replaced manual operating steps, then documented them as the team's running procedure.
+  \item Modernized a data-ingestion pipeline. Throughput increased 99.8\% in four months and cost fell 86\%.
+  \item Designed a content-marketing system and enabled the people running it. Production volume increased 10x.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Wiz Music}{Barcelona, Spain}
+{Community Development Intern}{May 2022 - July 2022}
+\begin{cvitems}
+  \item Diagnosed the Discord community from its own analytics: segmented churn by tenure and joins by source, identified that reported membership growth was not organic, and raised it with the team.
+  \item Built Python scraping and Chartmetric API automation to streamline artist and investor outreach.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Built an ML model translating handwritten clinical notes into an extensible data model (F1 80.03), a human-in-the-loop pipeline over unstructured operational documents.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Led Design Thinking discovery to surface business needs, then wrote the release notes and product documentation stakeholders used after each change.
+  \item Launched Tableau and Cognos dashboards that delivered operational status to C-level executives. Built IBMLogAnalyze and cut per-case log-analysis prep from 1-3 hours to none.
+  \item Built DRE Bot, a Watson NLP Slack app that surfaced similar past cases to support engineers during live troubleshooting, cutting the most common issues from a multi-touch case to a single response.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{RC Health Services}{Texas}
+{Emergency Medical Technician}{2024}
+
+\vspace{3pt}
+\cveduhead{Bondi Outdoor Leadership}{}
+{AIARE 1 Avalanche Safety and Rescue: trip planning, group decision-making, companion rescue}{March 2022}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate (in progress)}{expected July 2026}
+\begin{cvitems}
+  \item Completed Business Process Modeling, Analysis and Improvement (April 2026); IT Systems Design and Analysis; Cloud Native, DevOps, Agile, and capacity-planning methods.
+\end{cvitems}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Planning \& operations:} translating objectives into executable plans, process mapping, specs, SOPs and training docs, cross-functional coordination, executive status reporting, Python automation. \textbf{Judgment under uncertainty:} EMT (2024) patient assessment and radio/team communication; AIARE 1 trip planning and group decision-making (2022). \textbf{Build \& analysis:} Python, SQL, Tableau, Cognos, n8n, Git/GitHub, Docker, human-in-the-loop workflows. \textbf{Languages:} English (native), Spanish (conversational). Complex technical operations, not licensed maritime watchstanding.\par
+}
+
+\end{document}
