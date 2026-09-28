@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Makai Labs, Forward Deployed AI Analyst (Engineering, remote)
+% Compile with: xelatex cover_makai_forward-deployed-ai-analyst.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://linkedin.com/in/ezwalk}{LinkedIn}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Hiring Manager,}
+
+\lettercontent{I am applying for the Forward Deployed AI Analyst role. For three years I have run client engagements through the same arc: SME interviews, document review, system mapping, a written spec, a working agent, and a rollout their team can run. I want that work embedded alongside a Makai lead. I interviewed with Makai last year. An engineering seat was the wrong match, and the business analyst role filled before we finished. This analyst role is that client work. I would start here and grow toward solutions engineering or implementation.}
+
+\lettercontent{Makai's standard is the one I hold. People stay the final firewall, and the system has to adapt to how the work is already done. On the MRO medical-forms engagement, the interface doubled productivity even with auto-extraction turned off. That is the part I care about: the human path is part of the product, not a fallback when the model misses.}
+
+\lettercontent{How I would run an engagement:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Discovery through spec:} SME interviews, document review, and system mapping, then a product spec for what to automate and what to leave manual. I completed IBM's Business Process Modeling coursework in April 2026.
+    \item \textbf{Prototype and evaluation:} Python, TypeScript/JavaScript, SQL, n8n, and Claude Code. On a content-scoring workflow I designed the prompts and rubric from the client's ground truth, QA-tested them with their reviewers, and held deployment to 95\% agreement.
+    \item \textbf{Rollout and ROI:} I automated an IT MSP's pre-sales risk assessments and trained their team to run and extend the workflow. Processing time fell 98\% against a measured baseline.
+    \item \textbf{What not to build:} At Wiz Music I showed that reported community growth was not organic and raised it, instead of automating a number that would not survive a closer look.
+\end{itemize}\par}
+\vspace{2pt}
+
+\lettercontent{Agile delivery for me is GitHub and Notion. I have not used Jira, Azure DevOps, a process-mining product, or financial models. I map processes with interviews and BPMN, and I measure with operating dashboards and productivity against a baseline. I am based in Emeryville, I can hold Eastern Time overlap, and I can start before summer 2027 if you have an earlier full-time seat.}
+
+\lettercontent{Thank you for your time and consideration. I would welcome a conversation about how an analyst decides a workflow is worth a prototype on your platform, and when to stop after discovery.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}
