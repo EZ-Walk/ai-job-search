@@ -97,6 +97,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### What Excites You
 
+- Client discovery on an AI automation platform: interview notes, current-state process diagrams, a written specification, a pilot, operator training, and the backlog after launch. A person stays the accuracy check. Confirmed 2026-09-30 against Makai Labs' Business Analyst posting: that company shape and that role are the target.
 - Discovery and process mapping that makes implicit knowledge explicit before automating
 - AI-native, 0→1 products; getting genuinely useful tools into as many hands as possible
 - The outdoors: sailing, skiing, EMT work — building where tech meets the outdoors
@@ -107,7 +108,8 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Target Sectors
 
-- **Educator roles, Bay Area on-site** (current search priority). Do not overfit to Alpha. Include:
+- **Human-in-the-loop automation analyst** (current search priority, set 2026-09-30). Company shape first, title second. The reference is Makai Labs: an AI automation platform or AI consultancy, human-machine teaming, analyst embedded with client operators. The week is discovery, process diagrams, specifications, pilots, training, and a backlog. Titles that fit: Business Analyst, Implementation Analyst, Forward Deployed Analyst, AI Solutions Consultant, Client Engineer. Remote or Bay Area. A posting that says the seat can grow into product management is still this lane. Frontier labs and big tech stay out of scope.
+- **Educator roles, Bay Area on-site** (kept lane; was the search priority through 2026-08-31). Do not overfit to Alpha. Include:
   - Montessori (Guide, lead/assistant teacher, intern) and close cousins (Waldorf, Reggio, Acton)
   - Traditional and independent schools: teacher, teaching assistant, paraeducator, substitute, after-school / enrichment instructor, tutor, outdoor education
   - AI-native Guide / learning-coach roles (Alpha, 2 Hour Learning, Khan Lab, Prisma). Alpha/2 Hour Learning hire through Crossover, not LinkedIn.
@@ -122,6 +124,8 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 
 ### Company intelligence
+
+**Makai Labs** (first-party, 2026-09-30): Ethan said this company is the exact thing he wants, and the Business Analyst role is the work he wants. Use Makai as the reference shape for similar employers. Score the lifecycle (discovery, diagrams, spec, pilot, training, backlog, human as the accuracy check), not whether the title says Engineer. Leave process-mining tools, Jira, and Azure DevOps as skill gaps. Do not add them to the profile from this preference. Do not name Quincy Evans on applications unless Ethan asks. Do not treat "path to Product Manager" as the goal; the analyst seat is the goal.
 
 **Backroads** (Berkeley HQ; first-party, Sep 2026): coffee with a director of rooming operations. The company is building custom in-house software and becoming much more data-driven. Analysis skills and systems experience (custom internal tools, BI for operating teams, process mapping, client operational systems) are a differentiator across **all** Backroads roles, including guest services and hotel ops, not only titled data jobs. Do not hide the analyst to look guest-services-safe. Guest-facing postings still lead with communication, intake, and matching, but keep operational analysis, custom internal tools, reporting, and process mapping on the page. Do not name the director on applications unless Ethan asks. Do not invent product names for their in-house software.
 

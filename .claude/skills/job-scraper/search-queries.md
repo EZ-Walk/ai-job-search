@@ -1,7 +1,7 @@
 # Search Queries for Job Scraper
 
 <!-- Populated by /setup (Path A) on 2026-07-15 for Ethan Zaruba-Walker -->
-<!-- /setup educator lane 2026-08-31: Priority 1 is Bay Area education (Montessori, traditional/independent, Alpha-style). Do not overfit to Crossover/Guide titles. -->
+<!-- 2026-09-30: Priority 1 is human-in-the-loop automation analyst (Makai-shaped). Educator lane stays, now Priority 3. Do not overfit educator scrapes to Crossover/Guide titles. -->
 
 ## Installed portal CLIs (primary for `/scrape`)
 
@@ -21,7 +21,7 @@ The `site:` query templates below are the **WebSearch fallback** — for portals
 Primary:
 - **linkedin.com/jobs** - LinkedIn (filter: United States / San Francisco Bay Area); covered by `linkedin-search` CLI. Primary surface for Montessori, independent, and traditional school roles.
 - **edjoin.org** - California public-school jobs (paraeducator, substitute, after-school, some teaching). WebSearch `site:edjoin.org` fallback. No CLI skill yet.
-- **ed.crossover.com / jobs.crossover.com** - Alpha School, 2 Hour Learning, GT School, Unbound Academy only. One slice of Priority 1, not the whole lane.
+- **ed.crossover.com / jobs.crossover.com** - Alpha School, 2 Hour Learning, GT School, Unbound Academy only. One slice of the educator lane, not the whole search.
 - **jobs.ashbyhq.com** - Ashby boards, covered by `ashby-search` CLI (outdoor/climate lane)
 - **boards.greenhouse.io** - Greenhouse boards (WebSearch fallback until greenhouse-search CLI is ready)
 - **jobs.lever.co** - Lever boards (e.g. AllTrails)
@@ -34,41 +34,20 @@ Secondary (company career pages via Google):
 
 Queries are grouped by priority. Combine with location terms ("San Francisco Bay Area", "East Bay", "Emeryville", "Berkeley", "Oakland", "Palo Alto") for school roles. School roles are on-site unless the posting says otherwise.
 
-### Priority 1: Bay Area educator roles (Montessori, traditional, AI-native)
+### Priority 1: Human-in-the-loop automation analyst
 
-Current search priority (set 2026-08-31, widened the same day). Run **all three buckets**. Do not return only Alpha/Crossover hits.
+Current search priority (set 2026-09-30 from Ethan's read of Makai Labs). Company shape: AI automation platform or AI consultancy, human-machine teaming, analyst with client operators. Remote or San Francisco Bay Area. Titles: Business Analyst, Implementation Analyst, Forward Deployed Analyst, AI Solutions Consultant.
 
-**1a. Montessori and close pedagogies**
 ```
-site:linkedin.com/jobs Montessori (Guide OR teacher OR assistant OR intern) ("San Francisco Bay Area" OR Berkeley OR Oakland OR "East Bay" OR "Palo Alto")
-site:linkedin.com/jobs (Montessori OR Waldorf OR Reggio) (assistant OR aide OR "after school" OR "after-care") "San Francisco Bay Area"
-site:edjoin.org Montessori (teacher OR assistant) (Alameda OR Oakland OR Berkeley OR San Francisco)
+site:jobs.ashbyhq.com ("Business Analyst" OR "Implementation Analyst" OR "Forward Deployed") (AI OR automation)
+site:linkedin.com/jobs ("Business Analyst" OR "Implementation Analyst") (AI OR automation) (remote OR "San Francisco")
+site:linkedin.com/jobs "business analyst" ("process mapping" OR "process diagram" OR "functional specification") (AI OR automation) remote
+site:linkedin.com/jobs ("human in the loop" OR "human-machine") (analyst OR implementation) (remote OR "San Francisco")
 ```
-
-**1b. Traditional, independent, and entry classroom roles**
-```
-site:linkedin.com/jobs ("teaching assistant" OR paraeducator OR "instructional aide" OR substitute) (school OR elementary OR "middle school") ("East Bay" OR Berkeley OR Oakland OR "San Francisco")
-site:linkedin.com/jobs ("after school" OR "after-school" OR enrichment OR "outdoor education") (instructor OR teacher OR educator) ("San Francisco Bay Area" OR Berkeley)
-site:linkedin.com/jobs ("independent school" OR "private school") (teacher OR assistant OR "associate teacher") ("San Francisco Bay Area" OR "East Bay")
-site:edjoin.org (paraeducator OR substitute OR "instructional aide" OR "after school") (Alameda OR Berkeley OR Oakland OR "Emeryville")
-site:linkedin.com/jobs (tutor OR "academic coach") (K-12 OR elementary OR "middle school") "San Francisco Bay Area"
-```
-
-**1c. AI-native Guide / learning-coach (do not let this crowd out 1a/1b)**
-```
-site:ed.crossover.com Alpha (Guide OR Educator) ("San Francisco" OR "Palo Alto" OR "East Bay" OR "South Bay" OR Piedmont)
-site:jobs.crossover.com Alpha Guide ("San Francisco" OR "Palo Alto" OR Piedmont)
-site:ed.crossover.com "2 Hour Learning" (Guide OR Educator)
-site:ed.crossover.com (Unbound OR "GT School") Guide
-site:linkedin.com/jobs ("learning coach" OR "academic coach" OR Guide) (school OR K-8 OR K-12) ("San Francisco Bay Area" OR "East Bay" OR "Palo Alto")
-site:linkedin.com/jobs ("Khan Lab School" OR "Acton Academy" OR Prisma) (coach OR guide OR educator OR mentor)
-```
-
-For 1c, drop Crossover results whose campus list has no Bay Area site. For 1a/1b, a Berkeley Montessori assistant is a hit even if it never mentions AI.
 
 ### Priority 2: AI Solutions / Client / GTM Engineering
 
-Client-facing AI engineering (builder-seller pattern). Still in scope as a parallel lane.
+Client-facing AI engineering (builder-seller pattern). Adjacent to Priority 1. Same companies often post both.
 
 ```
 site:linkedin.com/jobs "AI Solutions Engineer" remote OR "San Francisco"
@@ -79,7 +58,39 @@ site:linkedin.com/jobs "Sales Engineer" AI OR LLM "San Francisco"
 site:linkedin.com/jobs "Client Engineering" IBM OR AI
 ```
 
-### Priority 3: Outdoor / Adventure / Climate Tech
+### Priority 3: Bay Area educator roles (Montessori, traditional, AI-native)
+
+Kept lane (search priority 2026-08-31 through 2026-09-29). Run **all three buckets** when the scrape is for schools. Do not return only Alpha/Crossover hits.
+
+**3a. Montessori and close pedagogies**
+```
+site:linkedin.com/jobs Montessori (Guide OR teacher OR assistant OR intern) ("San Francisco Bay Area" OR Berkeley OR Oakland OR "East Bay" OR "Palo Alto")
+site:linkedin.com/jobs (Montessori OR Waldorf OR Reggio) (assistant OR aide OR "after school" OR "after-care") "San Francisco Bay Area"
+site:edjoin.org Montessori (teacher OR assistant) (Alameda OR Oakland OR Berkeley OR San Francisco)
+```
+
+**3b. Traditional, independent, and entry classroom roles**
+```
+site:linkedin.com/jobs ("teaching assistant" OR paraeducator OR "instructional aide" OR substitute) (school OR elementary OR "middle school") ("East Bay" OR Berkeley OR Oakland OR "San Francisco")
+site:linkedin.com/jobs ("after school" OR "after-school" OR enrichment OR "outdoor education") (instructor OR teacher OR educator) ("San Francisco Bay Area" OR Berkeley)
+site:linkedin.com/jobs ("independent school" OR "private school") (teacher OR assistant OR "associate teacher") ("San Francisco Bay Area" OR "East Bay")
+site:edjoin.org (paraeducator OR substitute OR "instructional aide" OR "after school") (Alameda OR Berkeley OR Oakland OR "Emeryville")
+site:linkedin.com/jobs (tutor OR "academic coach") (K-12 OR elementary OR "middle school") "San Francisco Bay Area"
+```
+
+**3c. AI-native Guide / learning-coach (do not let this crowd out 3a/3b)**
+```
+site:ed.crossover.com Alpha (Guide OR Educator) ("San Francisco" OR "Palo Alto" OR "East Bay" OR "South Bay" OR Piedmont)
+site:jobs.crossover.com Alpha Guide ("San Francisco" OR "Palo Alto" OR Piedmont)
+site:ed.crossover.com "2 Hour Learning" (Guide OR Educator)
+site:ed.crossover.com (Unbound OR "GT School") Guide
+site:linkedin.com/jobs ("learning coach" OR "academic coach" OR Guide) (school OR K-8 OR K-12) ("San Francisco Bay Area" OR "East Bay" OR "Palo Alto")
+site:linkedin.com/jobs ("Khan Lab School" OR "Acton Academy" OR Prisma) (coach OR guide OR educator OR mentor)
+```
+
+For 3c, drop Crossover results whose campus list has no Bay Area site. For 3a/3b, a Berkeley Montessori assistant is a hit even if it never mentions AI.
+
+### Priority 4: Outdoor / Adventure / Climate Tech
 
 Domain passion: companies where tech meets the outdoors. The API-queryable set is handled by `ashby-search` (+ greenhouse fallback); these queries catch the rest.
 
@@ -91,26 +102,26 @@ site:linkedin.com/jobs "climate tech" OR wildfire OR carbon "solutions engineer"
 site:linkedin.com/jobs (camping OR RV OR outdoor) SaaS sales engineer OR implementation
 ```
 
-### Priority 4: Software Consulting
+### Priority 5: Software Consulting
 
 Client-facing software delivery — the direct extension of 3 years of consulting delivery at StaffRoom AI.
 Three lanes, all in scope:
 
-**3a. Boutique / mid-size product & dev shops**
+**5a. Boutique / mid-size product & dev shops**
 ```
 site:linkedin.com/jobs (Thoughtworks OR Slalom OR "Nearform" OR "Bain" OR "software consultancy") engineer "San Francisco Bay Area" OR remote
 site:linkedin.com/jobs "consulting engineer" OR "delivery engineer" software "San Francisco Bay Area"
 site:linkedin.com/jobs "product engineer" consultancy OR "client projects" remote
 ```
 
-**3b. Big 4 / large SI**
+**5b. Big 4 / large SI**
 ```
 site:linkedin.com/jobs (Accenture OR "Deloitte Digital" OR "IBM Consulting" OR EY) "solutions engineer" OR "technology consultant" "San Francisco Bay Area"
 site:linkedin.com/jobs "IBM Client Engineering" OR "Client Engineering" engineer
 site:linkedin.com/jobs "management consultant" technology OR digital "San Francisco Bay Area"
 ```
 
-**3c. AI-native consultancies (LLM / agent implementation for clients)**
+**5c. AI-native consultancies (LLM / agent implementation for clients)**
 ```
 site:linkedin.com/jobs "AI consultant" OR "automation consultant" remote OR "San Francisco"
 site:linkedin.com/jobs "AI implementation" OR "LLM implementation" consultant OR engineer remote
@@ -118,7 +129,7 @@ site:linkedin.com/jobs "technical consultant" AI OR automation "San Francisco Ba
 site:linkedin.com/jobs "implementation engineer" OR "solutions architect" AI remote
 ```
 
-### Priority 5: Data Analyst / Data Engineer (wider net)
+### Priority 6: Data Analyst / Data Engineer (wider net)
 
 ```
 site:linkedin.com/jobs "data engineer" Python SQL "San Francisco Bay Area" OR remote
@@ -156,8 +167,9 @@ Only include jobs posted within the last 14 days, or with an application deadlin
 ## Adapting Queries
 
 If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
-- "/scrape educator" -> Priority 1 **all three buckets** (Montessori, traditional/independent/para/sub, and Alpha). Do not return only Crossover.
-- "/scrape montessori" -> Priority 1a only
-- "/scrape alpha" -> Priority 1c only
-- "/scrape outdoor" -> Priority 3 queries + targeted `ashby-search --org` runs against the Tier 1/2 slugs in `documents/outdoor-target-companies.md`
+- "/scrape analyst" or "/scrape automation" -> Priority 1
+- "/scrape educator" -> Priority 3 **all three buckets** (Montessori, traditional/independent/para/sub, and Alpha). Do not return only Crossover.
+- "/scrape montessori" -> Priority 3a only
+- "/scrape alpha" -> Priority 3c only
+- "/scrape outdoor" -> Priority 4 queries + targeted `ashby-search --org` runs against the Tier 1/2 slugs in `documents/outdoor-target-companies.md`
 - "/scrape gtm" -> Priority 2 queries with GTM Engineer / Solutions Engineer / Sales Engineer titles
