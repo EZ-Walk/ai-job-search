@@ -20,7 +20,7 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** Python (7+ yrs professional), SQL/PostgreSQL, AI/LLM integration (Claude / OpenAI / Gemini APIs, MCP, agents), process automation (n8n, workflow design), Notion API / API integrations, data pipelines & BI (Tableau, Cognos, dashboards), discovery & stakeholder management, technical writing & documentation. For educator roles: daily generative-AI fluency, human-in-the-loop philosophy, adult enablement (EZ-AI), Cognitive Science certificate, 1:1 coaching-adjacent work (rush chair matching, client enablement). Do not treat AI fluency as a requirement for Montessori or traditional postings; it is a bonus there, not the job.
+**Strong match areas:** Python (7+ yrs professional), SQL/PostgreSQL, AI/LLM integration (Claude / OpenAI / Gemini APIs, MCP, agents), process automation (n8n, workflow design), Notion API / API integrations, data pipelines & BI (Tableau, Cognos, dashboards), discovery & stakeholder management, technical writing & documentation. Client business analysis under the Founder title: process diagrams, user journeys, statements of work as the build specification, milestone acceptance criteria, operator training, human-agreement KPIs, post-launch fix lists. Jira, Azure DevOps, and process-mining tools are gaps. Do not score them as present. For educator roles: daily generative-AI fluency, human-in-the-loop philosophy, adult enablement (EZ-AI), Cognitive Science certificate, 1:1 coaching-adjacent work (rush chair matching, client enablement). Do not treat AI fluency as a requirement for Montessori or traditional postings; it is a bonus there, not the job.
 **Moderate match areas:** TypeScript / Next.js, Flask microservices, classical ML (TensorFlow, Keras, scikit-learn), graph databases (Neo4j/Cypher), cloud platforms (IBM Cloud, Azure, AWS, GCP), Docker/Kubernetes, solutions/sales engineering (builder-seller experience, no quota history), developer relations, motivating peers/adults toward a goal (consulting delivery, fraternity rush, hackathon team lead)
 **Weak match areas:** large-scale distributed systems / infra engineering, mobile development, quota-carrying enterprise sales, people management, robotics/embedded, deep statistics/research-level ML, **K-12 classroom teaching, teaching credential, lesson planning, and 3+ years working directly with Pre-K–8 children** (the usual Alpha Guide screen)
 
@@ -34,7 +34,7 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** AI solutions consulting (3 yrs end-to-end: sell → discover → build → enable), workflow/process automation, data engineering & analytics (IBM Customer Support + client work), API integration work (Notion API production systems)
+**Strong:** AI solutions consulting (3 yrs end-to-end: sell → discover → build → enable), workflow/process automation, data engineering & analytics (IBM Customer Support + client work), API integration work (Notion API production systems). The same arc is a client-embedded business analyst seat on an automation platform. The title on file is Founder & AI Solutions Consultant. Score the work. Do not require a Business Analyst title on the resume.
 **Moderate:** ML engineering (internship + certifications, not a full-time ML role), developer relations (community + content work, never held the title), solutions/GTM engineering (builder-seller pattern, no formal SE role), adult training/enablement (EZ-AI)
 **Entry-level:** quota-carrying sales (SDR/BDR/AE), people management, robotics/hardware, **K-12 educator roles of every pedagogy** (no classroom, camp, tutoring, or youth-program tenure on file). Score assistant / para / sub / after-school / Montessori intern in the 35–55 band when no credential is required. Score credentialed teacher-of-record and AMI/AMS lead Guide lower unless the school hires uncredentialed. **Say the gap out loud** before drafting. Do not skip a posting because it is Montessori or traditional rather than Alpha.
 
@@ -68,14 +68,14 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- **Primary (2026-08-31):** Bay Area educator roles. Alpha-style Guide is one target, not the only shape. Also in scope: Montessori Guide / assistant, independent-school teacher or assistant, paraeducator, substitute, after-school / enrichment, tutor, outdoor education, and traditional K-12 classroom roles where the posting does not require a credential he does not have.
-- Client-facing AI engineering still in scope as a parallel lane: AI Solutions Engineer, Client Engineer, GTM Engineer, Technical Consultant
-- Work in the outdoor / adventure / climate sector where possible (see `documents/outdoor-target-companies.md`)
+- **Primary (2026-09-30):** Human-in-the-loop automation analyst. Ethan confirmed Makai Labs is the exact company shape he wants, and the Business Analyst seat (discovery, process diagrams, written spec, pilot, training, backlog, person as the accuracy check) is the work he wants. Titles: Business Analyst, Implementation Analyst, Forward Deployed Analyst, AI Solutions Consultant, Client Engineer. Company shape beats title. Remote or Bay Area.
+- **Scoring this shape:** career alignment 85–95 when the week is that lifecycle. 70–80 when the title matches and the week is mostly ticket support. Do not subtract because the posting says the seat can grow into product management. Do not subtract because the title is Business Analyst rather than Engineer. Jira, Azure DevOps, and process mining stay in the technical score.
+- **Kept lanes:** Bay Area educator roles (was primary 2026-08-31). Alpha-style Guide is one shape. Also Montessori Guide / assistant, independent-school teacher or assistant, paraeducator, substitute, after-school / enrichment, tutor, outdoor education, and traditional K-12 where the posting does not require a credential he does not have. Client-facing AI engineering titles (AI Solutions Engineer, Client Engineer, GTM Engineer, Technical Consultant) stay in scope. Outdoor / adventure / climate where possible (`documents/outdoor-target-companies.md`).
 - Preserve high autonomy; bring 3 years of founder-level ownership into a team context
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: discovery and process mapping, 0→1 builds, shipping working pilots fast, human-in-the-loop AI design, translating technical change for non-technical stakeholders, mission-driven work (e.g. Allies Against Slavery), coaching people through a goal (EZ-AI, client enablement), being present with learners
-- Tasks that drain: pure maintenance of legacy systems, rigid heavily-supervised process, work with no human contact and no craft. Do **not** mark traditional classroom teaching or grading as inherently draining. That is a live career lane.
+- Tasks that energize: discovery and process mapping, process diagrams, writing the specification the build is held to, shipping working pilots, training operators, keeping a backlog after launch, human-in-the-loop AI design, translating technical change for non-technical stakeholders, mission-driven work (e.g. Allies Against Slavery), coaching people through a goal (EZ-AI, client enablement), being present with learners
+- Tasks that drain: pure maintenance of legacy systems with no discovery in the week, rigid heavily-supervised process, work with no human contact and no craft. Post-launch support on a workflow he helped specify is part of the target analyst seat, not a drain by itself. Do **not** mark traditional classroom teaching or grading as inherently draining. That lane stays open.
 - Non-task factors: leadership style, department culture, company values, degree of autonomy (low autonomy is a deal-breaker; a school with a clear pedagogy is not automatically that)
 
 **Educator-lane honesty check:** No classroom, camp, tutoring, or youth-program tenure on file. A bachelor's is on file. No CA teaching credential, no AMI/AMS Montessori credential. Score accordingly:
@@ -88,7 +88,7 @@ Map EZ-AI, rush-chair matching, and enablement as adult-coaching evidence only. 
 **Life situation alignment:** Consider personal constraints:
 - **Security**: salary flexible, evaluated case by case (equity, mission, and growth path weigh in); consulting income exists as fallback. Alpha Guide posted pay is typically $100k–$150k W2. Montessori assistants, paras, and after-school roles pay much less. Say so in the eval; do not skip on pay unless the user has set a floor.
 - **Flexibility**: remote-first for engineering/consulting roles; **Bay Area on-site including school hours is fine for educator roles**; relocation out of the Bay Area is a deal-breaker (lives aboard MARGARITA on the SF Bay)
-- **Professional development**: growth toward AI-native client engineering *or* education work (Montessori, independent, traditional, or Guide-style); IBM Systems & Solutions Architecture certificate completing Jul 2026
+- **Professional development**: growth toward a client-embedded analyst seat on a human-in-the-loop automation platform; education work (Montessori, independent, traditional, or Guide-style) remains a kept lane; IBM Systems & Solutions Architecture certificate was in progress with modules through May 2026 (expected completion was Jul 2026; do not mark it finished from the calendar)
 
 ### 6. Salary Benchmark (Optional)
 
@@ -159,6 +159,8 @@ A named recruiter in the checklist is not a prompt to draft outreach. Mention th
 (Location is pass/fail, not weighted)
 
 ## Named company notes
+
+**Makai Labs** (first-party, 2026-09-30): reference company for the primary lane. Human-in-the-loop AI automation, analyst on the client lifecycle. Career alignment for a matching Business Analyst or implementation-analyst posting should land in the 85–95 band when discovery is in the week. Skill gaps (process mining, Jira, Azure DevOps) stay visible. Do not hide the founder title. Do not chase the posting's product-manager growth line as the goal.
 
 **Backroads** (first-party, Sep 2026): becoming data-driven and building custom in-house software (director of rooming ops). Do not score guest-services or hotel-ops postings as "hide the analyst." Technical-skills and career-alignment scores should credit operational analysis, custom internal tools, and process mapping as relevant, not as flight-risk noise. Still score hospitality/reservations tenure honestly when it is a gap.
 

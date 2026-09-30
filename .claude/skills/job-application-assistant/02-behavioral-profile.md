@@ -11,6 +11,9 @@ framework_version: 1.0.0
 ## Overview
 Ethan Zaruba-Walker presents as a **builder-communicator** pattern: someone who ships working software fast, then documents and evangelizes it so others can use it. Three years of solo consulting (selling, scoping, and delivering engagements end-to-end) point to high autonomy and comfort with ambiguity. *[Inferred from resumes and cover letters - review before relying on this]*
 
+## Search priority (user-confirmed 2026-09-30)
+Makai Labs is the company shape he wants: AI automation, human-machine teaming, people as the accuracy check. The Business Analyst work is the work he wants: discovery, process diagrams, a written specification, a pilot, operator training, and the backlog after launch. This is a preference, not a new skill. Jira, Azure DevOps, and process-mining tools are still absent. Educator and outdoor lanes stay open. The analyst seat is the goal; a posting's line about growing into product management is not.
+
 ## Strongest Behavioral Traits
 - **Builder-seller who ships fast:** self-describes as running "discovery with stakeholders and ships working pilots fast"; sells and delivers engagements end-to-end. *[Inferred from IBM Horizon resume]*
 - **Human-in-the-loop philosophy:** "my work has consistently focused on developing technology that enhances human capabilities while keeping people as the final decision-makers." *[Inferred from Makai cover letter]*
