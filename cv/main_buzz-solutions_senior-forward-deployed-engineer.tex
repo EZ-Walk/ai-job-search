@@ -1,0 +1,133 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Senior Forward Deployed Engineer, Buzz Solutions (Oakland)
+%% Template: compact-arial
+%% Compile with: lualatex main_buzz-solutions_senior-forward-deployed-engineer.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item First technical owner on every account: discovery call, scope (data, systems, timeline, out of scope), then a pilot on the customer's own files before a larger build.
+  \item Build the integration myself. Python and TypeScript against REST APIs and webhooks, plus data pipelines. One rebuild raised throughput 99.8\% in four months and cut cost 86\%.
+  \item Put agentic workflows in front of real users: prompting, tool use, MCP, and an evaluation held to 95\% agreement with human reviewers. Claude Code is the daily driver.
+  \item Own deployment through handoff. After go-live I resolve issues, keep the backlog, and train the operator to extend the workflow. Processing time on one pre-sales assessment fell 98\%.
+  \item Turn a one-off into a reusable piece: n8n workflows, playbooks, and the next customer's starting point, instead of a fresh script each time.
+  \item Write the requirement an engineer can build from. Discovery notes become a functional spec, not a verbal escalation.
+  \item Sell and deliver the same engagement, up to \$18K. I can tell a non-technical operator and a technical reviewer the same tradeoff in words each of them can use.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Deployed IBMLogAnalyze under a GDPR constraint: client data stayed in a defined pipeline, and 1-3 hours of per-case log prep went to zero. Dashboarded the result for operations leaders.
+  \item Built DRE Bot, a Watson NLP assistant in Slack, after Design Thinking sessions with the engineers who had to trust it. Wrote the release notes for each change.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Trained a Python model on handwritten clinical notes into a structured schema, F1 80.03.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate (in progress)}{expected July 2026}
+
+\vspace{3pt}
+\cveduhead{DeepLearning.AI}{Online}
+{Deep Learning Specialization (Jan 2021) \textbar{} TensorFlow Developer Certificate (May 2020)}{2020 - 2021}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Forward deployed:} pre-sales discovery, implementation scoping, pilots, API and webhook integrations, data pipelines, handoff, reusable deployment tooling. \textbf{Agents:} Python, TypeScript, Claude Code, MCP, prompting, tool use, evaluation. \textbf{Data constraint:} GDPR-scoped client pipeline at IBM.\par
+}
+
+\end{document}

@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Hippocratic AI, Sales Engineer (Menlo Park)
+% Compile with: xelatex cover_hippocratic-ai_sales-engineer.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+}
+
+\currentdate{\today}
+\lettercontent{Dear Hippocratic AI hiring team,}
+
+\lettercontent{I am writing about the Sales Engineer role in Menlo Park. The posting describes a lighter-weight forward deployed engineer: prototype the agent flow, then walk into the room and explain it. That is the work I already do. I live in Emeryville and can be in the Menlo Park office five days a week.}
+
+\lettercontent{Your framing is a safety-focused healthcare LLM, and the demos have to survive a clinical and a commercial audience. I will not pretend I have run a pharma sales cycle. What I have done is make an AI output checkable. At Valhalla I turned handwritten clinical notes into a data model (F1 80.03), with a person still reviewing the result. In my own practice I hold an evaluation to 95\% agreement with human reviewers before I treat the score as real.}
+
+\lettercontent{How I would show up in a cycle:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Discovery, then a proof:} I scope the workflow with the operator, write the engagement down, and build the prototype in Python against Claude, OpenAI, or Gemini APIs. Claude Code is the tool I use to iterate the demo.
+    \item \textbf{The room:} at IBM I wrote the release notes and presented operational results to C-level readers. The same explanation has to work for an engineer and for someone who will never open the repo.
+    \item \textbf{Degree:} B.S. Information Science, Major GPA 3.7, plus a Cognitive Science certificate. That is a related technical field, not a computer science degree.
+\end{itemize}\par}
+\vspace{2pt}
+
+\lettercontent{Thank you for your time and consideration. I would welcome the chance to walk through a proof of concept the way I would run one with a prospect.}
+
+\begin{flushright}
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

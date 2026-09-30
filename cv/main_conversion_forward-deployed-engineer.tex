@@ -1,0 +1,132 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Forward Deployed Engineer, Conversion (San Francisco)
+%% Template: compact-arial
+%% Compile with: lualatex main_conversion_forward-deployed-engineer.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Scope the technical requirements with the customer, then build a working proof before a larger build. Engagements are milestone-gated and have reached \$18K.
+  \item Build the integrations and data pipelines that connect a customer's existing systems to the workflow. One ingestion rebuild raised throughput 99.8\% in four months and cut cost 86\%.
+  \item Turn a marketing or operations goal into a deployed AI workflow: n8n, Python, REST, and webhooks, with Claude Code as the daily build tool.
+  \item Designed a content-production system for an agency and enabled the people running it. Production volume increased 10x after the workflow went live.
+  \item Ship custom behavior the customer can see in their own data, then fold the repeated piece back into the next engagement instead of rebuilding it.
+  \item Stay through launch: resolve breakage, keep a backlog, and report the measured result. The operator stays the decision-maker.
+  \item Write the spec from discovery notes so engineering is not guessing. Prompts and review gates are part of the deliverable, not a later cleanup.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Partnered with the people who used the tool: Design Thinking sessions, then release notes, so a change landed in the workflow they already had.
+  \item Built data pipelines and a Slack NLP assistant (DRE Bot) plus IBMLogAnalyze, which removed 1-3 hours of per-case prep. Reported results in Tableau and Cognos.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Shipped a Python model from messy source documents to a usable data model (F1 80.03) for a single customer, on a short engagement.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate (in progress)}{expected July 2026}
+\begin{cvitems}
+  \item BPMN, process improvement, systems design, and cloud-native delivery.
+\end{cvitems}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Forward deployed:} discovery, proofs of concept, integrations, data pipelines, production handover, field notes back to the product. \textbf{Stack:} Python, TypeScript, SQL, REST, webhooks, n8n, Claude Code, MCP, Claude / OpenAI / Gemini APIs.\par
+}
+
+\end{document}

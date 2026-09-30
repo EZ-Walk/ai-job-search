@@ -1,0 +1,125 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Solutions Engineer, Scribe (San Francisco Bay Area)
+%% Template: compact-arial
+%% Compile with: lualatex main_scribe_solutions-engineer.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Own the technical layer from first call through a proof: map how the work actually happens, then design the workflow AI should run. Engagements reach \$18K and are scoped in an SOW before the build.
+  \item Build the ROI from the customer's own baseline. An MSP pre-sales assessment fell 98\% in processing time. An ingestion pipeline rose 99.8\% in throughput and fell 86\% in cost.
+  \item Speak fluently about LLM behavior: prompt design, output quality, and a separate evaluation model held to 95\% agreement with human reviewers before the score was trusted.
+  \item Turn one engagement into a playbook. n8n workflows, written specs, and EZ-AI training so the second team does not start from a blank page. Claude Code is the daily build tool.
+  \item Carry field evidence back to the build: what the review gate caught, which step was still manual, and what the next version has to do.
+  \item Configure the proof in the customer's environment, not a generic demo: API integrations in Python and TypeScript, including OAuth and live connectivity tests.
+  \item Translate the same design to an executive and to the person who does the task. The operator remains the decision-maker on what ships.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Documented how support work actually moved, in release notes and in Design Thinking sessions, then put DRE Bot in Slack so the repeated case resolved in one response.
+  \item Removed 1-3 hours of log-prep per case with IBMLogAnalyze and showed the operational result to C-level readers in Tableau and Cognos.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate (in progress)}{expected July 2026}
+\begin{cvitems}
+  \item BPMN and process improvement: drawing the workflow before automating it.
+\end{cvitems}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Pre-sales:} discovery, proof-of-concept design, ROI from measured baselines, playbooks, GDPR-scoped data pipeline at IBM. \textbf{Workflow AI:} process mapping, prompt design, output-quality evaluation, n8n, Claude Code, MCP, Python, SQL, TypeScript.\par
+}
+
+\end{document}
