@@ -1,0 +1,51 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Letter - Makai Labs, Business Analyst
+% Compile with: xelatex cover_makai-labs_business-analyst.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{Ethan Zaruba-Walker}}{  \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com} | (512) 694-4844 |  \urlstyle{same}\href{https://linkedin.com/in/ezwalk}{LinkedIn}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\currentdate{\today}
+\lettercontent{Dear Hiring Manager,}
+
+\lettercontent{I am applying for the Business Analyst role on your product team. Since October 2023 at StaffRoom AI I have run client work from discovery interviews and current-state process diagrams through a written specification, a pilot, user training, and the backlog after launch. People stay the final firewall for accuracy. That is how I decide a workflow is done, and it is the rule Makai publishes.}
+
+\lettercontent{Your published case studies start from documents people already handle: medical forms, bank statements, and fund subscription agreements. My closest proof is handwritten clinical notes turned into a structured data model. I would map the current workflow, fit your pre-built components to it, and carry the pilot and the training beside your engineers and product managers. When the early vision needs a prototype, I build a thin slice in Python, n8n, and Claude Code so representative users can try it.}
+
+\lettercontent{How I would contribute:}
+
+{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{Discovery and process diagrams:} For an IT managed-service provider I mapped the pre-sales risk assessment, including the files, data, and systems each step used, then trained that team to run it. Processing time fell 98\%.
+    \item \textbf{Specifications and testing:} I write the specification as a statement of work: target workflow, source data, and milestone acceptance criteria. A content-scoring workflow had to reach 95\% agreement with human reviewers before production.
+    \item \textbf{Training:} Discovery, workflow design, and operator training on an agency content system raised production volume 10x.
+\end{itemize}\par}
+\vspace{2pt}
+
+\lettercontent{I have not used process-mining tools, Jira, or Azure DevOps. I have BPMN from IBM's Systems and Solutions Architecture coursework (April 2026), and I track milestones in GitHub. Thank you for your time and consideration. I would welcome a conversation about how your analysts run the first weeks of a new client engagement.}
+
+\begin{flushright}
+\closing{Sincerely,}
+
+\signature{Ethan Zaruba-Walker}
+\end{flushright}
+\end{document}

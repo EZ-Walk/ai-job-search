@@ -1,0 +1,141 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Business Analyst, Makai Labs (remote; California listed)
+%% Template: compact-arial (templates/cv/compact-arial/)
+%% Compile with: lualatex main_makai-labs_business-analyst.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    Emeryville, CA
+    {-}
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Led client discovery meetings with active listening and process mapping: interview notes, user journeys, current-state process diagrams, and the files, data, and systems each step used.
+  \item Wrote each statement of work as the specification for the build: target workflow, source data, and milestone acceptance criteria, then held delivery to those criteria through pilot and launch.
+  \item Mapped an IT managed-service provider's pre-sales risk assessments, automated the manual steps, and trained that team to run the workflow. Processing time fell 98\%.
+  \item Led discovery, workflow design, and operator training for a Notion content system, raising production volume 10x.
+  \item Set a 95\% human-agreement production KPI on a content-scoring test built from the client's labeled examples.
+  \item Rebuilt an ingestion pipeline in Python and SQL: throughput up 99.8\% in four months, cost down 86\%.
+  \item After launch, tracked issues and enhancement requests on a backlog and shipped the fixes on the same milestone plan.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Built a Python model that turned handwritten clinical notes into a structured data model (F1 80.03).
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Led Design Thinking sessions, documented the support workflow, and wrote release notes for each product change.
+  \item Built DRE Bot, a Watson NLP Slack app that cut common-issue resolution to a single response.
+  \item Shipped IBMLogAnalyze, a GDPR-compliant SQL dashboard that cut log prep from 1-3 hours to zero.
+  \item Built Cognos and Tableau dashboards that delivered operational insights to C-level executives.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science, Major GPA 3.7; Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+\begin{cvitems}
+  \item Coursework in user-centered design, applied machine learning, and technical communication.
+\end{cvitems}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate (in progress)}{2026}
+\begin{cvitems}
+  \item Completed BPMN (Business Process Modeling, April 2026) and Agile (Cloud Native, DevOps, and Agile, May 2026).
+\end{cvitems}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Discovery \& delivery:} process mapping, process diagrams, BPMN, user journeys, statements of work, functional requirements, milestone acceptance criteria, backlog, user training, active listening, cross-functional client meetings.\par
+\vspace{2pt}
+\noindent\textbf{Build \& analysis:} Python, SQL (PostgreSQL), n8n, Notion API, Claude Code, Tableau, Cognos, Figma, GitHub. Human-in-the-loop review. Agile/Scrum coursework (May 2026).\par
+}
+
+\end{document}
