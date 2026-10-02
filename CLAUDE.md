@@ -25,6 +25,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 - **Contact:** (512) 694-4844 · [ethan@staffroomai.com](mailto:ethan@staffroomai.com) · Portfolio: [https://app.notion.com/p/staffroomai/Ethan-Zaruba-Walker-2953ef6cafd5812baab4fcd98c129999?source=resume](https://app.notion.com/p/staffroomai/Ethan-Zaruba-Walker-2953ef6cafd5812baab4fcd98c129999?source=copy_link)
 - **Languages:** English (native), Spanish (conversational)
 - **Status:** Founder & AI Solutions Consultant at StaffRoom AI (Oct 2023-present); open to full-time roles
+- **Work authorization:** Authorized to work in the United States. Will never need visa sponsorship. On applications, answer right-to-work and legally-authorized questions Yes, and every sponsorship question No.
 
 
 
