@@ -1,0 +1,133 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Sales Engineer, Hippocratic AI (Menlo Park)
+%% Template: compact-arial
+%% Compile with: lualatex main_hippocratic-ai_sales-engineer.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Run discovery and scoping with the operator, then write the SOW and build the proof. Client work has reached \$18K, with the human remaining the decision-maker.
+  \item Prototype agent flows in Python against Claude, OpenAI, and Gemini APIs, including tool use and MCP. Claude Code is the daily driver for iterating a demo with the customer in the room.
+  \item Own the technical narrative: translate a workflow into a solution design, a demo, and a measured outcome the buyer can repeat back.
+  \item Built an evaluation from the client's ground truth and held it to 95\% agreement with human reviewers before anything was treated as good enough to ship.
+  \item Shipped production API integrations in Python and TypeScript, including OAuth and CI that calls the live third-party API, so a pilot is not a slide.
+  \item Automated an MSP's pre-sales risk assessments, cut processing time 98\%, and trained their team to extend the workflow after the pilot.
+  \item Turn what breaks on a client engagement into the next scoped change: a living backlog, revised prompts, and a tighter human review gate.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Built a Python model that turned handwritten clinical notes into a structured data model (F1 80.03). The interface was one customer, and a person still checked the output.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Wrote release notes and ran Design Thinking sessions so engineers and non-technical stakeholders heard the same explanation of what changed and why.
+  \item Built DRE Bot, a Watson NLP assistant inside Slack, and IBMLogAnalyze, a pipeline that removed 1-3 hours of log prep per case. Presented operational results to C-level readers in Tableau and Cognos.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{DeepLearning.AI}{Online}
+{Deep Learning Specialization \textbar{} TensorFlow Developer Professional Certificate}{January 2021 \textbar{} May 2020}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate (in progress)}{expected July 2026}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Sales engineering:} discovery, scoping, working pilots, solution narratives, executive-readable outcomes. \textbf{Build:} Python, TypeScript, REST APIs, LLM and agent tooling, Claude Code, MCP, prompt and evaluation design. \textbf{Adjacent:} clinical-note ML internship (F1 80.03).\par
+}
+
+\end{document}
