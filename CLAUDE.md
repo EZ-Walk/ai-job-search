@@ -64,7 +64,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Certifications
 
-- **IBM Systems & Solutions Architecture Professional Certificate** - in progress, expected Jul 2026
+- **IBM Systems & Solutions Architecture Professional Certificate** - completed 2026
 - **Deep Learning Specialization** (DeepLearning.AI) - Jan 2021
 - **TensorFlow Developer Professional Certificate** - May 2020
 - **EMT** (RC Health Services) - 2024 · **AIARE 1** - 2022

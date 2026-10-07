@@ -88,7 +88,7 @@ Map EZ-AI, rush-chair matching, and enablement as adult-coaching evidence only. 
 **Life situation alignment:** Consider personal constraints:
 - **Security**: salary flexible, evaluated case by case (equity, mission, and growth path weigh in); consulting income exists as fallback. Alpha Guide posted pay is typically $100k–$150k W2. Montessori assistants, paras, and after-school roles pay much less. Say so in the eval; do not skip on pay unless the user has set a floor.
 - **Flexibility**: remote-first for engineering/consulting roles; **Bay Area on-site including school hours is fine for educator roles**; relocation out of the Bay Area is a deal-breaker (lives aboard MARGARITA on the SF Bay)
-- **Professional development**: growth toward a client-embedded analyst seat on a human-in-the-loop automation platform; education work (Montessori, independent, traditional, or Guide-style) remains a kept lane; IBM Systems & Solutions Architecture certificate was in progress with modules through May 2026 (expected completion was Jul 2026; do not mark it finished from the calendar)
+- **Professional development**: growth toward a client-embedded analyst seat on a human-in-the-loop automation platform; education work (Montessori, independent, traditional, or Guide-style) remains a kept lane; IBM Systems & Solutions Architecture Professional Certificate completed in 2026
 
 ### 6. Salary Benchmark (Optional)
 

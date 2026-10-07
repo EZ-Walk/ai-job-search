@@ -1,0 +1,144 @@
+%% Compact Arial CV - Ethan Zaruba-Walker
+%% Target: Forward Deployed Architect, Notion (San Francisco, hybrid)
+%% Compile with: lualatex -interaction=nonstopmode main_notion_forward-deployed-architect.tex
+%% Do not overwrite other Notion role variants.
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://staffroomai.com}{staffroomai.com}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Lead consultative discovery with operators: map current-state workflows, pain, stakeholders, technical constraints, unknowns, and the practical future state before selecting tools.
+  \item Translate ambiguous goals into process maps, prioritized requirements, solution architectures, implementation plans, human review points, and measurable success criteria.
+  \item Built a Notion content-marketing system that increased agency production volume 10x; designed client, campaign, topic, content, review, and publishing workflows inside a shared workspace.
+  \item Automated an IT MSP's pre-sales risk assessments and trained the team to operate and extend the workflow. Processing time fell 98\% against a measured baseline.
+  \item Ran a 30-day AI-workflow pilot with four users; converted eight-plus sessions into a prioritized product backlog, then shipped one-click generation, multi-draft output, research integration, and direct publishing.
+  \item Built production Notion API integrations in TypeScript and Python: OAuth Connections, data sources, pages, comments, webhooks, and a Whisper-to-Notion pipeline with live-connectivity CI.
+  \item Design Notion as the work and review surface while specialized systems retain their machinery; connect the boundary with APIs, n8n, MCP, and event-driven agent workflows.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Wiz Music}{Barcelona, Spain}
+{Community Development Intern}{May 2022 - July 2022}
+\begin{cvitems}
+  \item Analyzed Discord churn and acquisition to define the growth objective, then configured artist feeds and ran an AMA against the engagement gap.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer Intern}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Translated handwritten clinical notes into an extensible data model with Python and TensorFlow, achieving F1 80.03.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Built DRE Bot after Design Thinking discovery with support stakeholders. At the three-month check-in, teams still used the Watson NLP Slack app and resolved common issues in one response.
+  \item Designed and deployed IBMLogAnalyze, a GDPR-compliant client-data pipeline and dashboard that eliminated 1--3 hours of preparation per case; a user confirmed continued use six years later.
+  \item Built C-level Tableau and Cognos dashboards; published release notes and documentation for each product change.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S.\ Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate; BPMN, cloud-native, Agile}{2026}
+
+\vspace{3pt}
+\cveduhead{DeepLearning.AI}{Online}
+{Deep Learning Specialization \textbar{} TensorFlow Developer Professional Certificate}{2020 - 2021}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Discovery \& delivery:} current-state mapping, requirements, solution architecture, success criteria, SOWs, change management, stakeholder alignment, enablement, launch planning, handoff.\\[2pt]
+\noindent\textbf{Notion \& AI:} workspace and data architecture, permissions, API, OAuth, MCP, agents, automations, Claude Code.\\[2pt]
+\noindent\textbf{Adoption \& product:} human-in-the-loop design, user testing, product backlogs, operational KPIs, training, documentation.\\[2pt]
+\noindent\textbf{Implementation:} Python, TypeScript, SQL, n8n, REST/JSON APIs, data pipelines, Docker, Git/GitHub.\par
+}
+
+\end{document}

@@ -37,7 +37,7 @@ framework_version: 1.0.0
 - Note: cumulative GPA is 3.253 (rough first year, strong recovery); **always cite "Major GPA 3.7"**, never unqualified "GPA 3.7"
 
 ### Certifications
-- **IBM Systems & Solutions Architecture Professional Certificate** — in progress, expected Jul 2026 (completed: IT Systems Design and Analysis, Mar 2026; Business Process Modeling, Analysis and Improvement, Apr 2026; Cloud Native, DevOps, Agile, May 2026)
+- **IBM Systems & Solutions Architecture Professional Certificate** — completed 2026 (coursework included IT Systems Design and Analysis; Business Process Modeling, Analysis and Improvement; Cloud Native, DevOps, Agile)
 - **Deep Learning Specialization** — DeepLearning.AI / Coursera (Jan 2021)
 - **TensorFlow Developer Professional Certificate** — DeepLearning.AI / Coursera (May 2020)
 - **Natural Language Processing in TensorFlow** — DeepLearning.AI / Coursera (May 2020, verify: coursera.org/verify/5JHEWA6MXLH2)
@@ -48,7 +48,7 @@ framework_version: 1.0.0
 - **Applied Machine Learning (INFO 4604):** classification, regression, clustering; statistical learning; feature creation / dimensionality reduction; ML fairness. *(CU catalog syllabus)*
 - **Deep Learning Specialization (completed Jan 2021):** CNNs and visual detection/recognition; neural style transfer; RNNs / LSTMs / GRUs; word embeddings and sequence modeling; hyperparameter tuning, regularization, batch norm, bias/variance diagnosis; end-to-end vs. transfer vs. multi-task learning. Do **not** cite HuggingFace/Transformers from this cert — those were added to the course after the 2021 completion. *(DeepLearning.AI syllabus, 2021-era)*
 - **TensorFlow Developer Professional Certificate (May 2020):** time-series forecasting with DNNs/ConvNets; image augmentation and overfitting control; tokenization and sentence-vector NLP in TensorFlow. *(DeepLearning.AI / Coursera)*
-- **IBM Systems & Solutions Architecture (in progress):** UML / DFDs / ERDs; BPMN and business-process improvement (Lean / systems thinking); cloud-native microservices, CI/CD, Agile/Scrum; capacity planning, scalability, architectural patterns. *(Coursera program skills — completed modules through May 2026)*
+- **IBM Systems & Solutions Architecture:** UML / DFDs / ERDs; BPMN and business-process improvement (Lean / systems thinking); cloud-native microservices, CI/CD, Agile/Scrum; capacity planning, scalability, architectural patterns. *(Professional Certificate completed 2026)*
 - **AIARE 1:** avalanche terrain recognition and trip planning; AIARE risk-management / group decision-making framework; companion rescue; snowpack observation and human-factor mitigation. *(AIARE official SLOs)*
 - **EMT (2024):** emergency medical assessment and BLS; patient care and radio/team communication under uncertainty. *(inferred from RC Health Services EMT — review before relying on specific protocols)*
 
@@ -138,7 +138,7 @@ Barcelona, Spain
 - **Avalanche hazard management** as outdoor-domain knowledge (terrain recognition, group decision-making, companion rescue). *(AIARE 1 — Bondi Outdoor Leadership)*
 - **Andragogy / AI fluency training:** problem-first curriculum design for adult domain experts. *(EZ-AI, confirmed delivered)*
 - **Event-driven and knowledge-graph systems:** Source→Gate→Drain event streams; entity graphs with co-occurrence / Hebbian design; Trello webhook extraction. *(GitHub — marketsense-event-stream, marketsense-information-ecosystem)*
-- **Systems architecture methods:** UML/DFD/ERD, BPMN, microservices vs. monolith, CI/CD, Agile/Scrum, capacity planning. *(IBM Systems & Solutions Architecture — in progress)*
+- **Systems architecture methods:** UML/DFD/ERD, BPMN, microservices vs. monolith, CI/CD, Agile/Scrum, capacity planning. *(IBM Systems & Solutions Architecture Professional Certificate, completed 2026)*
 - **AI bias mitigation in data collection** (transparent procedures on the Allies Against Slavery engagement). *(LinkedIn)*
 
 ### Software & Tools
