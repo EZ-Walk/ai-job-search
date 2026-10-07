@@ -1,0 +1,164 @@
+%% Portfolio résumé — Notion-native source (Ethan Zaruba-Walker page)
+%% ATS layout: compact-arial (ai-job-search templates/cv/compact-arial)
+%% Compile: lualatex -interaction=nonstopmode notion-native.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - Resume},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    ethan@zwconsultingllc.net
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}
+    {-}
+    \href{https://www.instagram.com/ez.walk/}{instagram.com/ez.walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Work Experience}
+
+\cventryhead{Staff Room AI}{}{AI Consultant}{Oct. 2023 -- Present}
+\vspace{3pt}
+\noindent\textbf{Client Work}\par
+\vspace{2pt}
+\noindent\textbf{MediaMark Spotlight} --- \textit{LLM-as-a-Judge Content Evaluation System}\par
+\begin{cvitems}
+  \item Architected multi-phase engagement: data extraction $\rightarrow$ rubric design $\rightarrow$ validation $\rightarrow$ deployment with 95\% human-agreement success criteria
+  \item Delivered automated content scoring at scale with triple-gate approval workflows and GitHub-versioned rubrics
+  \item Managed stakeholder communication and requirements gathering, translating business needs into technical architecture
+  \item Built reusable patterns: n8n orchestration, multimodal evaluation, event-driven agent workflows
+\end{cvitems}
+\vspace{3pt}
+\noindent\textbf{Allies Against Slavery} --- \textit{Data Platform Modernization}\par
+\begin{cvitems}
+  \item Modernized data ingestion process, increasing potential throughput by \textbf{99.8\%} in 4 months and reducing cost by \textbf{86\%}
+  \item Built data platforms and partnerships to accelerate solutions to human trafficking
+\end{cvitems}
+\vspace{3pt}
+\noindent I use \textbf{Python, Azure AI Services, PostgreSQL, Dropbox API, OpenAI API, n8n, Docker, GitHub Actions}\par
+
+\vspace{5pt}
+\cventryhead{Wiz Music}{Barcelona}{Community Development Intern}{May 2022 -- July 2022}
+\begin{cvitems}
+  \item This study abroad style internship inspired a greater appreciation for diversity for cultures and thought. During these three months I dove into the Web3 community in Barcelona and fostered/supported the Discord community around Wiz music. Working under Marc Collado taught me invaluable lessons in product design and development as well as a few in Spanish and Catalan.
+  \item I used \textbf{Spanish, Discord, Twitter (X)}
+\end{cvitems}
+
+\vspace{5pt}
+\cventryhead{Valhalla Healthcare}{}{Machine Learning Engineer}{May 2021 -- Aug. 2021}
+\begin{cvitems}
+  \item Researched, designed and built a machine learning model that added business value by augmenting the capabilities of healthcare providers by translating hand-written notes to an extensible data model across the business.
+  \item I used \textbf{Python, Keras, Tensorflow, Docker}
+\end{cvitems}
+
+\vspace{5pt}
+\cventryhead{IBM}{}{Cognitive Software Engineer}{Aug. 2017 -- Dec. 2020}
+\begin{cvitems}
+  \item Designed, built and integrated a machine learning application into Slack that allowed support engineers to find similar service records, accelerating time to resolution and employee productivity
+  \item Published release notes and documentation to stakeholders to support ongoing application development
+\end{cvitems}
+
+\cventryhead{IBM}{}{Data Engineer}{Aug. 2018 -- Aug. 2020}
+\begin{cvitems}
+  \item Designed, built, and deployed a data platform for advanced analytics, automating hours of work for support teams.
+  \item Hosted design meetings with stakeholders to discover human priorities for the technology
+\end{cvitems}
+
+\cventryhead{IBM}{}{Research Intern}{May 2017 -- Aug. 2017}
+\begin{cvitems}
+  \item Developed a VR local multiplayer tower defense game in Unity using C\#. There was a special emphasis on the interaction between players inside and outside of the virtual space.
+  \item Designed and built and engaging AR window exhibit for the ThinkLab using Java and the Microsoft Kinect.
+  \item I used \textbf{Kinect, HTC Vive, Microsoft HoloLens, Unity 3D, C\#, Python, SQLITE, Flask, Dash, Plotly,}
+\end{cvitems}
+
+\cvsection{Education}
+
+\noindent ``I never let my schooling get in the way of my education.'' --- Mark Twain\par
+\vspace{4pt}
+
+\cveduhead{University of Colorado, Boulder}{}{B.S. Information Science Graduate, May 2023 --- GPA: 3.7 --- Projects Inside}{}
+\cveduhead{University of Colorado, Boulder}{}{Certificate of Cognitive Science, May 2023}{}
+
+\vspace{5pt}
+\cveduhead{IBM on Coursera}{}{Systems and Solutions Architecture, August 2026}{}
+\cveduhead{Deeplearning.ai on Coursera}{}{Deep Learning Specialization, Jan 2021}{}
+\cveduhead{Deeplearning.ai on Coursera}{}{Tensorflow Developer Professional Certificate, May 2020}{}
+
+\cvsection{Other interests}
+
+\cveduhead{RC Health Services EMS Academy}{}{Emergency Medical Technician, May 2024}{}
+\noindent Post-graduation I wanted to keep learning and I wanted to challenge myself to learn more about a field that is steeped in complexity while remaining widely applicable. Healthcare was my answer.\par
+
+\vspace{5pt}
+\cveduhead{Bondi Outdoor Leadership}{}{AIARE 1 Avalanche Safety and Rescue, March 2022}{}
+\noindent The outdoors inspire me, skiing motivates me. Combining the two safely with a sprinkling of science is right up my alley\par
+
+\end{document}
