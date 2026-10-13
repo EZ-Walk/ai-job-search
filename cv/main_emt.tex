@@ -1,0 +1,85 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Emergency Medical Technician (EMT) roles, Bay Area
+%% Compile with: lualatex main_emt.tex
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{30}{32}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{30}{32}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={Ethan Zaruba-Walker - EMT Resume},
+    pdfauthor={Ethan Zaruba-Walker},
+}
+\usepackage[scale=0.86]{geometry}
+\usepackage{needspace}
+
+% personal data
+\name{Ethan}{Zaruba-Walker}
+\address{Emeryville, CA}{}{}
+\phone[mobile]{(512) 694-4844}
+\email{rocketwalker@gmail.com}
+
+\begin{document}
+
+\makecvtitle
+
+\vspace{2pt}
+\small{National Registry EMT (NREMT) certified (RC Health Services, 2024); California EMT certification pending reinstatement. AIARE 1 avalanche safety and rescue trained. Customer-facing professional with two years in IBM's Customer Support organization and three years as sole point of contact for all clients of an independent consulting practice. Fully open availability, including nights, weekends, and holidays.}
+
+\section{Certifications}
+\begin{itemize}
+\item \textbf{National Registry Emergency Medical Technician (NREMT)}, RC Health Services EMT program (2024). California EMT certification pending reinstatement (continuing education or refresher, plus skills verification).
+\item \textbf{AIARE 1 Avalanche Safety and Rescue}, Bondi Outdoor Leadership (March 2022): avalanche terrain recognition, group decision-making, companion rescue.
+\end{itemize}
+
+\section{Core Strengths}
+\begin{itemize}
+\item \textbf{Safety and emergency response}: NREMT certified and AIARE 1 trained; scene assessment, adherence to safety protocols, composure under pressure.
+\item \textbf{Reliability}: Manages scheduling, communications, and billing across multiple concurrent clients; lives aboard and maintains a 1966 sailboat on SF Bay, requiring daily upkeep.
+\item \textbf{Public communication}: Eight years translating technical detail into plain language for non-technical audiences; active listening and thorough needs assessment.
+\item \textbf{Physical capability}: Full-shift standing, repeated bending, lifting up to 40 lbs, and manual work.
+\item \textbf{Outdoor activities}: Cycling (commuting and community rides), skiing, sailing.
+\item \textbf{Languages}: English (native), Spanish (conversational).
+\end{itemize}
+
+\section{Experience}
+\begin{itemize}
+\item{\cventry{2023--Present}{Founder \& AI Solutions Consultant}{StaffRoom AI}{Emeryville, CA}{}{
+\begin{itemize}
+    \item Manage all client relationships end to end, from initial consultation through delivery and ongoing support, on engagements up to \$18K.
+    \item Lead discovery sessions to identify client requirements; communicate project scope in plain language.
+    \item Trained and supported an agency team on a new content production system as production volume grew 10x.
+\end{itemize}}}
+\item{\cventry{2018--2020}{Data Engineer / Cognitive Software Engineer, Customer Support}{IBM}{Austin, TX}{}{
+\begin{itemize}
+    \item Built tools for front-line support engineers, reducing resolution of the most common customer issues to a single response.
+    \item Automated log analysis, eliminating 1--3 hours of preparation per support case.
+    \item Handled sensitive customer data under GDPR-compliant controls; authored plain-language customer release notes.
+\end{itemize}}}
+\item{\cventry{2021}{Machine Learning Engineer (Intern)}{Valhalla Healthcare}{Remote}{}{
+\begin{itemize}
+    \item Developed an ML model converting handwritten clinical notes into structured data (F1 80.03). Software role; no patient care.
+\end{itemize}}}
+\end{itemize}
+
+\section{Education}
+\begin{itemize}
+\item{\cventry{2018--2023}{B.S. Information Science}{University of Colorado Boulder}{Boulder, CO}{}{
+Major GPA 3.7 · Certificate of Cognitive Science · Coursework includes Personal Health Informatics (INFO 4871) · Senior capstone: Gamifying Outdoor Education in Software.}}
+\end{itemize}
+
+\section{References}
+\begin{itemize}
+\item{Available upon request.}
+\end{itemize}
+
+\end{document}
