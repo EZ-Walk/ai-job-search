@@ -71,7 +71,7 @@ export function ProjectSearch({ posts }: ProjectSearchProps) {
                   </p>
                 ) : null}
                 <p>
-                  <Link href={`/blog/${post.slug}`}>Read more →</Link>
+                  <Link href={`/blog/${post.slug}`}>Read the evidence →</Link>
                 </p>
               </article>
             );

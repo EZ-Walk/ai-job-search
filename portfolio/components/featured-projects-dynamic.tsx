@@ -54,7 +54,7 @@ export function FeaturedProjectsDynamic({
               </p>
             ) : null}
             <p>
-              <a href={`/blog/${post.slug}`}>Read more →</a>
+              <a href={`/blog/${post.slug}`}>Read the evidence →</a>
             </p>
           </article>
         );
