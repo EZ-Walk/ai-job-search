@@ -7,7 +7,9 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run test:blog-tags && npm run test:notion-parity",
+    "test:blog-tags": "node --env-file=.env.local --import tsx --test tests/blog-tags.test.ts",
+    "test:notion-parity": "node --env-file=.env.local ./node_modules/tsx/dist/cli.mjs tests/notion-server-parity.test.ts",
     "dev": "next dev",
     "prebuild": "node scripts/generate-resume-pdf.mjs",
     "build": "next build",
@@ -37,6 +39,8 @@
     "@types/react-dom": "^19.3.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.3.8",
+    "playwright": "^1.64.1",
+    "tsx": "^4.23.15",
     "typescript": "^6.0.3"
   }
 }

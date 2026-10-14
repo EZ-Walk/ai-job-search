@@ -2,6 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      { source: "/projects", destination: "/blog", permanent: true },
+      { source: "/projects/:slug", destination: "/blog/:slug", permanent: true },
+    ];
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "www.notion.so" },

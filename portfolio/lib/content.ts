@@ -27,67 +27,111 @@ export const about = {
   ],
 } as const;
 
+export type ProblemId =
+  | "discovery-solution-design"
+  | "first-of-kind-architecture"
+  | "integrations-ai-configuration"
+  | "deployment-leadership"
+  | "adoption-handoff"
+  | "reusable-delivery-assets"
+  | "field-to-product-feedback";
+
+export const problemLabels: Record<ProblemId, string> = {
+  "discovery-solution-design": "Discovery & solution design",
+  "first-of-kind-architecture": "First-of-kind architecture",
+  "integrations-ai-configuration": "Integrations & AI configuration",
+  "deployment-leadership": "Deployment leadership",
+  "adoption-handoff": "Adoption & handoff",
+  "reusable-delivery-assets": "Reusable delivery assets",
+  "field-to-product-feedback": "Field-to-product feedback",
+};
+
+const problemIdByLabel = new Map(
+  Object.entries(problemLabels).map(([id, label]) => [label.toLowerCase(), id as ProblemId]),
+);
+
 export type ExperienceEntry = {
   id: string;
   period: string;
   title: string;
   organization: string;
-  context: string;
-  contribution: string;
-  outcome: string;
-  featuredProjectId?: string;
-  lesson?: string;
-  lessonPendingQuestion?: string;
+  situation: string;
+  task: string;
+  action: string;
+  result?: string;
+  problems: ProblemId[];
+  /** Blog slugs whose published deep dives support this role. */
+  evidenceSlugs?: string[];
 };
 
 export const experience: ExperienceEntry[] = [
   {
     id: "staffroom-consulting",
-    period: "2023–present",
+    period: "Oct 2023–present",
     title: "Founder & consultant",
     organization: "Staff Room AI",
-    context:
-      "Operators needed systems that matched how work actually moved—not another dashboard that sat beside the job.",
-    contribution:
-      "Led discovery, mapped information flows, designed integrations and automation, and trained teams on the new operating model.",
-    outcome:
-      "Documented delivery across ingestion modernization, LLM evaluation design, and a legal-AI hypothesis with requirements, use cases, and a runnable service.",
-    featuredProjectId: "mediamark-spotlight",
+    situation:
+      "Small operators needed AI systems that matched how work actually moved, and they did not have an in-house team to build them. Each engagement had to end with operators who could keep the system running.",
+    task: "Own discovery through training, and leave a system the client can run.",
+    action: "Mapped the work, built Notion and automation systems, and trained operators at handoff.",
+    result: "Ingestion capacity +99.8% and cost −86%; operators took over the systems.",
+    problems: [
+      "discovery-solution-design",
+      "first-of-kind-architecture",
+      "integrations-ai-configuration",
+      "deployment-leadership",
+      "adoption-handoff",
+      "reusable-delivery-assets",
+    ],
   },
   {
     id: "ibm",
-    period: "2017–2020",
+    period: "Aug 2018–Dec 2020",
     title: "Cognitive software and data engineer",
     organization: "IBM",
-    context:
-      "Support engineers lost time when the similar case was buried in tooling they were not already using.",
-    contribution:
-      "Designed a similar-case tool inside Slack and built analytics around case topics, volume, and outcomes.",
-    outcome:
-      "Similar cases could surface in the channel where support work already happened.",
-    featuredProjectId: "ibm-similar-case",
+    situation:
+      "Support engineers lost hours preparing client logs before they could analyze a case. Past resolutions were just as hard to find, buried outside the channel where the work already happened.",
+    task: "Surface past resolutions and usable logs inside existing support tools.",
+    action: "Ran discovery with support teams, then shipped a Slack case-matcher and a log pipeline.",
+    result: "Common problems resolved in one Slack response; log-analysis effort fell by an order of magnitude.",
+    problems: [
+      "discovery-solution-design",
+      "integrations-ai-configuration",
+      "deployment-leadership",
+      "adoption-handoff",
+      "reusable-delivery-assets",
+    ],
+    evidenceSlugs: ["solve-analytics", "ibm-log-analyze-overview"],
   },
   {
     id: "valhalla",
     period: "May–Aug 2021",
     title: "Machine learning engineer (intern)",
     organization: "Valhalla Healthcare",
-    context: "Handwritten clinical notes never became a record the rest of the work could use.",
-    contribution: "Built a model pipeline from handwritten notes into a structured data model.",
-    outcome: "Handwritten notes could enter a data model downstream systems could use.",
-    featuredProjectId: "valhalla-healthcare",
+    situation:
+      "Clinicians recorded care in handwritten notes that never became a record the rest of the work could use.",
+    task: "Turn handwritten clinical notes into a data model other workflows could use.",
+    action: "Researched the pipeline, trained a Keras and TensorFlow model, and packaged it in Docker.",
+    result: "Handwritten notes entered an extensible data model at F1 80.03.",
+    problems: [
+      "discovery-solution-design",
+      "first-of-kind-architecture",
+      "integrations-ai-configuration",
+      "reusable-delivery-assets",
+    ],
+    evidenceSlugs: ["auto-note"],
   },
   {
     id: "wiz",
-    period: "2022",
+    period: "May–Jul 2022",
     title: "Community development intern",
     organization: "Wiz Music · Barcelona",
-    context: "Community metrics did not match what operators believed about growth.",
-    contribution:
-      "Diagnosed instrumentation gaps, raised non-organic growth patterns, and tested artist-feed interventions.",
-    outcome: "Clearer metrics judgment for community operators.",
-    lessonPendingQuestion:
-      "What is the one sentence you want visitors to remember from the Wiz Music internship?",
+    situation:
+      "A music startup read its Discord member count as growth, but the join sources did not support that story. Artists, the reason people would stay, were missing from the server.",
+    task: "Show what the membership data actually said, then test one fix.",
+    action: "Segmented joins by source, raised the inorganic pattern, and shipped an artist AMA.",
+    result: "The team corrected its baseline, and the AMA shipped as a paid artist perk.",
+    problems: ["discovery-solution-design", "field-to-product-feedback"],
   },
 ];
 
@@ -101,7 +145,69 @@ export type FeaturedProject = {
   outcome: string;
   inspect: { label: string; href: string }[];
   outcomeNote?: string;
+  problems?: ProblemId[];
+  problemSolved?: string;
+  proves?: string;
 };
+
+export type EvidenceOverlay = {
+  problems: ProblemId[];
+  problemSolved: string;
+  proves: string;
+};
+
+/** Fills homepage evidence cards when a published post has no tags or excerpt yet. */
+export const evidenceOverlays: Record<string, EvidenceOverlay> = {
+  "solve-analytics": {
+    problems: [
+      "discovery-solution-design",
+      "integrations-ai-configuration",
+      "adoption-handoff",
+    ],
+    problemSolved: "Past resolutions were buried outside the Slack channel where support work happened.",
+    proves:
+      "Design-thinking sessions, a Watson NLP case matcher, and a check-in where common problems resolved in one response.",
+  },
+  "ibm-log-analyze-overview": {
+    problems: [
+      "integrations-ai-configuration",
+      "deployment-leadership",
+      "reusable-delivery-assets",
+    ],
+    problemSolved: "Support engineers lost hours preparing client logs before analysis could start.",
+    proves:
+      "A GDPR-minded CaseBase pipeline and SDS-Vis dashboard that cut analysis effort by an order of magnitude.",
+  },
+  "auto-note": {
+    problems: [
+      "discovery-solution-design",
+      "first-of-kind-architecture",
+      "integrations-ai-configuration",
+    ],
+    problemSolved: "Handwritten clinical notes never became a record other systems could use.",
+    proves: "A notes-to-data-model pipeline with a reported F1 of 80.028.",
+  },
+  "hack-for-racial-justice-2020": {
+    problems: ["discovery-solution-design", "first-of-kind-architecture"],
+    problemSolved: "Polling access was eroding, and the national gap was hard to see.",
+    proves:
+      "A hackathon data product that used polling and census data to find underserved communities.",
+  },
+};
+
+export function evidenceView(post: { slug: string; excerpt: string; tags: string[] }) {
+  const overlay = evidenceOverlays[post.slug];
+  const taggedProblems = post.tags.flatMap((tag) => {
+    const id = problemIdByLabel.get(tag.toLowerCase());
+    return id ? [id] : [];
+  });
+  return {
+    problems: taggedProblems.length ? taggedProblems : (overlay?.problems ?? []),
+    problemSolved: overlay?.problemSolved,
+    proves: post.excerpt.trim() || overlay?.proves,
+    extraTags: post.tags.filter((tag) => !problemIdByLabel.has(tag.toLowerCase())),
+  };
+}
 
 export const featuredProjects: FeaturedProject[] = [
   {
@@ -111,7 +217,7 @@ export const featuredProjects: FeaturedProject[] = [
     discovery:
       "Support cases supplied the signal; stakeholder interviews and Cognos dashboards showed where time disappeared.",
     architecture: "A similar-case tool inside Slack, where support work already happened.",
-    delivery: "Designed and built the Slack tool as a cognitive software and data engineer, 2017–2020.",
+    delivery: "Designed and built the Slack tool as a cognitive software and data engineer, Aug 2018–Dec 2020.",
     outcome: "Similar cases can surface in Slack, in the tool people were already using.",
     inspect: [],
   },
@@ -141,6 +247,9 @@ export const featuredProjects: FeaturedProject[] = [
       "Notion Worker syncing bank transactions, hardened Plaid → Supabase pipeline, and Notion OAuth integration.",
     delivery: "Engineering depth in production-shaped modules with inspectable public README and repo boundaries.",
     outcome: "Working integration evidence and a documented backlog from field feedback.",
+    problems: ["integrations-ai-configuration", "field-to-product-feedback"],
+    problemSolved: "A finance operator needed a ledger they could review, not a black-box agent.",
+    proves: "A public README for the Notion worker, Plaid → Supabase pipeline, and Notion OAuth integration.",
     inspect: [
       {
         label: "The Count README",
@@ -191,6 +300,9 @@ export const featuredProjects: FeaturedProject[] = [
     delivery:
       "Documented the system and composed the service. Publicly described as a Staff Room case study.",
     outcome: "A documented hypothesis and a service someone else can start.",
+    problems: ["discovery-solution-design", "first-of-kind-architecture"],
+    problemSolved: "Easement drafting is slow, and an unreviewed model is the wrong place to file from.",
+    proves: "Public system context, requirements, use cases, and a Docker Compose service a reviewer can start.",
     inspect: [
       {
         label: "System context",

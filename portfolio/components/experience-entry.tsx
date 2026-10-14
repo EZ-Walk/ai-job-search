@@ -1,11 +1,16 @@
-import type { ExperienceEntry, FeaturedProject } from "../lib/content";
+import { problemLabels, type ExperienceEntry } from "../lib/content";
+
+type EvidenceLink = {
+  slug: string;
+  title: string;
+};
 
 type ExperienceEntryProps = {
   entry: ExperienceEntry;
-  featuredProject?: FeaturedProject;
+  evidenceLinks?: EvidenceLink[];
 };
 
-export function ExperienceEntryCard({ entry, featuredProject }: ExperienceEntryProps) {
+export function ExperienceEntryCard({ entry, evidenceLinks = [] }: ExperienceEntryProps) {
   return (
     <article className="experience-card" id={entry.id}>
       <p className="meta">
@@ -14,31 +19,33 @@ export function ExperienceEntryCard({ entry, featuredProject }: ExperienceEntryP
       <h3>
         {entry.title} · {entry.organization}
       </h3>
-      <p>
-        <strong>Context.</strong> {entry.context}
+      {entry.problems.length ? (
+        <div className="problem-row" aria-label="Problems this role demonstrates">
+          {entry.problems.map((problem) => (
+            <span key={problem}>{problemLabels[problem]}</span>
+          ))}
+        </div>
+      ) : null}
+      <p>{entry.situation}</p>
+      <p className="star-line">
+        <strong>Task.</strong> {entry.task}
       </p>
-      <p>
-        <strong>Contribution.</strong> {entry.contribution}
+      <p className="star-line">
+        <strong>Action.</strong> {entry.action}
       </p>
-      <p>
-        <strong>Outcome.</strong> {entry.outcome}
-      </p>
-      {entry.lesson ? (
-        <p>
-          <strong>Lesson.</strong> {entry.lesson}
+      {entry.result ? (
+        <p className="star-line">
+          <strong>Result.</strong> {entry.result}
         </p>
       ) : null}
-      {entry.lessonPendingQuestion ? (
-        <p className="muted">
-          <strong>Open for Ethan:</strong> {entry.lessonPendingQuestion}
-        </p>
-      ) : null}
-      {featuredProject ? (
-        <p>
-          <a href={`#project-${featuredProject.id}`}>
-            Featured project: {featuredProject.title} →
-          </a>
-        </p>
+      {evidenceLinks.length ? (
+        <div className="inspect-links">
+          {evidenceLinks.map((link) => (
+            <a key={link.slug} href={`/blog/${link.slug}`}>
+              Evidence: {link.title} →
+            </a>
+          ))}
+        </div>
       ) : null}
     </article>
   );

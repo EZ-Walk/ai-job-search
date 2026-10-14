@@ -27,12 +27,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const { post } = match;
   const description = post.excerpt || post.title;
-  const url = `${getSiteBaseUrl()}/projects/${post.slug}`;
+  const url = `${getSiteBaseUrl()}/blog/${post.slug}`;
 
   return {
     title: `${post.seoTitle} — ${site.name}`,
     description,
-    alternates: { canonical: `/projects/${post.slug}` },
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.seoTitle,
       description,
@@ -56,7 +56,7 @@ export default async function ProjectDeepDivePage({ params }: PageProps) {
     notFound();
   }
 
-  const liveUrl = `${getSiteBaseUrl()}/projects/${post.slug}`;
+  const liveUrl = `${getSiteBaseUrl()}/blog/${post.slug}`;
   try {
     await writePostSyncMetadata(page.id, liveUrl);
   } catch {
@@ -74,8 +74,13 @@ export default async function ProjectDeepDivePage({ params }: PageProps) {
           <p className="muted project-tags">{post.tags.join(" · ")}</p>
         ) : null}
         <NotionPageRenderer recordMap={recordMap} rootPageId={page.id} />
-        <p style={{ marginTop: "2.5rem" }}>
-          <Link href="/projects">← All projects</Link>
+        <p className="article-back" style={{ marginTop: "2.5rem" }}>
+          <Link className="button-ghost" href="/">
+            ← Home
+          </Link>
+          <Link className="button-ghost" href="/blog">
+            ← All posts
+          </Link>
         </p>
       </main>
     </>

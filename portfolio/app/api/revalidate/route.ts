@@ -16,11 +16,11 @@ export async function POST(request: Request) {
   const slug = url.searchParams.get("slug");
 
   revalidatePath("/");
-  revalidatePath("/projects");
+  revalidatePath("/blog");
   if (slug) {
-    revalidatePath(`/projects/${slug}`);
+    revalidatePath(`/blog/${slug}`);
   } else {
-    revalidatePath("/projects", "layout");
+    revalidatePath("/blog", "layout");
   }
 
   return NextResponse.json({ ok: true, revalidated: true, slug: slug ?? "all" });

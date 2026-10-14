@@ -7,6 +7,7 @@ import {
   experience,
   featuredProjects,
   influences,
+  problemLabels,
   site,
 } from "../lib/content";
 import { fetchPublishedPosts } from "../lib/notion/posts";
@@ -17,7 +18,8 @@ const mailto = `mailto:${site.email}?subject=${encodeURIComponent("Let's connect
 
 export default async function HomePage() {
   const publishedProjects = await fetchPublishedPosts();
-  const projectById = new Map(featuredProjects.map((p) => [p.id, p]));
+  const publishedBySlug = new Map(publishedProjects.map((post) => [post.slug, post]));
+  const fallbackEvidence = featuredProjects.filter((project) => project.inspect.length > 0);
 
   return (
     <>
@@ -45,6 +47,9 @@ export default async function HomePage() {
             <a className="button-ghost" href="#experience">
               Explore my work
             </a>
+            <a className="button-ghost" href="/blog">
+              Blog
+            </a>
             <a className="button-ghost" href={mailto}>
               Contact
             </a>
@@ -71,19 +76,20 @@ export default async function HomePage() {
         <p className="kicker">Experience</p>
         <h2>What happened, and what I took from it</h2>
         <p className="section-intro">
-          A narrative of the work—not a skills inventory. Each chapter links to a featured project
-          when there is public evidence to inspect.
+          Each role starts with the situation, then a task, action, and result you can scan. A link
+          appears only when a published deep dive supports the claim.
         </p>
         <div className="timeline">
           {experience.map((entry) => {
-            const project = entry.featuredProjectId
-              ? projectById.get(entry.featuredProjectId)
-              : undefined;
+            const evidenceLinks = (entry.evidenceSlugs ?? []).flatMap((slug) => {
+              const post = publishedBySlug.get(slug);
+              return post ? [{ slug, title: post.title }] : [];
+            });
             return (
               <ExperienceEntryCard
                 key={entry.id}
                 entry={entry}
-                featuredProject={project}
+                evidenceLinks={evidenceLinks}
               />
             );
           })}
@@ -91,52 +97,47 @@ export default async function HomePage() {
       </section>
 
       <section id="featured-projects">
-        <p className="kicker">Featured projects</p>
+        <p className="kicker">Evidence</p>
         <h2>Evidence you can inspect</h2>
         <p className="section-intro">
           {publishedProjects.length
-            ? "Published deep dives from Notion. Each card opens a full project write-up."
-            : "Strongest grounded cases first. Artifacts from one engagement stay attached to one story."}
+            ? "Published blog deep dives. Each card names the problem, what the write-up proves, and where to read it."
+            : "Blog deep dives are not loaded in this preview. These cards are public artifacts already on the record."}
         </p>
         {publishedProjects.length ? (
           <>
             <FeaturedProjectsDynamic posts={publishedProjects} />
             <p style={{ marginTop: "1rem" }}>
-              <a href="/projects">Browse all projects and search by skill →</a>
+              <a href="/blog">Browse the blog and search by skill →</a>
             </p>
           </>
         ) : (
           <div className="studies">
-            {featuredProjects.map((project) => (
+            {fallbackEvidence.map((project) => (
               <article className="project-card" key={project.id} id={`project-${project.id}`}>
+                <p className="muted">Preview artifact</p>
                 <h3>{project.title}</h3>
-                <p>
-                  <strong>Who needed what?</strong> {project.problem}
-                </p>
-                <p>
-                  <strong>What did I discover?</strong> {project.discovery}
-                </p>
-                <p>
-                  <strong>Architecture & intervention.</strong> {project.architecture}
-                </p>
-                <p>
-                  <strong>Delivery & communication.</strong> {project.delivery}
-                </p>
-                <p>
-                  <strong>What changed?</strong> {project.outcome}
-                </p>
-                {project.outcomeNote ? <p className="muted">{project.outcomeNote}</p> : null}
-                {project.inspect.length > 0 ? (
-                  <div className="inspect-links">
-                    {project.inspect.map((link) => (
-                      <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
-                        {link.label}
-                      </a>
+                {project.problems?.length ? (
+                  <div className="problem-row">
+                    {project.problems.map((problem) => (
+                      <span key={problem}>{problemLabels[problem]}</span>
                     ))}
                   </div>
-                ) : (
-                  <p className="muted">No public artifact link on this preview yet.</p>
-                )}
+                ) : null}
+                <p>
+                  <strong>Problem solved.</strong> {project.problemSolved ?? project.problem}
+                </p>
+                <p>
+                  <strong>What this proves.</strong> {project.proves ?? project.outcome}
+                </p>
+                {project.outcomeNote ? <p className="muted">{project.outcomeNote}</p> : null}
+                <div className="inspect-links">
+                  {project.inspect.map((link) => (
+                    <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               </article>
             ))}
           </div>

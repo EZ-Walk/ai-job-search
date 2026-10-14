@@ -17,7 +17,7 @@ The app lives in `portfolio/` inside [EZ-Walk/ai-job-search](https://github.com/
 
 ## Notion project deep dives
 
-Published rows in **Blog Entries** (`NOTION_BLOG_DATABASE_ID`) with `Status = Published` render at `/projects` and on the home **Featured projects** section.
+Published rows in **Blog Entries** (`NOTION_BLOG_DATABASE_ID`) with `Status = Published` render at `/blog` and on the home **Featured projects** section.
 
 Copy `.env.example` → `.env.local` and set `NOTION_TOKEN` (internal integration with access to the database). Page bodies are loaded via the public Notion read API (`notion-client` + `react-notion-x`); keep pages shared or public if rendering fails.
 

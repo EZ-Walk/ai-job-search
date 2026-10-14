@@ -1,37 +1,64 @@
+import { evidenceView } from "../lib/content";
 import type { ProjectPost } from "../lib/notion/posts";
 
 type FeaturedProjectsDynamicProps = {
   posts: ProjectPost[];
+  heading?: "h2" | "h3";
 };
 
-export function FeaturedProjectsDynamic({ posts }: FeaturedProjectsDynamicProps) {
+function TagChips({ tags }: { tags: string[] }) {
+  if (!tags.length) return null;
+  return (
+    <div className="problem-row" aria-label="Tags">
+      {tags.map((tag) => (
+        <span key={tag}>{tag}</span>
+      ))}
+    </div>
+  );
+}
+
+export function FeaturedProjectsDynamic({
+  posts,
+  heading = "h3",
+}: FeaturedProjectsDynamicProps) {
   if (!posts.length) return null;
+  const Heading = heading;
 
   return (
     <div className="studies">
-      {posts.map((post) => (
-        <article className="project-card" key={post.id} id={`project-${post.slug}`}>
-          {post.coverUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={post.coverUrl}
-              alt=""
-              className="project-cover"
-              loading="lazy"
-            />
-          ) : null}
-          <h3>
-            <a href={`/projects/${post.slug}`}>{post.title}</a>
-          </h3>
-          {post.excerpt ? <p>{post.excerpt}</p> : null}
-          {post.tags.length ? (
-            <p className="muted project-tags">{post.tags.join(" · ")}</p>
-          ) : null}
-          <p>
-            <a href={`/projects/${post.slug}`}>Read the deep dive →</a>
-          </p>
-        </article>
-      ))}
+      {posts.map((post) => {
+        const evidence = evidenceView(post);
+        return (
+          <article className="project-card" key={post.id} id={`project-${post.slug}`}>
+            {post.coverUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={post.coverUrl}
+                alt=""
+                className="project-cover"
+                loading="lazy"
+              />
+            ) : null}
+            <Heading>
+              <a href={`/blog/${post.slug}`}>{post.title}</a>
+            </Heading>
+            <TagChips tags={post.tags} />
+            {evidence.problemSolved ? (
+              <p>
+                <strong>Problem solved.</strong> {evidence.problemSolved}
+              </p>
+            ) : null}
+            {evidence.proves ? (
+              <p>
+                <strong>What this proves.</strong> {evidence.proves}
+              </p>
+            ) : null}
+            <p>
+              <a href={`/blog/${post.slug}`}>Read more →</a>
+            </p>
+          </article>
+        );
+      })}
     </div>
   );
 }

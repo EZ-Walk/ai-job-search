@@ -71,6 +71,13 @@ img {
   color: var(--ink-soft);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
 .nav-cta {
   text-decoration: none;
   background: var(--ink);
@@ -80,7 +87,17 @@ img {
   font-size: 13px;
   letter-spacing: 0.04em;
   text-transform: none;
-  margin-left: auto;
+}
+
+.nav-cta-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.article-back {
+  display: flex;
+  gap: 1.25rem;
 }
 
 .hero {
@@ -249,6 +266,30 @@ section h2 {
   color: var(--brass);
 }
 
+.problem-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 4px;
+}
+
+.problem-row span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.star-line {
+  margin: 6px 0;
+}
+
+.star-line strong {
+  margin-right: 0.35em;
+}
+
 .muted {
   color: var(--ink-soft);
   font-size: 14px;
@@ -316,29 +357,6 @@ footer {
   border: 1px solid var(--line);
   font: inherit;
   margin-bottom: 8px;
-}
-
-.project-search-results {
-  list-style: none;
-  padding: 0;
-  margin: 16px 0 0;
-  display: grid;
-  gap: 12px;
-}
-
-.project-search-results a {
-  display: block;
-  padding: 14px 16px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: white;
-  text-decoration: none;
-  color: inherit;
-}
-
-.project-search-results strong {
-  display: block;
-  margin-bottom: 4px;
 }
 
 .project-article .notion-page {
