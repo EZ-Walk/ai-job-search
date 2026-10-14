@@ -1,0 +1,144 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Forward Deployed Agentic Engineer, Gumloop (San Francisco)
+%% Template: compact-arial (templates/cv/compact-arial/)
+%% Compile with: lualatex main_gumloop_forward-deployed-agentic-engineer.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Own technical delivery after the contract is signed: discovery, statements of work, and milestone-gated builds up to \$18K, with the operator kept as the decision-maker on each account.
+  \item Map the process, connect the dependent systems, and structure customer data so the automation runs on live records.
+  \item Automated an IT MSP's pre-sales cybersecurity risk assessments, then trained that team to run and extend the workflow. Processing time fell 98\% against a measured baseline.
+  \item Designed a Notion content system and trained the operators to run it. Agency production volume increased 10x.
+  \item Ship connected systems past prototype: Notion API integrations in TypeScript and Python, JSON payloads, Git, and CI that tests live API connectivity on each change.
+  \item Build with MCP servers and production LLM workflows across Claude, OpenAI, and Gemini. Claude Code is the daily driver for agent tooling on live accounts.
+  \item Designed a content-scoring evaluation from the client's ground truth. Agreement with human reviewers reached 95\%.
+  \item Turn each deployment into the next change: a post-launch backlog, measured results, and reusable workflow patterns the customer's team keeps building after handover.
+  \item Modernized a data-ingestion pipeline. Throughput increased 99.8\% in four months and cost fell 86\%.
+  \item Delivered EZ-AI, problem-first fluency training so operators can judge and extend the system after handover.
+  \item Ingested federal case documents for an anti-trafficking nonprofit and powered its client-facing analytics dashboard.
+  \item Shipped a public Notion OAuth app in TypeScript and a Whisper-to-Notion pipeline, with CI that tests live API connectivity.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Built DRE Bot, a Watson NLP Slack app that surfaced similar past cases, cutting common issues to one response.
+  \item Ran Design Thinking with technical and non-technical stakeholders, then wrote release notes for each change.
+  \item Designed IBMLogAnalyze, a GDPR-compliant pipeline and dashboard. Log-analysis prep fell from 1-3 hours to zero. Tableau and Cognos dashboards went to C-level operators.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Built a Python model that turned handwritten clinical notes into a structured data model (F1 80.03).
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science, Major GPA 3.7; Certificate of Cognitive Science}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate}{Completed 2026}
+\begin{cvitems}
+  \item Business process modeling and improvement, IT systems design and analysis, cloud-native delivery, DevOps, and Agile.
+
+\vspace{3pt}
+\cveduhead{DeepLearning.AI}{Online}
+{Deep Learning Specialization; TensorFlow Developer Professional Certificate}{2020 - 2021}
+\end{cvitems}
+
+\cvsection{Skills}
+
+\noindent\textbf{Client delivery:} process mapping, system connection, data structuring, operator enablement, executive communication.\\[2pt]
+\noindent\textbf{Agent stack:} Python, TypeScript/JavaScript, JSON, Git, MCP, Claude Code, n8n, Claude/OpenAI/Gemini APIs.\\[2pt]
+\noindent\textbf{Data and proof:} SQL/PostgreSQL, human-agreement evaluation, milestone acceptance, post-launch backlog, reusable patterns.\\[2pt]
+\noindent\textbf{Field tools:} Docker, GitHub Actions, Slack API, Figma process diagrams, Tableau, Cognos, Vercel.\\[2pt]
+\noindent\textbf{Handoff:} operator training after go-live, measured baselines, human-agreement checks, and a backlog the customer team runs.
+
+\end{document}
