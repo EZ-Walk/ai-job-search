@@ -17,7 +17,7 @@ export const about = {
   method:
     "Design-thinking interviews, use cases, and process mapping show me the work. I rebuild it with business analysis, data science, ML pipelines, agentic systems, and AI enablement. My background spans data and AI engineering at IBM, healthcare machine learning, and my own consulting practice.",
   personal:
-    "I'm looking for a technical sales role: remote, or San Francisco based with travel. If you are hiring that seat, write me.",
+    "If you or someone you know could use these skills, please get in touch. I'm looking for a full-time remote role, travel is a plus.",
   domains: [
     "Discovery & process mapping",
     "Data platforms",
