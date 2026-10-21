@@ -11,13 +11,13 @@ export const site = {
 
 export const about = {
   greeting:
-    "Howdy, I'm Ethan Zaruba-Walker. I translate between what people need and what technology systems can deliver.",
+    "I'm bridging the gap between what humans need and what technology can deliver.",
   problem:
-    "Organizations' valuable work is trapped in fragmented information, manual handoffs, and software that hasn't become a dependable way of operating. I make that work legible, design the system around the people doing it, build the missing connections, and train people in the new system that solves their problems.",
+    "Coding and technology were the start. School turned that into data science and cognitive science, and the work today is human-agent business systems.",
   method:
-    "My favorite part of the work is uncovering what people actually need, shaping the architecture, and communicating it back to them as it's being built. My background spans data and AI engineering at IBM, healthcare machine learning, and my own consulting practice.",
+    "Design-thinking interviews, use cases, and process mapping show me the work. I rebuild it with business analysis, data science, ML pipelines, agentic systems, and AI enablement. My background spans data and AI engineering at IBM, healthcare machine learning, and my own consulting practice.",
   personal:
-    "That work connects to a wider interest of mine: exploring, articulating, and making useful what I learn about people and the world. I live aboard a sailboat in San Francisco Bay, and I value the freedom to travel and adventure in nature.",
+    "I'm looking for a technical sales role: remote, or San Francisco based with travel. If you are hiring that seat, write me.",
   domains: [
     "Discovery & process mapping",
     "Data platforms",
@@ -338,8 +338,9 @@ export const influences: Influence[] = [];
 
 export const resume = {
   headline: "Ethan Zaruba-Walker",
-  subtitle: about.greeting.split(".")[0] + ".",
-  summary: about.problem,
+  subtitle: "Howdy, I'm Ethan Zaruba-Walker.",
+  summary:
+    "Organizations' valuable work is trapped in fragmented information, manual handoffs, and software that hasn't become a dependable way of operating. I make that work legible, design the system around the people doing it, build the missing connections, and train people in the new system that solves their problems.",
   contact: site,
   experience: [
     {
