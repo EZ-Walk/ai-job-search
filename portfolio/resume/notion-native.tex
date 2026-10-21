@@ -1,6 +1,7 @@
-%% Portfolio résumé — Notion-native source (Ethan Zaruba-Walker page)
-%% ATS layout: compact-arial (ai-job-search templates/cv/compact-arial)
-%% Compile: lualatex -interaction=nonstopmode notion-native.tex
+%% Compact Arial CV - Ethan Zaruba-Walker
+%% Target: Forward Deployed Architect, Notion (San Francisco, hybrid)
+%% Compile with: lualatex -interaction=nonstopmode main_notion_forward-deployed-architect.tex
+%% Do not overwrite other Notion role variants.
 
 \documentclass[10pt,letterpaper]{article}
 
@@ -24,7 +25,7 @@
   colorlinks=true,
   urlcolor=black,
   linkcolor=black,
-  pdftitle={Ethan Zaruba-Walker - Resume},
+  pdftitle={Ethan Zaruba-Walker - CV},
 }
 
 \pagestyle{empty}
@@ -65,100 +66,83 @@
   \noindent\textit{#3}\hfill#4\par
 }
 
+\newcommand{\cvcert}[3]{%
+  \noindent\textbf{#1} \textbar{} #2\hfill#3\par
+  \vspace{1pt}%
+}
+
 \begin{document}
 
 \begin{center}
   {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
   \vspace{4pt}
   {\fontsize{10pt}{12pt}\selectfont
-    ethan@zwconsultingllc.net
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
     {-}
     (512) 694-4844
     {-}
     \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
     {-}
-    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}
-    {-}
-    \href{https://www.instagram.com/ez.walk/}{instagram.com/ez.walk}\par}
+    \href{https://staffroomai.com}{staffroomai.com}\par}
 \end{center}
 \vspace{2pt}
 
-\cvsection{Work Experience}
+\cvsection{Experience}
 
-\cventryhead{Staff Room AI}{}{AI Consultant}{Oct. 2023 -- Present}
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Lead consultative discovery with operators: map current-state workflows, pain, stakeholders, technical constraints, unknowns, and the practical future state before selecting tools.
+  \item Translate ambiguous goals into process maps, prioritized requirements, solution architectures, implementation plans, human review points, and measurable success criteria.
+  \item Built a Notion content-marketing system that increased agency production volume 10x; designed the data architecture, process maps, migration plan, and user adoption training.
+  \item Automated an IT MSP's pre-sales risk assessments and trained the team to operate and extend the workflow. Processing time fell 98\% against a measured baseline.
+  \item Ran a 30-day AI-workflow pilot with four users; converted eight-plus sessions into a prioritized product backlog, then shipped one-click generation, multi-draft output, research integration, and direct publishing.
+  \item Built production Notion API integrations in TypeScript and Python: OAuth Connections, data sources, pages, comments, webhooks, and a Whisper-to-Notion pipeline with live-connectivity CI.
+  \item Design Notion as the work and review surface while specialized systems retain their machinery; connect the boundary with APIs, n8n, MCP, and event-driven agent workflows.
+\end{cvitems}
+
 \vspace{3pt}
-\noindent\textbf{Client Work}\par
-\vspace{2pt}
-\noindent\textbf{MediaMark Spotlight} --- \textit{LLM-as-a-Judge Content Evaluation System}\par
+\cventryhead{Wiz Music}{Barcelona, Spain}
+{Community Development Intern}{May 2022 - July 2022}
 \begin{cvitems}
-  \item Architected multi-phase engagement: data extraction $\rightarrow$ rubric design $\rightarrow$ validation $\rightarrow$ deployment with 95\% human-agreement success criteria
-  \item Delivered automated content scoring at scale with triple-gate approval workflows and GitHub-versioned rubrics
-  \item Managed stakeholder communication and requirements gathering, translating business needs into technical architecture
-  \item Built reusable patterns: n8n orchestration, multimodal evaluation, event-driven agent workflows
+  \item Analyzed Discord churn and acquisition to define the growth objective, then configured artist feeds and ran an AMA against the engagement gap.
 \end{cvitems}
+
 \vspace{3pt}
-\noindent\textbf{Allies Against Slavery} --- \textit{Data Platform Modernization}\par
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer Intern}{May 2021 - August 2021}
 \begin{cvitems}
-  \item Modernized data ingestion process, increasing potential throughput by \textbf{99.8\%} in 4 months and reducing cost by \textbf{86\%}
-  \item Built data platforms and partnerships to accelerate solutions to human trafficking
+  \item Translated handwritten clinical notes into an extensible data model with Python and TensorFlow, achieving F1 80.03.
 \end{cvitems}
+
 \vspace{3pt}
-\noindent I use \textbf{Python, Azure AI Services, PostgreSQL, Dropbox API, OpenAI API, n8n, Docker, GitHub Actions}\par
-
-\vspace{5pt}
-\cventryhead{Wiz Music}{Barcelona}{Community Development Intern}{May 2022 -- July 2022}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
 \begin{cvitems}
-  \item This study abroad style internship inspired a greater appreciation for diversity for cultures and thought. During these three months I dove into the Web3 community in Barcelona and fostered/supported the Discord community around Wiz music. Working under Marc Collado taught me invaluable lessons in product design and development as well as a few in Spanish and Catalan.
-  \item I used \textbf{Spanish, Discord, Twitter (X)}
-\end{cvitems}
-
-\vspace{5pt}
-\cventryhead{Valhalla Healthcare}{}{Machine Learning Engineer}{May 2021 -- Aug. 2021}
-\begin{cvitems}
-  \item Researched, designed and built a machine learning model that added business value by augmenting the capabilities of healthcare providers by translating hand-written notes to an extensible data model across the business.
-  \item I used \textbf{Python, Keras, Tensorflow, Docker}
-\end{cvitems}
-
-\vspace{5pt}
-\cventryhead{IBM}{}{Cognitive Software Engineer}{Aug. 2017 -- Dec. 2020}
-\begin{cvitems}
-  \item Designed, built and integrated a machine learning application into Slack that allowed support engineers to find similar service records, accelerating time to resolution and employee productivity
-  \item Published release notes and documentation to stakeholders to support ongoing application development
-\end{cvitems}
-
-\cventryhead{IBM}{}{Data Engineer}{Aug. 2018 -- Aug. 2020}
-\begin{cvitems}
-  \item Designed, built, and deployed a data platform for advanced analytics, automating hours of work for support teams.
-  \item Hosted design meetings with stakeholders to discover human priorities for the technology
-\end{cvitems}
-
-\cventryhead{IBM}{}{Research Intern}{May 2017 -- Aug. 2017}
-\begin{cvitems}
-  \item Developed a VR local multiplayer tower defense game in Unity using C\#. There was a special emphasis on the interaction between players inside and outside of the virtual space.
-  \item Designed and built and engaging AR window exhibit for the ThinkLab using Java and the Microsoft Kinect.
-  \item I used \textbf{Kinect, HTC Vive, Microsoft HoloLens, Unity 3D, C\#, Python, SQLITE, Flask, Dash, Plotly,}
+  \item Built DRE Bot after Design Thinking discovery with support stakeholders. At the three-month check-in, teams still used the Watson NLP Slack app and resolved common issues in one response.
+  \item Designed and deployed IBMLogAnalyze, a GDPR-compliant client-data pipeline and dashboard that eliminated 1--3 hours of preparation per case; a user confirmed continued use six years later.
+  \item Built C-level Tableau and Cognos dashboards; published release notes and documentation for each product change.
 \end{cvitems}
 
 \cvsection{Education}
 
-\noindent ``I never let my schooling get in the way of my education.'' --- Mark Twain\par
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S.\ Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+
 \vspace{4pt}
+\cvcert{IBM}{Systems \& Solutions Architecture Professional Certificate}{2026}
+\cvcert{RC Health Services}{Emergency Medical Technician (NREMT)}{2024}
+\cvcert{Bondi Outdoor Leadership}{AIARE 1 Avalanche Safety and Rescue}{2022}
+\cvcert{DeepLearning.AI}{Deep Learning Specialization}{2021}
+\cvcert{DeepLearning.AI}{TensorFlow Developer Professional Certificate}{2020}
 
-\cveduhead{University of Colorado, Boulder}{}{B.S. Information Science Graduate, May 2023 --- GPA: 3.7 --- Projects Inside}{}
-\cveduhead{University of Colorado, Boulder}{}{Certificate of Cognitive Science, May 2023}{}
+\cvsection{Skills}
 
-\vspace{5pt}
-\cveduhead{IBM on Coursera}{}{Systems and Solutions Architecture, August 2026}{}
-\cveduhead{Deeplearning.ai on Coursera}{}{Deep Learning Specialization, Jan 2021}{}
-\cveduhead{Deeplearning.ai on Coursera}{}{Tensorflow Developer Professional Certificate, May 2020}{}
-
-\cvsection{Other interests}
-
-\cveduhead{RC Health Services EMS Academy}{}{Emergency Medical Technician, May 2024}{}
-\noindent Post-graduation I wanted to keep learning and I wanted to challenge myself to learn more about a field that is steeped in complexity while remaining widely applicable. Healthcare was my answer.\par
-
-\vspace{5pt}
-\cveduhead{Bondi Outdoor Leadership}{}{AIARE 1 Avalanche Safety and Rescue, March 2022}{}
-\noindent The outdoors inspire me, skiing motivates me. Combining the two safely with a sprinkling of science is right up my alley\par
+{\raggedright
+\noindent\textbf{Discovery \& delivery:} current-state mapping, requirements, solution architecture, success criteria, SOWs, change management, stakeholder alignment, enablement, launch planning, handoff.\\[2pt]
+\noindent\textbf{Notion \& AI:} workspace and data architecture, permissions, API, OAuth, MCP, agents, automations, Claude Code.\\[2pt]
+\noindent\textbf{Adoption \& product:} human-in-the-loop design, user testing, product backlogs, operational KPIs, training, documentation.\\[2pt]
+\noindent\textbf{Implementation:} Python, TypeScript, SQL, n8n, REST/JSON APIs, data pipelines, Docker, Git/GitHub.\par
+}
 
 \end{document}

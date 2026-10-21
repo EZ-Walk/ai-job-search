@@ -66,6 +66,11 @@
   \noindent\textit{#3}\hfill#4\par
 }
 
+\newcommand{\cvcert}[3]{%
+  \noindent\textbf{#1} \textbar{} #2\hfill#3\par
+  \vspace{1pt}%
+}
+
 \begin{document}
 
 \begin{center}
@@ -89,7 +94,7 @@
 \begin{cvitems}
   \item Lead consultative discovery with operators: map current-state workflows, pain, stakeholders, technical constraints, unknowns, and the practical future state before selecting tools.
   \item Translate ambiguous goals into process maps, prioritized requirements, solution architectures, implementation plans, human review points, and measurable success criteria.
-  \item Built a Notion content-marketing system that increased agency production volume 10x; designed client, campaign, topic, content, review, and publishing workflows inside a shared workspace.
+  \item Built a Notion content-marketing system that increased agency production volume 10x; designed the data architecture, process maps, migration plan, and user adoption training.
   \item Automated an IT MSP's pre-sales risk assessments and trained the team to operate and extend the workflow. Processing time fell 98\% against a measured baseline.
   \item Ran a 30-day AI-workflow pilot with four users; converted eight-plus sessions into a prioritized product backlog, then shipped one-click generation, multi-draft output, research integration, and direct publishing.
   \item Built production Notion API integrations in TypeScript and Python: OAuth Connections, data sources, pages, comments, webhooks, and a Whisper-to-Notion pipeline with live-connectivity CI.
@@ -124,13 +129,12 @@
 \cveduhead{University of Colorado Boulder}{Boulder, CO}
 {B.S.\ Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
 
-\vspace{3pt}
-\cveduhead{IBM}{Online}
-{Systems \& Solutions Architecture Professional Certificate; BPMN, cloud-native, Agile}{2026}
-
-\vspace{3pt}
-\cveduhead{DeepLearning.AI}{Online}
-{Deep Learning Specialization \textbar{} TensorFlow Developer Professional Certificate}{2020 - 2021}
+\vspace{4pt}
+\cvcert{IBM}{Systems \& Solutions Architecture Professional Certificate}{2026}
+\cvcert{RC Health Services}{Emergency Medical Technician (NREMT)}{2024}
+\cvcert{Bondi Outdoor Leadership}{AIARE 1 Avalanche Safety and Rescue}{2022}
+\cvcert{DeepLearning.AI}{Deep Learning Specialization}{2021}
+\cvcert{DeepLearning.AI}{TensorFlow Developer Professional Certificate}{2020}
 
 \cvsection{Skills}
 
