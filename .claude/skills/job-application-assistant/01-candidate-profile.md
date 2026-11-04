@@ -22,6 +22,7 @@ framework_version: 1.0.0
 - **Instagram:** https://www.instagram.com/ez.walk/ *(added /expand 2026-08-20)*
 - **Languages:** English (native), Spanish (conversational — 2 years university coursework; worked in a multilingual English/Spanish/Catalan community in Barcelona)
 - **Status:** Founder & AI Solutions Consultant at StaffRoom AI (own consultancy, Oct 2023–present); open to full-time roles
+- **Work authorization:** Authorized to work in the United States. Will never need visa sponsorship. On applications, answer right-to-work and legally-authorized questions Yes, and every sponsorship question No. Do not ask again.
 - **Constraints:** Based in SF Bay Area; has worked fully remote since 2024. **Bay Area on-site is acceptable**, including full-time school-hours roles (Montessori, independent, traditional, and Alpha-style Guide). Relocation out of the Bay Area is still a deal-breaker.
 
 ## Education

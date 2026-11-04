@@ -1,0 +1,133 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Forward Deployed Engineer (AI Solutions), NA West, Aircall
+%% Template: compact-arial (templates/cv/compact-arial/)
+%% Compile with: lualatex main_aircall_forward-deployed-engineer-ai-solutions.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Lead customer discovery and map the current process, files, and systems before any automation. Write the SOW the build follows. Engagements have reached \$18K.
+  \item Design and deploy low-code workflows in n8n with REST APIs and webhooks, then leave a playbook the operator can run.
+  \item Automated an IT MSP's pre-sales risk assessments and trained that team to extend the workflow. Processing time fell 98\% against a measured baseline.
+  \item Configure prompts, review gates, and pass/fail metrics for LLM workflows. A content-scoring evaluation had to reach 95\% agreement with human reviewers.
+  \item Built production Notion API integrations in TypeScript and Python, including a public OAuth app and CI that tests live third-party API connectivity.
+  \item Delivered EZ-AI, problem-first workshops that train domain experts to judge and extend the system after handover. Claude Code is the daily build tool.
+  \item After launch I stay on the account: resolve user issues, keep a living backlog, and fold the next change into the reusable workflow instead of a one-off.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Ran Design Thinking sessions with support engineers, then wrote the release notes that walked mixed technical and non-technical stakeholders through each change.
+  \item Built DRE Bot, a Watson NLP Slack app in the channel the team already used, cutting the most common issues from a multi-touch case to a single response.
+  \item Shipped IBMLogAnalyze, a GDPR-compliant pipeline and dashboard that removed 1-3 hours of per-case log prep, plus Tableau and Cognos dashboards for operations leaders.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Built a Python model that turned handwritten clinical notes into a structured data model (F1 80.03), with a human still checking the output.
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science; Major GPA 3.7 \textbar{} Certificate of Cognitive Science; Dean's List}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate (in progress)}{expected July 2026}
+\begin{cvitems}
+  \item BPMN and process improvement; IT systems design and analysis; cloud-native delivery, DevOps, and Agile.
+\end{cvitems}
+
+\cvsection{Skills}
+
+{\raggedright
+\noindent\textbf{Deployment:} n8n, REST, JSON, webhooks, API connectors, process mapping, solution specs, playbooks, stakeholder timelines. \textbf{AI workflows:} prompts, evaluation, human review gates, Claude Code, MCP, Claude / OpenAI / Gemini APIs. \textbf{Languages:} Python (primary), TypeScript (production integrations), SQL.\par
+}
+
+\end{document}
