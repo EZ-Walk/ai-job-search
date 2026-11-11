@@ -26,7 +26,7 @@ export function getRevalidateSeconds(): number {
 export function getSiteBaseUrl(): string {
   if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  return "https://zarubawalker.com";
+  return "https://ethan.zarubawalker.com";
 }
 
 export function isNotionConfigured(): boolean {

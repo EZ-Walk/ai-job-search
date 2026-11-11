@@ -6,7 +6,7 @@ export const site = {
   github: "https://github.com/EZ-Walk",
   instagram: "https://www.instagram.com/ez.walk/",
   staffRoom: "https://staffroomai.com",
-  canonical: "https://zarubawalker.com",
+  canonical: "https://ethan.zarubawalker.com",
 } as const;
 
 export const about = {

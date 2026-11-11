@@ -1,6 +1,6 @@
 # ezwalker
 
-Ethan Zaruba-Walker’s portfolio site ([zarubawalker.com](https://zarubawalker.com)) — Next.js App Router.
+Ethan Zaruba-Walker’s portfolio site ([ethan.zarubawalker.com](https://ethan.zarubawalker.com)) — Next.js App Router.
 
 The app lives in `portfolio/` inside [EZ-Walk/ai-job-search](https://github.com/EZ-Walk/ai-job-search). It was moved off the `ezwalker` branch of `Staff-Room/MarketSense`.
 
@@ -13,7 +13,8 @@ The app lives in `portfolio/` inside [EZ-Walk/ai-job-search](https://github.com/
 | Production branch | `master` |
 | Root directory | `portfolio` |
 | Framework | Next.js |
-| Live site | [zarubawalker.com](https://zarubawalker.com) |
+| Public site | [ethan.zarubawalker.com](https://ethan.zarubawalker.com) |
+| Local dev | `npm run dev` in this folder → [http://localhost:3000](http://localhost:3000). No hosted dev URL. |
 
 ## Notion project deep dives
 
@@ -38,4 +39,4 @@ npm run build
 ## Notes
 
 - `scripts/extract-to-own-repo.sh` is the old MarketSense-branch extractor. The source of truth is this folder.
-- Custom domain `zarubawalker.com` is registered at GoDaddy. Vercel can attach it, but nameservers stay at GoDaddy until they are changed to `ns1.vercel-dns.com` and `ns2.vercel-dns.com`.
+- Public URL is `https://ethan.zarubawalker.com`. The apex `zarubawalker.com` is attached in Vercel (`www` redirects to the apex), but DNS still serves the old placeholder site. Do not treat the apex as the portfolio.

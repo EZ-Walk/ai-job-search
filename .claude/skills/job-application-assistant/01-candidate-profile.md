@@ -16,7 +16,8 @@ framework_version: 1.0.0
 - **Email:** ethan@staffroomai.com
 - **GitHub:** https://github.com/EZ-Walk
 - **LinkedIn:** https://linkedin.com/in/ezwalk *(added /expand 2026-08-20)*
-- **Portfolio:** https://app.notion.com/p/staffroomai/Ethan-Zaruba-Walker-2953ef6cafd5812baab4fcd98c129999 *(added /expand 2026-08-20)*
+- **Portfolio:** https://ethan.zarubawalker.com/ *(public site; local dev is `portfolio/` via `npm run dev` → http://localhost:3000)*
+- **Notion working page (not the public portfolio):** https://app.notion.com/p/staffroomai/Ethan-Zaruba-Walker-2953ef6cafd5812baab4fcd98c129999 *(added /expand 2026-08-20)*
 - **Company site:** https://staffroomai.com *(added /expand 2026-08-20)*
 - **Notion Marketplace:** https://www.notion.com/@ezwalk *(added /expand 2026-08-20)*
 - **Instagram:** https://www.instagram.com/ez.walk/ *(added /expand 2026-08-20)*

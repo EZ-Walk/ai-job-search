@@ -22,7 +22,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 - **Name:** Ethan Zaruba-Walker
 - **Location:** Emeryville, CA (SF Bay Area; remote-first, Bay Area hybrid OK; relocation is a deal-breaker — lives aboard *MARGARITA*, a 1966 sailboat)
-- **Contact:** (512) 694-4844 · [ethan@staffroomai.com](mailto:ethan@staffroomai.com) · Portfolio: [https://app.notion.com/p/staffroomai/Ethan-Zaruba-Walker-2953ef6cafd5812baab4fcd98c129999?source=resume](https://app.notion.com/p/staffroomai/Ethan-Zaruba-Walker-2953ef6cafd5812baab4fcd98c129999?source=copy_link)
+- **Contact:** (512) 694-4844 · [ethan@staffroomai.com](mailto:ethan@staffroomai.com) · Portfolio: [https://ethan.zarubawalker.com/](https://ethan.zarubawalker.com/)
 - **Languages:** English (native), Spanish (conversational)
 - **Status:** Founder & AI Solutions Consultant at StaffRoom AI (Oct 2023-present); open to full-time roles
 
@@ -139,8 +139,19 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 
 
+## Portfolio site
+
+When asked to see, open, or review the portfolio, use only the URLs below.
+
+- **Public:** [https://ethan.zarubawalker.com/](https://ethan.zarubawalker.com/). Open this in the browser. This is the portfolio.
+- **Dev:** there is no deployed dev URL. From `portfolio/`, run `npm run dev` and open [http://localhost:3000](http://localhost:3000). Do that only when the request says dev, local, or that changes are being made. If port 3000 is taken, use the port Next prints.
+- **Do not open** the Notion page `app.notion.com/p/staffroomai/Ethan-Zaruba-Walker-…`. That page is a working source for case studies, not the portfolio.
+- **Do not open** [https://zarubawalker.com](https://zarubawalker.com) or `www.zarubawalker.com`. The apex still serves an old placeholder site. Vercel has the domain attached; DNS has not moved.
+- Vercel project `ezwalker-portfolio` (`*.vercel.app` aliases serve the same production app). Prefer `ethan.zarubawalker.com`.
+
 ## Repo Structure
 
+- `portfolio/` - the Next.js portfolio. Public site above; local dev as above.
 - `cv/` - LaTeX CV variants (active template: compact-arial; stock moderncv still in older files)
 - `cover_letters/` - LaTeX cover letters (custom cover.cls template)
 - `.claude/skills/` - AI skill definitions for the application workflow
