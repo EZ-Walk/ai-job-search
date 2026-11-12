@@ -1,0 +1,143 @@
+%% CV - Ethan Zaruba-Walker
+%% Tailored for: Forward Deployed Engineer, Trail (Palo Alto, hybrid)
+%% Template: compact-arial (templates/cv/compact-arial/)
+%% Compile with: lualatex main_trail_forward-deployed-engineer.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Arial}{
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont={Arial Bold},
+    ItalicFont={Arial Italic},
+    BoldItalicFont={Arial Bold Italic}
+  ]
+}{
+  \setmainfont{TeX Gyre Heros}
+}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Ethan Zaruba-Walker - CV},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+\newenvironment{cvitems}{%
+  \begin{list}{-}{%
+    \setlength{\leftmargin}{12pt}%
+    \setlength{\itemsep}{1.2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{6pt}%
+    \setlength{\itemindent}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \noindent{\bfseries\fontsize{11pt}{13pt}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+  \noindent\rule{\textwidth}{0.4pt}\par
+  \vspace{4pt}%
+}
+
+\newcommand{\cventryhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\newcommand{\cveduhead}[4]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{0.5pt}%
+  \noindent\textit{#3}\hfill#4\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\bfseries\fontsize{22pt}{24pt}\selectfont Ethan Zaruba-Walker\par}
+  \vspace{4pt}
+  {\fontsize{10pt}{12pt}\selectfont
+    \href{mailto:ethan@staffroomai.com}{ethan@staffroomai.com}
+    {-}
+    (512) 694-4844
+    {-}
+    \href{https://linkedin.com/in/ezwalk}{linkedin.com/in/ezwalk}
+    {-}
+    \href{https://github.com/EZ-Walk}{github.com/EZ-Walk}\par}
+\end{center}
+\vspace{2pt}
+
+\cvsection{Experience}
+
+\cventryhead{StaffRoom AI}{Emeryville, CA}
+{Founder \& AI Solutions Consultant}{October 2023 - Present}
+\begin{cvitems}
+  \item Own every engagement: source the work, write the statement of work, build it, and stay through handover. Client delivery has run up to \$18K on a single engagement.
+  \item Translate a customer's operating problem into the written specification the build is held to: workflows, success criteria, and milestone acceptance, then implement that spec in Python.
+  \item Surface the real constraint during onboarding. Automated an IT MSP's pre-sales risk assessments and trained the team to extend the workflow. Processing time fell 98\%.
+  \item Designed a content-scoring evaluation from client ground truth. Human-reviewer agreement reached 95\%.
+  \item Ship agent workflows in production with Python, TypeScript, JSON APIs, Git, and MCP. Claude Code drives the LLM work.
+  \item Modernized a data-ingestion pipeline. Throughput increased 99.8\% in four months and cost fell 86\%.
+  \item Designed a Notion content system and its operating workflow, then trained the producers. Agency volume increased 10x.
+  \item Feed what customers hit in onboarding back as the next build: a living backlog and measured results.
+  \item Delivered EZ-AI, problem-first fluency training so operators can judge and extend the system after handover.
+  \item Ingested federal case documents for an anti-trafficking nonprofit and powered its client-facing analytics dashboard.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{IBM}{Austin, TX}
+{Data Engineer / Cognitive Software Engineer, Customer Support}{August 2018 - December 2020}
+\begin{cvitems}
+  \item Led Design Thinking sessions, turned stakeholder needs into a build, and wrote release notes for each change.
+  \item Built DRE Bot, a Watson NLP Slack app for support engineers. Common issues fell from a multi-touch case to one response on the tickets that kept coming back.
+  \item Designed IBMLogAnalyze, a GDPR-compliant pipeline and dashboard. Log-analysis prep fell from 1-3 hours to zero, and Tableau and Cognos dashboards went to C-level operators.
+\end{cvitems}
+
+\vspace{3pt}
+\cventryhead{Valhalla Healthcare}{Remote}
+{Machine Learning Engineer (Intern)}{May 2021 - August 2021}
+\begin{cvitems}
+  \item Built a Python model translating handwritten clinical notes into a structured data model (F1 80.03).
+\end{cvitems}
+
+\cvsection{Education}
+
+\cveduhead{University of Colorado Boulder}{Boulder, CO}
+{B.S. Information Science, Major GPA 3.7; Certificate of Cognitive Science}{August 2018 - May 2023}
+
+\vspace{3pt}
+\cveduhead{IBM}{Online}
+{Systems \& Solutions Architecture Professional Certificate}{Completed 2026}
+\begin{cvitems}
+  \item Business process modeling, requirements and systems analysis, cloud-native delivery, DevOps, and Agile.
+
+\vspace{3pt}
+\cveduhead{DeepLearning.AI}{Online}
+{Deep Learning Specialization; TensorFlow Developer Professional Certificate}{2020 - 2021}
+\end{cvitems}
+
+\cvsection{Skills}
+
+\noindent\textbf{Client delivery:} statements of work, workflows, success criteria, onboarding discovery, end-to-end testing against a human check, multi-project delivery. Based in Emeryville.\\[2pt]
+\noindent\textbf{Build:} Python (primary), JavaScript/TypeScript, SQL/PostgreSQL, Git, JSON APIs, MCP, Claude Code, n8n, production LLM and agent workflows.\\[2pt]
+\noindent\textbf{With the team:} customer stakeholders on each engagement. Founder ownership brought to a collaborative seat running several projects at once.\\[2pt]
+\noindent\textbf{Field tools:} Docker, GitHub Actions, Slack API, Figma process diagrams, Tableau, Cognos, Vercel.\\[2pt]
+\noindent\textbf{Handoff:} operator training after go-live, measured baselines, human-agreement checks, and a backlog the customer team keeps running after the engagement.\\[2pt]
+\noindent\textbf{Languages:} English, Spanish (conversational).
+
+\end{document}
